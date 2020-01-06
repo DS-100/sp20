@@ -1,0 +1,93 @@
+.module {
+  @extend .card;
+
+  .module-days {
+    grid-template-columns: 1fr 4fr;
+
+    @include mq(lg) {
+      grid-template-columns: 1fr 7fr;
+    }
+  }
+}
+
+.module-date {
+  @extend .card-header;
+}
+
+.module-header {
+  @extend .card-header;
+}
+
+.module-body {
+  @extend .card-body;
+}
+
+.module-days {
+  border-bottom: $border $border-color;
+  border-top: $border $border-color;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .module-day,
+  .module-event {
+    margin: 0;
+    padding: $sp-2;
+
+    @include mq(sm) {
+      padding: $sp-2 $sp-4;
+    }
+
+    &.main {
+      border-top: $border $border-color;
+
+      &:first-of-type {
+        border-top: none;
+      }
+    }
+
+    p {
+      display: inline-block;
+      margin: 0;
+      width: 100%;
+
+      @include mq(sm) {
+        width: 62.5%;
+      }
+
+      +p {
+        width: auto;
+      }
+    }
+  }
+
+  .module-day {
+    grid-column-start: 1;
+  }
+
+  .module-event {
+    grid-column-start: 2;
+
+    +.module-event {
+      padding-top: 0;
+    }
+
+    .label-lab { background-color: #00A6A6 }
+
+    .label-vit { background-color: #c1443c }
+
+    .label-disc { background-color: #e38505 }
+
+    .label-hw { background-color: #0D5C63 }
+
+    .label-proj { background-color: #595959 }
+
+    .label-exam { background-color: #99c24d }
+  }
+
+}
