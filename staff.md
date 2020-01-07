@@ -9,7 +9,7 @@ description: A listing of all the course staff members.
 
 Jump to [Instructors](#inst), [Teaching Assistants](#tas), or [Readers](#readers)
 
-**Note:** Consult the [calendar](http://ds100.org/fa19/calendar) for the most up-to-date office hours for each GSI.
+**Note:** Consult the [calendar](http://ds100.org/sp20/calendar) for the most up-to-date office hours for each GSI.
 
 <a name = 'inst'></a>
 

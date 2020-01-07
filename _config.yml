@@ -17,7 +17,7 @@ title: Data 100
 description: Principles and Techniques of Data Science
 author: Suraj Rampure
 email: suraj.rampure@berkeley.edu
-baseurl: '/fa19' # the subpath of your site, e.g. /blog
+baseurl: '/sp20' # the subpath of your site, e.g. /blog
 url: 'http://ds100.org' # the base hostname & protocol for your site, e.g. http://example.com
 
 # Theme settings
@@ -32,9 +32,9 @@ nav_links:
     Textbook:
       - 'http://textbook.ds100.org'
     Gradescope:
-      - 'https://www.gradescope.com/courses/57158'
+      - 'https://www.gradescope.com/courses/78615'
     Piazza:
-      - 'https://piazza.com/berkeley/fall2019/data100'
+      - 'https://piazza.com/berkeley/spring2020/data100'
     Okpy:
       - 'https://okpy.org'
     Office Hours Queue:

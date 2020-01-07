@@ -7,6 +7,10 @@ description: >-
 ---
 
 # Policies
+Coming soon
+
+<!--
+# Policies
 {:.no_toc}
 
 
@@ -44,3 +48,4 @@ Data science is a collaborative activity. While you may talk with others about t
 
 ## We Want You to Succeed
 If you are feeling overwhelmed, visit our office hours and talk with us. We know college can be stressful and we want to help you succeed!
+-->

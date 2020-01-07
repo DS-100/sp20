@@ -2,10 +2,10 @@
 name: Daniel Zhu
 role: Teaching Assistant
 email: daniel.zhu@berkeley.edu
-photo: http://ds100.org/fa20/resources/assets/staff_pics/daniel_zhu.jpg
-discussion: W 5-6PM, Dwinelle 229; W 6-7PM, Dwinelle 246
-lab: M 5-6PM, Evans 458; M 6-7PM, Evans 458
-oh: F 12-2PM
+photo: http://ds100.org/sp20/resources/assets/staff_pics/daniel_zhu.jpg
+discussion: Coming Soon
+lab: Coming Soon
+oh: Coming Soon
 
 ---
 

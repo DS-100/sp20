@@ -128,13 +128,13 @@ You may remove the `install_anaconda.sh` script now if you'd like.
 These instructions are the same for OSX, Windows, and Linux.
 
 1.  Download the data100 `data100_environment.yml`] from the course repository
-    [here](https://raw.githubusercontent.com/DS-100/fa19/gh-pages/resources/assets/local_setup/data100_environment.yml) or:
+    [here](https://raw.githubusercontent.com/DS-100/sp20/gh-pages/resources/assets/local_setup/data100_environment.yml) or:
 
          # download via curl
-         curl https://raw.githubusercontent.com/DS-100/fa19/gh-pages/resources/assets/local_setup/data100_environment.yml > data100_environment.yml
+         curl https://raw.githubusercontent.com/DS-100/sp20/gh-pages/resources/assets/local_setup/data100_environment.yml > data100_environment.yml
 
          # OR download via wget
-         wget -O data100_environment.yml https://raw.githubusercontent.com/DS-100/fa19/gh-pages/resources/assets/local_setup/data100_environment.yml
+         wget -O data100_environment.yml https://raw.githubusercontent.com/DS-100/sp20/gh-pages/resources/assets/local_setup/data100_environment.yml
 
 This [YAML](https://en.wikipedia.org/wiki/YAML) file is what we use to specify the dependencies and packages (and their versions) we wish to install into the [conda environment](http://conda.pydata.org/docs/using/envs.html) we will make for this class. The purpose of the environment is to ensure that everyone in the course is using the same package versions for every assignment whether or not they are working on datahub. This is to prevent inconsistent behavior due to
 differences in package versions.

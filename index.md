@@ -8,7 +8,7 @@ description: >-
 
 # Principles and Techniques of Data Science
 {: .mb-2 }
-Data 100, Fall 2019
+Data 100, Spring 2020
 {: .mb-0 .fs-6 .text-grey-dk-000 }
 
 {% assign instructors = site.staffers | where: 'role', 'Instructor' %}
@@ -30,7 +30,7 @@ Data 100, Fall 2019
 - When: Tuesdays and Thursdays, 9:30am-11:00am
 - Where: 150 Wheeler
 - What: See the [syllabus](syllabus)
-- News: We will post updates about the class on [Piazza](http://piazza.com/berkeley/fall2019/data100).
+- News: We will post updates about the class on [Piazza](http://piazza.com/berkeley/spring2020/data100).
 
 This class is listed as STAT C100 (undergraduate) and STAT C200C (graduate).
 
