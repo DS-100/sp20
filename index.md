@@ -42,7 +42,8 @@ This class is listed as STAT C100 (undergraduate) and STAT C200C (graduate).
 
 ## Prerequisites
 
-While we are working to make this class widely accessible we currently require the following (or equivalent) prerequisites:
+While we are working to make this class widely accessible we currently require the following (or equivalent) prerequisites. **We are not enforcing prerequisites during enrollment. However, all of the prerequisties will 
+be used starting very early on in the class. It is your responsibility to know the material in the prerequisites.**:
 
 - **Foundations of Data Science**: [Data8](http://data8.org) covers much of the material in DS100 but at an introductory level. Data8 provides basic exposure to python programming and working with tabular data as well as visualization, statistics, and machine learning.
 - **Computing**: _The Structure and Interpretation of Computer Programs_ ([CS 61A](http://cs61a.org)) or _Computational Structures in Data Science_ ([CS 88](https://cs88-website.github.io)). These courses provide additional background in python programming (e.g., for loops, lambdas, debugging, and complexity) that will enable DS100 to focus more on the concepts in Data Science and less on the details of programming in python.
