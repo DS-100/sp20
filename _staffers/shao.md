@@ -2,7 +2,7 @@
 name: Paul Shao
 role: Teaching Assistant
 email: paulshaoyuqiao1@berkeley.edu
-photo: http://ds100.org/sp20/resources/assets/staff_pics/Paul_Shao.png
+photo: http://ds100.org/sp20/resources/assets/staff_pics/Paul_Shao.jpg
 discussion: F 2-3PM, Dwinelle 229; F 3-4PM, Dwinelle 234
 lab: T 1-2PM, Evans 458; T 2-3PM, Evans 458
 oh: Coming Soon
