@@ -57,24 +57,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## Discussion, Lab, and Lecture
 
-Coming soon
+**Note**: Per course policies, you should only attend the discussion / lab section you are assigned to.
 
-<!--
-Discussion sections are in blue, labs are in green, and lectures are in yellow. Click a discussion / lab event to see the different GSIs teaching at that time.
+Discussion sections are in <span style="color:DodgerBlue">blue</span>, labs are in <span style="color:DodgerBlue">green</span>, and lectures are in <span style="color:Orange">yellow</span>. Click a discussion / lab event to see the different GSIs teaching at that time. 
 
-<iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1X2luOXF2c2c5cnN2NXIzNWxhNG91ZnJxMnRrQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1XzcwODN1a205M2ZsbTl0ZWVobnBkZnFwcmFrQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X3FzMzRwbWJhb3F1OHE0MGNpa2NjNjg4aWRjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%233F51B5&amp;color=%23009688&amp;color=%23E4C441&amp;showTitle=0&amp;mode=WEEK" style="border-width:0" width="700" height="450" frameborder="0" scrolling="no"></iframe>
--->
+<iframe src="https://calendar.google.com/calendar/embed?height=450&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1XzFxOG1tNGxzaTRhdHZyYWlrdDZya2dsYzhnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X2IyNDhyYmRsbHJ1cTY4ZjI2cWwyMTlyMTBjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X29odmVpZG1qdWJuaTdnOWdoNmNvOGE2NGYwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%233366CC&amp;color=%23329262&amp;color=%239D7000&amp;title=%20&amp;mode=WEEK" style="border-width:0" width="700" height="450" frameborder="0" scrolling="no"></iframe>
 
 <br>
 
 ## Office Hours
 
-Coming soon
+**Note:** All GSI office hours are in **Soda 341A**. We are currently actively adding in more office hours.
 
-<!--
-GSI office hours are in blue, and Professor office hours are in pink.
-
-**Note:** All GSI office hours are in Evans 426, with the exception of OH from 8AM-2PM on Tuesdays, which are in Evans 342, and 2-5PM on Tuesdays, which are in Jacobs 220.
-
-<iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1XzFsc3R0NmFkZHNubGVtbWZpc240MHBidWxnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X3Y3cThpaXBwcjcydHZtaTkwZTV1MnI3ZTBjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%234285F4&amp;color=%23D81B60&amp;mode=WEEK&amp;title=Office%20Hours%20%E2%80%93%20Data%20100%2C%20Fall%202019&amp;showTitle=0" style="border-width:0" width="700" height="450" frameborder="0" scrolling="no"></iframe>
--->
+<iframe src="https://calendar.google.com/calendar/embed?height=450&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;title=%20&amp;mode=WEEK&amp;src=YmVya2VsZXkuZWR1XzlvZTRkcTUyMTY2YzhwaGJwMTZtaTZtdG5jQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%232952A3" style="border-width:0" width="700" height="450" frameborder="0" scrolling="no"></iframe>
