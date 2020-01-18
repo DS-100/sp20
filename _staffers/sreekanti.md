@@ -1,12 +1,12 @@
 ---
-name: Daniel Zhu
+name: Vikram Sreekanti
 role: Teaching Assistant
-email: daniel.zhu@berkeley.edu
-photo: http://ds100.org/sp20/resources/assets/staff_pics/daniel_zhu.jpg
-discussion: Coming Soon
-lab: Coming Soon
+email: vikrams@berkeley.edu
+website: http://www.vikrams.io
+photo: http://ds100.org/sp20/resources/assets/staff_pics/Vikram_Sreekanti.jpg
+discussion: Th 2-3PM, VLSB 2062
+lab: T 11-12AM, Cory 105
 oh: Coming Soon
-
 ---
 
-Hi I'm Daniel. I'm a senior majoring in Computer Science and Data Science, from New Jersey. In my free time, I enjoy climbing, photography and hiking. Feel free to ask me anything! 
+I'm a 4th year PhD student in computer science working on cloud infrastructure and distributed systems. In my free time, I like reading/thinking/listening to podcasts about sports (football, basketball, other football), politics, Constitutional law, Star Wars and Star Trek, and philosophy.
