@@ -2,7 +2,7 @@
 name: Raguvir Kunani
 role: Teaching Assistant
 email: rkunani@berkeley.edu
-photo: http://ds100.org/sp20/resources/assets/staff_pics/raguvir_kunani.png
+photo: http://ds100.org/sp20/resources/assets/staff_pics/Raguvir_Kunani.jpg
 discussion: Coming Soon
 lab: Coming Soon
 oh: Coming Soon
