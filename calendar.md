@@ -68,4 +68,4 @@ Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs 
 
 **Note:** All GSI office hours are in **Soda 341A**. We are currently actively adding in more office hours.
 
-<iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1XzlvZTRkcTUyMTY2YzhwaGJwMTZtaTZtdG5jQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%239D7000&amp;mode=WEEK&amp;title=%20" style="border-width:0" width="750" height="550" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1XzlvZTRkcTUyMTY2YzhwaGJwMTZtaTZtdG5jQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%239D7000&amp;title=%20&amp;mode=WEEK" style="border-width:0" width="750" height="550" frameborder="0" scrolling="no"></iframe>
