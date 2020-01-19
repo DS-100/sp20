@@ -35,15 +35,14 @@ description: >-
 - **Undergrad vs. grad:** All students enrolled in the graduate version of the course (CS C200A) will be graded according to the graduate grading scheme. Students enrolled in the undergraduate version of the course (CS C100) will be graded according to the undergraduate grading scheme. 
 
 ## Late Policy
-For all assignments – Assignments are due at 11:59 pm, but there will be a short submission grace period to accommodate last-minute submission issues. 
+All assignments are due at 11:59 pm on the due date specified on the syllabus. There will be a short submission grace period to accommodate last-minute submission issues. 
 
-Homeworks, labs, and vitamins - These assignments will not be accepted late. The 2 lowest homework, labs, and vitamins will be dropped.
+**Homeworks, labs, and vitamins will not be accepted late.**
 
-Projects - Projects are marked down by 10% per day, **up to two days**. After two days, project submissions will not be accepted. 
-
+Projects are marked down by 10% per day, **up to two days**. After two days, project submissions will not be accepted. 
 
 ## Collaboration Policy (don’t cheat)
-Data science is a collaborative activity. While you may talk with others about the homework, we ask that you write your solutions individually. If you do discuss the assignments with others please include their names at the top of your notebook. Keep in mind that content from the homework and vitamins will likely be covered on both the midterm and final. We will be following the EECS departmental policy on Academic Honesty, so be sure you are familiar with it.
+Data science is a collaborative activity. While you may talk with others about the homework, we ask that you write your solutions individually in your own words. If you do discuss the assignments with others please include their names at the top of your notebook. Keep in mind that content from the homework and vitamins will likely be covered on both the midterm and final. We will be following the [EECS departmental policy on Academic Honesty](https://eecs.berkeley.edu/resources/students/academic-dishonesty), so be sure you are familiar with it.
 
 ## We Want You to Succeed
 If you are feeling overwhelmed, visit our office hours and talk with us. We know college can be stressful and we want to help you succeed!
