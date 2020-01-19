@@ -32,7 +32,7 @@ Data 100, Spring 2020
 - What: See the [syllabus](syllabus)
 - News: We will post updates about the class on [Piazza](http://piazza.com/berkeley/spring2020/data100).
 
-This class is listed as CS C100 (undergraduate) and CS C200C (graduate). **Be sure to register for one of these two classes**.
+This class is listed as CS C100 (undergraduate) and CS C200A (graduate). **Be sure to register for one of these two classes**.
 
 ## Goals
 
