@@ -61,12 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs are in <span style="color:MediumSeaGreen">**green**</span>, and lectures are in <span style="color:Orange">**yellow**</span>. Click a discussion / lab event to see the different GSIs teaching at that time. 
 
-<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;title=%20&amp;mode=WEEK&amp;src=YmVya2VsZXkuZWR1XzFxOG1tNGxzaTRhdHZyYWlrdDZya2dsYzhnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X2IyNDhyYmRsbHJ1cTY4ZjI2cWwyMTlyMTBjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X29odmVpZG1qdWJuaTdnOWdoNmNvOGE2NGYwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%233366CC&amp;color=%23329262&amp;color=%239D7000" style="border-width:0" width="750" height="600" frameborder="0" scrolling="no"></iframe>
-
+<iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;mode=WEEK&amp;title=%20&amp;src=YmVya2VsZXkuZWR1XzFxOG1tNGxzaTRhdHZyYWlrdDZya2dsYzhnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X2IyNDhyYmRsbHJ1cTY4ZjI2cWwyMTlyMTBjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X29odmVpZG1qdWJuaTdnOWdoNmNvOGE2NGYwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%233366CC&amp;color=%23329262&amp;color=%239D7000" style="border-width:0" width="750" height="550" frameborder="0" scrolling="no"></iframe>
 <br>
 
 ## Office Hours
 
 **Note:** All GSI office hours are in **Soda 341A**. We are currently actively adding in more office hours.
 
-<iframe src="https://calendar.google.com/calendar/embed?height=450&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;title=%20&amp;mode=WEEK&amp;src=YmVya2VsZXkuZWR1XzlvZTRkcTUyMTY2YzhwaGJwMTZtaTZtdG5jQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%232952A3" style="border-width:0" width="750" height="550" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1XzlvZTRkcTUyMTY2YzhwaGJwMTZtaTZtdG5jQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%239D7000&amp;title=%20&amp;mode=WEEK" style="border-width:0" width="750" height="550" frameborder="0" scrolling="no"></iframe>
