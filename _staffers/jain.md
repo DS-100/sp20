@@ -3,7 +3,7 @@ name: Rahul Jain
 role: Teaching Assistant
 email: rahuljcool26@berkeley.edu
 website: https://rahulj2409.github.io
-photo: http://ds100.org/sp20/resources/assets/staff_pics/Rahul_Jain.jpg
+photo: http://ds100.org/sp20/resources/assets/staff_pics/Rahul_Jain.png
 discussion: Fri 10-11AM, Evans 70
 lab: T 12-1PM, Evans B6
 oh: Coming Soon

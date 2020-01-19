@@ -3,7 +3,7 @@ name: Pranav Nagarajan
 role: Teaching Assistant
 email: pranav.njn@berkeley.edu
 website: https://chrispyles.io/ds100/
-photo: http://ds100.org/sp20/resources/assets/staff_pics/Pranav_Nagarajan.jpg
+photo: http://ds100.org/sp20/resources/assets/staff_pics/Pranav_Nagarajan.png
 discussion: F 10-11AM, Latimer 105
 lab: W 10-11AM, SDH 254
 oh: Coming Soon
