@@ -2,7 +2,7 @@
 name: Raguvir Kunani
 role: Teaching Assistant
 email: rkunani@berkeley.edu
-photo: http://ds100.org/sp20/resources/assets/staff_pics/Raguvir_Kunani.jpg
+photo: http://ds100.org/sp20/resources/assets/staff_pics/Raguvir_Kunani.png
 discussion: F 12-1PM, Wheeler 202
 lab: T 2-3PM, SDH 254
 oh: Coming Soon

@@ -2,9 +2,9 @@
 name: William Huang
 role: Teaching Assistant
 email: wwhuang@berkeley.edu
-photo: http://ds100.org/sp20/resources/assets/staff_pics/william_huang.jpg
-discussion: Coming Soon
-lab: Coming Soon
+photo: http://ds100.org/sp20/resources/assets/staff_pics/William_Huang.jpg
+discussion: N/A
+lab: N/A
 oh: Coming Soon
 ---
 

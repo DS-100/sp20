@@ -1,5 +1,5 @@
 ---
-name: Jennifer Shish
+name: Jennifer Shih
 role: Teaching Assistant
 email: cshih@berkeley.edu
 website: https://cyshih.github.io/
