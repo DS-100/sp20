@@ -8,7 +8,7 @@ days:
       "**No Lab**{: .label .label-lab }":
   - date: 2020-01-23
     events:
-      "2. Data Sampling and Probability":
+      "**Lecture**{: .label } Data Sampling and Probability":
         "[Ch. 2](https://www.textbook.ds100.org/ch/02/design_intro.html)"
   - date: 2020-01-24
     events:

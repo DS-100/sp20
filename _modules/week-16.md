@@ -1,7 +1,7 @@
 ---
 title: Week 16
 days:
-  - date: 2019-12-09
+  - date: 2020-05-05
     events:
-      "**Lab**{: .label .label-lab } Review Labs":
+      "RRR Week (TBD)":
 ---
