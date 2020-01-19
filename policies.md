@@ -31,7 +31,7 @@ description: >-
 - **Vitamins (undergrad only):** Vitamins are weekly short assignments to check that you are keeping up with lectures. Vitamins should take less than 10 minutes to complete. Your two lowest vitamin scores will be dropped.
 - **Projects:** Projects are two week long assignments that synthesize multiple topics.
 - **Midterms:** We will have one midterm this semester. Logistics to be announced later.
-- **Final:** Final exam logistics will be announced later. 
+- **Final:** The final exam will be Wednesday, May 13th, 11:30 am to 2:30 pm, exam group 10.
 - **Undergrad vs. grad:** All students enrolled in the graduate version of the course (CS C200 or Stat C200C, i.e. Data 200) will be graded according to the Graduate grading scheme. Students enrolled in the undergraduate version of the course (Data 100) can opt for the graduate grading scheme, which involves a final project. All students in Data 100 who complete a final project will be scored under both grading schemes and given the higher of the two scores.
 
 ## Late Policy
