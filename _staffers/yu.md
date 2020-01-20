@@ -8,4 +8,4 @@ lab: T 12-1PM, Cory 105
 oh: Coming Soon
 ---
 
-Coming Soon
+Hey, I am Julie! I am a junior Chem E and Data Science major from Victoria, Canada. DS 100 is one of my favorite classes so feel free to talk to me about it or anything else!
