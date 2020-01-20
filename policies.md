@@ -37,6 +37,9 @@ description: >-
 ## Late Policy
 All assignments are due at 11:59 pm on the due date specified on the syllabus. There will be a short submission grace period to accommodate last-minute submission issues. 
 
+## Exam makeup policy 
+We will have alternate exams for people with academic conflicts. Alternate exams will tentatively be held on the same day as the regular exam. Details to be announced. 
+
 **Homeworks, labs, and vitamins will not be accepted late.**
 
 Projects are marked down by 10% per day, **up to two days**. After two days, project submissions will not be accepted. 
