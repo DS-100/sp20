@@ -1,7 +1,7 @@
 ---
 name: Dequan Wang
 role: Teaching Assistant
-email: dqw@berkeley.edu
+email: dequanwang@berkeley.edu
 website: https://dequan.wang/
 photo: http://ds100.org/sp20/resources/assets/staff_pics/Dequan_Wang.jpg
 discussion: F 10-11AM, Etcheverry 3107
