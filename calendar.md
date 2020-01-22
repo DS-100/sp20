@@ -7,8 +7,8 @@ description: An embedded Google Calendar displaying the weekly event schedule.
 
 # Calendar
 
-Jump to [Discussion/Lab/Lecture Calendar](#dll) or [Office Hours Calendar](#oh)
-<!-- <div id="fullcalendar"></div>
+Jump to Calendars for [Discussion, Lab, and Lecture](#dll) or [Office Hours](#oh)
+
 
 <!-- <link rel="stylesheet" property="stylesheet" href="https://unpkg.com/@fullcalendar/core/main.css">
 <link rel="stylesheet" property="stylesheet" href="https://unpkg.com/@fullcalendar/timegrid/main.css"> -->
