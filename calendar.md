@@ -7,6 +7,7 @@ description: An embedded Google Calendar displaying the weekly event schedule.
 
 # Calendar
 
+Jump to [Discussion/Lab/Lecture Calendar](#dll) or [Office Hours Calendar](#oh)
 <!-- <div id="fullcalendar"></div>
 
 <!-- <link rel="stylesheet" property="stylesheet" href="https://unpkg.com/@fullcalendar/core/main.css">
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
  
 <script src="../assets/js/calendar.js"></script>
 <script src="../assets/js/gcal.js"></script> -->
+<a name = 'dll'></a>
 
 ## Discussion, Lab, and Lecture
 
@@ -63,6 +65,8 @@ Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs 
 
 <iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;mode=WEEK&amp;title=%20&amp;src=YmVya2VsZXkuZWR1XzFxOG1tNGxzaTRhdHZyYWlrdDZya2dsYzhnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X2IyNDhyYmRsbHJ1cTY4ZjI2cWwyMTlyMTBjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X29odmVpZG1qdWJuaTdnOWdoNmNvOGE2NGYwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%233366CC&amp;color=%23329262&amp;color=%239D7000" style="border-width:0" width="750" height="550" frameborder="0" scrolling="no"></iframe>
 <br>
+
+<a name = 'oh'></a>
 
 ## Office Hours
 
