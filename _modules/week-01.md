@@ -4,7 +4,7 @@ weekNumber: 1
 days:
   - date: 2020-01-21
     events:
-      "**Lecture**{: .label } [Introduction](https://drive.google.com/file/d/13a80KfptueWk8VeFggbuw3C4bENTrZyi/view) ([webcast](https://www.youtube.com/watch?v=hKkPhqUcb0c)) ([code](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp20&urlpath=tree%2Fsp20%2Flecture%2Flec01)):
+      "**Lecture**{: .label } [Introduction](https://drive.google.com/file/d/13a80KfptueWk8VeFggbuw3C4bENTrZyi/view) ([webcast](https://www.youtube.com/watch?v=hKkPhqUcb0c)) ([code](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp20&urlpath=tree%2Fsp20%2Flecture%2Flec01))":
         "[Ch. 1](https://www.textbook.ds100.org/ch/01/lifecycle_intro.html)"
       "**No Lab**{: .label .label-lab }":
       "**Homework**{: .label .label-hw } [Homework 1](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=hw/hw1/) (due Jan. 27)":
