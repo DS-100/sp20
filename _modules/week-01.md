@@ -14,6 +14,6 @@ days:
         "[Ch. 2](https://www.textbook.ds100.org/ch/02/design_intro.html)"
   - date: 2020-01-24
     events:
-      "**Discussion**{: .label .label-disc } Discussion 1":
+      "**Discussion**{: .label .label-disc } [Discussion 1](../resources/assets/discussions/disc01.pdf)":
 ---
 <script src="../assets/js/highlight.js"></script>
