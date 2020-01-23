@@ -10,7 +10,7 @@ days:
       "**Homework**{: .label .label-hw } [Homework 1](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=hw/hw1/) (due Jan. 27)":
   - date: 2020-01-23
     events:
-      "**Lecture**{: .label } Data Sampling and Probability":
+      "**Lecture**{: .label } [Data Sampling and Probability](https://drive.google.com/file/d/119g7EFyafzswyF264rrIsIex7KlPBq4B/view?usp=sharing)":
         "[Ch. 2](https://www.textbook.ds100.org/ch/02/design_intro.html)"
   - date: 2020-01-24
     events:
