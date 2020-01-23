@@ -17,6 +17,17 @@ function highlighWeek() {
         currChild.style.border = "none";
         }
     }
+    var embedScriptTabs = document.getElementsByClassName("module-body");
+    for (var i = 0; i < embedScriptTabs.length; i++) {
+        var embedChildren = embedScriptTabs[i].children;
+        if (embedChildren.length == 1) {
+            if (embedChildren[0].tagName.toLowerCase() == 'script') {
+                embedScriptTabs[i].style.width = "0px";
+                embedScriptTabs[i].style.height = "0px";
+                embedScriptTabs[i].style.padding = "0px";
+            }
+        }
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {

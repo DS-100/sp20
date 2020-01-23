@@ -2157,8 +2157,6 @@ pre.highlight code { padding: 0; border: 0; }
 .module .module-days { grid-template-columns: 1fr 4fr; }
 @media (min-width: 70rem) { .module .module-days { grid-template-columns: 1fr 7fr; } }
 
-.module-body { padding: 0; width: 0; height: 0; }
-
 .module-days { border-bottom: 1px solid #44434d; border-top: 1px solid #44434d; margin-bottom: 0; }
 .module-days:first-child { border-top: none; }
 .module-days:last-child { border-bottom: none; }
