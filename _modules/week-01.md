@@ -16,5 +16,4 @@ days:
     events:
       "**Discussion**{: .label .label-disc } Discussion 1":
 ---
-
-
+<script src="../assets/js/highlight.js"></script>

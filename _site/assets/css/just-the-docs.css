@@ -145,7 +145,9 @@ td, th { padding: 0; }
 .module .module-days { grid-template-columns: 1fr 4fr; }
 @media (min-width: 70rem) { .module .module-days { grid-template-columns: 1fr 7fr; } }
 
-.module-days { border-bottom: 1px solid #eeebee; border-top: 1px solid #eeebee; }
+.module-body { padding: 0; width: 0; height: 0; }
+
+.module-days { border-bottom: 1px solid #eeebee; border-top: 1px solid #eeebee; margin-bottom: 0; }
 .module-days:first-child { border-top: none; }
 .module-days:last-child { border-bottom: none; }
 .module-days .module-day, .module-days .module-event { margin: 0; padding: 0.5rem; }
