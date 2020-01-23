@@ -1,5 +1,6 @@
 ---
 title: Week 11
+weekNumber: 11
 days:
   - date: 2020-03-31
     events:

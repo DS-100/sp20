@@ -1,5 +1,6 @@
 ---
 title: Week 2
+weekNumber: 2
 days:
   - date: 2020-01-28
     events:

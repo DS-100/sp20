@@ -1,5 +1,6 @@
 ---
 title: Week 15
+weekNumber: 15
 days:
   - date: 2020-04-28
     events:

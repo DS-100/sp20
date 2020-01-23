@@ -9,7 +9,7 @@
   "1": {
     "id": "1",
     "title": "Calendar",
-    "content": "Calendar Discussion, Lab, and Lecture Note: Per course policies, you should only attend the discussion / lab section you are assigned to. Discussion sections are in blue, labs are in green, and lectures are in yellow. Click a discussion / lab event to see the different GSIs teaching at that time. Office Hours Note: All GSI office hours are in Soda 341A. We are currently actively adding in more office hours.",
+    "content": "Calendar Jump to Calendars for Discussion, Lab, and Lecture or Office Hours Discussion, Lab, and Lecture Note: Per course policies, you should only attend the discussion / lab section you are assigned to. Discussion sections are in blue, labs are in green, and lectures are in yellow. Click a discussion / lab event to see the different GSIs teaching at that time. Office Hours Note: All GSI office hours are in Soda 341A. We are currently actively adding in more office hours.",
     "url": "http://localhost:4000/sp20/calendar/",
     "relUrl": "/calendar/"
   },

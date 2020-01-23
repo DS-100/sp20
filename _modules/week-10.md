@@ -1,5 +1,6 @@
 ---
 title: Week 10 (Spring Break)
+weekNumber: 10
 days:
   - date: 2020-03-24
     events:

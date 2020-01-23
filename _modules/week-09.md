@@ -1,5 +1,6 @@
 ---
 title: Week 9
+weekNumber: 9
 days:
   - date: 2020-03-17
     events:

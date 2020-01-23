@@ -1,5 +1,6 @@
 ---
 title: Week 6
+weekNumber: 6
 days:
   - date: 2020-02-25
     events:

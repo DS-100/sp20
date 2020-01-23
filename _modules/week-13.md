@@ -1,5 +1,6 @@
 ---
 title: Week 13
+weekNumber: 13
 days:
   - date: 2020-04-14
     events:

@@ -1,5 +1,6 @@
 ---
 title: Week 5
+weekNumber: 5
 days:
   - date: 2020-02-18
     events:

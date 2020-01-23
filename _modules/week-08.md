@@ -1,5 +1,6 @@
 ---
 title: Week 8
+weekNumber: 8
 days:
   - date: 2020-03-10
     events:

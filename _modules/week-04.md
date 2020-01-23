@@ -1,5 +1,6 @@
 ---
 title: Week 4
+weekNumber: 4
 days:
   - date: 2020-02-11
     events:

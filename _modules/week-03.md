@@ -1,5 +1,6 @@
 ---
 title: Week 3
+weekNumber: 3
 days:
   - date: 2020-02-04
     events:

@@ -1,5 +1,6 @@
 ---
 title: Final Exam
+weekNumber: 17
 days:
   - date: 2020-05-13
     events:

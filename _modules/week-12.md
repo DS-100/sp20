@@ -1,5 +1,6 @@
 ---
 title: Week 12
+weekNumber: 12
 days:
   - date: 2020-04-07
     events:
