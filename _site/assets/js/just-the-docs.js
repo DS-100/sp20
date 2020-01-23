@@ -178,6 +178,7 @@ function highlighWeek() {
 // Document ready
 
 function ready(){
+  // highlight the given week
   highlighWeek();
   toggleNav();
   pageFocus();
