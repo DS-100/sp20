@@ -6,7 +6,7 @@ days:
     events:
       "**Lecture**{: .label .label } SQL":
         "[Ch. 9](https://www.textbook.ds100.org/ch/09/sql_intro.html)"
-      "**Lab**{: .label .label-lab } Lab 1":
+      "**Lab**{: .label .label-lab } [Lab 1](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab01/) (due Feb. 3)":
   - date: 2020-01-30
     events:
       "**Lecture**{: .label .label } SQL, Pandas":
