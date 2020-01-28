@@ -1,7 +1,7 @@
 const startOfSp20InMilli = new Date(2020, 0, 20, 0, 0, 0, 0).getTime();
 const oneWeekInMilli = 604800000;
 
-function highlighWeek() {
+function highlightAndScrollToWeek() {
     const currentMilli = (new Date()).getTime();
     const currWeekIndex = Math.floor((currentMilli - startOfSp20InMilli) / oneWeekInMilli);
     var currentWeekTab = document.getElementsByClassName("module")[currWeekIndex];
@@ -28,8 +28,9 @@ function highlighWeek() {
             }
         }
     }
+    currentWeekTab.scrollIntoView();
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    highlighWeek();
+    highlightAndScrollToWeek();
 });
