@@ -2,6 +2,9 @@
 title: Week 2
 weekNumber: 2
 days:
+  - date: 2020-01-27
+    events:
+      "**Homework**{: .label .label-hw } [Homework 2](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=hw/hw2/) (due Feb. 3)":
   - date: 2020-01-28
     events:
       "**Lecture**{: .label .label } SQL":
