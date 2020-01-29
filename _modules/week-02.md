@@ -7,7 +7,7 @@ days:
       "**Homework**{: .label .label-hw } [Homework 2](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=hw/hw2/) (due Feb. 3)":
   - date: 2020-01-28
     events:
-      "**Lecture**{: .label .label } [SQL](https://drive.google.com/file/d/1dB2h3iAv-cVm7umXkjPjy01TGmeistUQ/view?usp=sharing)":
+      "**Lecture**{: .label .label } [SQL](https://drive.google.com/file/d/1dB2h3iAv-cVm7umXkjPjy01TGmeistUQ/view?usp=sharing) ([code](../resources/assets/lectures/lec03/IMDB_Demo.html))":
         "[Ch. 9](https://www.textbook.ds100.org/ch/09/sql_intro.html)"
       "**Lab**{: .label .label-lab } [Lab 1](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab01/) (due Feb. 3)":
   - date: 2020-01-30
