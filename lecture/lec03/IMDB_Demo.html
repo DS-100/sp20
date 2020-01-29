@@ -13092,7 +13092,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Connecting-to-the-Database">Connecting to the Database<a class="anchor-link" href="#Connecting-to-the-Database">&#182;</a></h2><p>There actually many ways to connect to databases systems from Python.  For the labs, homeworks, and projects we will use the simple SQLite database system. At the end of this notebook is an optional tutorial using the more general sqlalchemy library.</p>
+<h2 id="Connecting-to-the-Database">Connecting to the Database<a class="anchor-link" href="#Connecting-to-the-Database">&#182;</a></h2><p>There actually many ways to connect to databases systems from Python.  For the labs, homeworks, and projects we will use the simple SQLite database system.  In this notebook we will also demonstrate how to use <code>sqlalchemy</code>.</p>
 
 </div>
 </div>
@@ -13105,37 +13105,30 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Download-the-Database">Download the Database<a class="anchor-link" href="#Download-the-Database">&#182;</a></h1><p>The following block of code will download the database if it is not already present.  This may take a few minutes.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls -lh
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ds100_utils</span> <span class="kn">import</span> <span class="n">download_file_from_google_drive</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">zipfile</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;im.db&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="n">download_file_from_google_drive</span><span class="p">(</span><span class="s2">&quot;1owm2jBnVwCXAXVRsbzLSj8j9Ct8PkeVF&quot;</span><span class="p">,</span> <span class="s2">&quot;im.db.zip&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s2">&quot;im.db.zip&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+        <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">()</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>total 4098096
--rw-r--r--@  1 jegonzal  staff   978K Jan 27 23:44 IMDB_Demo.ipynb
--rw-r--r--@  1 jegonzal  staff   1.6K Jan 26 18:09 ds100_utils.py
--rw-r--r--@  1 jegonzal  staff   1.9G Jan 27 22:24 im.db
-drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intense-fg ansi-bold">setup</span>
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13165,7 +13158,7 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 
 <pre><code>.tables</code></pre>
 <ul>
-<li>Select a few values</li>
+<li>Try running a few basic queries.</li>
 </ul>
 
 </div>
@@ -13174,7 +13167,7 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Connecting-to-the-Database-from-Python">Connecting to the Database from Python<a class="anchor-link" href="#Connecting-to-the-Database-from-Python">&#182;</a></h2>
+<h2 id="Connecting-to-Databases-from-Python">Connecting to Databases from Python<a class="anchor-link" href="#Connecting-to-Databases-from-Python">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13190,6 +13183,14 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The following code connects to the database and opens a cursor to send queries.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13208,7 +13209,7 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To learn about what is in a database you will often need to write a sql query to access the catalog</p>
+<p>To get a list of the tables in the database we can actually query the <code>sqlite_master</code> table.  Each database will have a different mechanism to list the available tables.</p>
 
 </div>
 </div>
@@ -13255,6 +13256,14 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Notice that each time we execute a query we get a new cursor.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
@@ -13282,7 +13291,7 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;sqlite3.Cursor at 0x7ff60809b1f0&gt;</pre>
+<pre>&lt;sqlite3.Cursor at 0x7fa32872fb90&gt;</pre>
 </div>
 
 </div>
@@ -13290,13 +13299,21 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>sqlite</code> cursor operates like a an iterator.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span><span class="o">.</span><span class="n">description</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13315,43 +13332,6 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>((&#39;name&#39;, None, None, None, None, None, None),
- (&#39;gpa&#39;, None, None, None, None, None, None),
- (&#39;age&#39;, None, None, None, None, None, None),
- (&#39;dept&#39;, None, None, None, None, None, None),
- (&#39;gender&#39;, None, None, None, None, None, None))</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
 <pre>(&#39;Sergey Brin&#39;, 2.8, 45, &#39;CS&#39;, &#39;M&#39;)</pre>
 </div>
 
@@ -13363,7 +13343,7 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">res</span><span class="p">]</span>
@@ -13379,7 +13359,7 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13404,7 +13384,52 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="SQL-Alchemy">SQL Alchemy<a class="anchor-link" href="#SQL-Alchemy">&#182;</a></h1><p>In this notebook we walk through basic SQL queries and review how to interact with SQL from Python.  We will be using the <a href="http://docs.sqlalchemy.org/en/latest/core/tutorial.html">sqlalchemy library</a> as an abstraction layer on-top of the underlying database management system. However, in the homework and labs we will focus on just using sqlite which behaves identically when interacting with other tools.</p>
+<p>The <code>sqlite</code> cursor has a description field which lists the columns</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span><span class="o">.</span><span class="n">description</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>((&#39;name&#39;, None, None, None, None, None, None),
+ (&#39;gpa&#39;, None, None, None, None, None, None),
+ (&#39;age&#39;, None, None, None, None, None, None),
+ (&#39;dept&#39;, None, None, None, None, None, None),
+ (&#39;gender&#39;, None, None, None, None, None, None))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="SQL-Alchemy">SQL Alchemy<a class="anchor-link" href="#SQL-Alchemy">&#182;</a></h2><p>We can also use the <a href="http://docs.sqlalchemy.org/en/latest/core/tutorial.html">sqlalchemy library</a> as an abstraction layer on top of the underlying database system. This is how you will likely connect to databases in many real-world applications.</p>
 
 </div>
 </div>
@@ -13422,12 +13447,22 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here we use sqlalchemy to connect to SQLite but in lecture professor Gonzalez connected to a separate postgres server.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># engine = sqlalchemy.create_engine(&quot;postgres://jegonzal:@localhost:5432/data100&quot;)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># # the following line connects to Professor Gonzalez&#39;s postgres server.  </span>
+<span class="c1"># engine = sqlalchemy.create_engine(&quot;postgres://jegonzal:@localhost:5432/data100&quot;)</span>
+
 <span class="n">engine</span> <span class="o">=</span> <span class="n">sqlalchemy</span><span class="o">.</span><span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;sqlite:///im.db&quot;</span><span class="p">)</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 </pre></div>
@@ -13436,6 +13471,14 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Just as before <code>sqlalchemy</code> returns a cursor for each query.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13464,7 +13507,7 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;sqlalchemy.engine.result.ResultProxy at 0x7ff5d8531490&gt;</pre>
+<pre>&lt;sqlalchemy.engine.result.ResultProxy at 0x7fa2e8305290&gt;</pre>
 </div>
 
 </div>
@@ -13550,7 +13593,8 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Connecting-to-Postgres">Connecting to Postgres<a class="anchor-link" href="#Connecting-to-Postgres">&#182;</a></h2><p>I am going to use a more optimized database for the in class demo.  When you do this at home you will need to run sqlite instead.</p>
+<h2 id="Reading-Directly-into-a-DataFrame">Reading Directly into a DataFrame<a class="anchor-link" href="#Reading-Directly-into-a-DataFrame">&#182;</a></h2><p>We haven't yet started to work with the Pandas DataFrame (next lecture) but we will use DataFrames in this lecture to make it easier to see the table output.  In the following line of code we use the <code>read_sql</code> command to construct a DataFrame containing the results from the SQL query.</p>
+<p>The following function prints the SQL query and returns the DataFrame.  Notice that Jupyter is able to render the DataFrame in a easy to read format.  Also notice that the following code would accidentally pull a lot more data than might fit in memory.</p>
 
 </div>
 </div>
@@ -13558,455 +13602,6 @@ drwxr-xr-x@ 13 jegonzal  staff   416B Jan 27 22:53 <span class="ansi-cyan-intens
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">engine</span> <span class="o">=</span> <span class="n">sqlalchemy</span><span class="o">.</span><span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;postgres://jegonzal:@localhost:5432/data100&quot;</span><span class="p">)</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">    SELECT * FROM students LIMIT 10;</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-<span class="n">res</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[15]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;sqlalchemy.engine.result.ResultProxy at 0x7ff5a8486050&gt;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;name&#39;, &#39;gpa&#39;, &#39;age&#39;, &#39;dept&#39;, &#39;gender&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">res</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[(&#39;Sergey Brin&#39;, 2.8, 45, &#39;CS&#39;, &#39;M&#39;),
- (&#39;Danah Boyd&#39;, 3.9, 40, &#39;CS&#39;, &#39;F&#39;),
- (&#39;Bill Gates&#39;, 1.0, 63, &#39;CS&#39;, &#39;M&#39;),
- (&#39;Hillary Mason&#39;, 4.0, 39, &#39;DATASCI&#39;, &#39;F&#39;),
- (&#39;Mike Olson&#39;, 3.7, 53, &#39;CS&#39;, &#39;M&#39;),
- (&#39;Mark Zuckerberg&#39;, 3.8, 34, &#39;CS&#39;, &#39;M&#39;),
- (&#39;Sheryl Sandberg&#39;, 3.6, 49, &#39;BUSINESS&#39;, &#39;F&#39;),
- (&#39;Susan Wojcicki&#39;, 3.8, 50, &#39;BUSINESS&#39;, &#39;F&#39;),
- (&#39;Marissa Mayer&#39;, 2.6, 43, &#39;BUSINESS&#39;, &#39;F&#39;)]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Making-a-Helper-Function">Making a Helper Function<a class="anchor-link" href="#Making-a-Helper-Function">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">stop_early</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">;&quot;</span><span class="p">)</span>
-    <span class="c1"># Run the Query</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-    <span class="c1"># Print the Header</span>
-    <span class="n">headers</span> <span class="o">=</span> <span class="s2">&quot;      |      &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">h</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">res</span><span class="o">.</span><span class="n">keys</span><span class="p">()])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;#&quot;</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">headers</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">headers</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">headers</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span><span class="p">))</span>
-    <span class="c1"># Print all the results</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">)):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">|</span><span class="se">\t</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">result</span><span class="p">]))</span>
-        <span class="c1"># Stop Early to avoid overflowing the web browser</span>
-        <span class="k">if</span> <span class="n">stop_early</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="n">stop_early</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!!!TERMINATING EARLY!!!!&quot;</span><span class="p">)</span>
-            <span class="k">break</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">    SELECT * FROM names;</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-    SELECT * FROM names;
- 
-;
-##########################################################################
-nconst      |      name      |      birth_year      |      death_year
---------------------------------------------------------------------------
-nm0000001 	|	Fred Astaire	|	1899.0	|	1987.0
-nm0000002 	|	Lauren Bacall	|	1924.0	|	2014.0
-nm0000003 	|	Brigitte Bardot	|	1934.0	|	None
-nm0000004 	|	John Belushi	|	1949.0	|	1982.0
-nm0000005 	|	Ingmar Bergman	|	1918.0	|	2007.0
-nm0000006 	|	Ingrid Bergman	|	1915.0	|	1982.0
-nm0000007 	|	Humphrey Bogart	|	1899.0	|	1957.0
-nm0000008 	|	Marlon Brando	|	1924.0	|	2004.0
-nm0000009 	|	Richard Burton	|	1925.0	|	1984.0
-nm0000010 	|	James Cagney	|	1899.0	|	1986.0
-nm0000011 	|	Gary Cooper	|	1901.0	|	1961.0
-nm0000012 	|	Bette Davis	|	1908.0	|	1989.0
-nm0000013 	|	Doris Day	|	1922.0	|	2019.0
-nm0000014 	|	Olivia de Havilland	|	1916.0	|	None
-nm0000015 	|	James Dean	|	1931.0	|	1955.0
-nm0000016 	|	Georges Delerue	|	1925.0	|	1992.0
-nm0000017 	|	Marlene Dietrich	|	1901.0	|	1992.0
-nm0000018 	|	Kirk Douglas	|	1916.0	|	None
-nm0000019 	|	Federico Fellini	|	1920.0	|	1993.0
-nm0000020 	|	Henry Fonda	|	1905.0	|	1982.0
-nm0000021 	|	Joan Fontaine	|	1917.0	|	2013.0
-nm0000022 	|	Clark Gable	|	1901.0	|	1960.0
-nm0000023 	|	Judy Garland	|	1922.0	|	1969.0
-nm0000024 	|	John Gielgud	|	1904.0	|	2000.0
-nm0000025 	|	Jerry Goldsmith	|	1929.0	|	2004.0
-nm0000026 	|	Cary Grant	|	1904.0	|	1986.0
-nm0000027 	|	Alec Guinness	|	1914.0	|	2000.0
-nm0000028 	|	Rita Hayworth	|	1918.0	|	1987.0
-nm0000029 	|	Margaux Hemingway	|	1954.0	|	1996.0
-nm0000030 	|	Audrey Hepburn	|	1929.0	|	1993.0
-nm0000031 	|	Katharine Hepburn	|	1907.0	|	2003.0
-nm0000032 	|	Charlton Heston	|	1923.0	|	2008.0
-nm0000033 	|	Alfred Hitchcock	|	1899.0	|	1980.0
-nm0000034 	|	William Holden	|	1918.0	|	1981.0
-nm0000035 	|	James Horner	|	1953.0	|	2015.0
-nm0000036 	|	Buster Keaton	|	1895.0	|	1966.0
-nm0000037 	|	Gene Kelly	|	1912.0	|	1996.0
-nm0000038 	|	Grace Kelly	|	1929.0	|	1982.0
-nm0000039 	|	Deborah Kerr	|	1921.0	|	2007.0
-nm0000040 	|	Stanley Kubrick	|	1928.0	|	1999.0
-nm0000041 	|	Akira Kurosawa	|	1910.0	|	1998.0
-nm0000042 	|	Alan Ladd	|	1913.0	|	1964.0
-nm0000043 	|	Veronica Lake	|	1922.0	|	1973.0
-nm0000044 	|	Burt Lancaster	|	1913.0	|	1994.0
-nm0000045 	|	Bruce Lee	|	1940.0	|	1973.0
-nm0000046 	|	Vivien Leigh	|	1913.0	|	1967.0
-nm0000047 	|	Sophia Loren	|	1934.0	|	None
-nm0000048 	|	Peter Lorre	|	1904.0	|	1964.0
-nm0000049 	|	Henry Mancini	|	1924.0	|	1994.0
-nm0000050 	|	Groucho Marx	|	1890.0	|	1977.0
-nm0000051 	|	James Mason	|	1909.0	|	1984.0
-nm0000052 	|	Marcello Mastroianni	|	1924.0	|	1996.0
-nm0000053 	|	Robert Mitchum	|	1917.0	|	1997.0
-nm0000054 	|	Marilyn Monroe	|	1926.0	|	1962.0
-nm0000055 	|	Alfred Newman	|	1901.0	|	1970.0
-nm0000056 	|	Paul Newman	|	1925.0	|	2008.0
-nm0000057 	|	David Niven	|	1910.0	|	1983.0
-nm0000058 	|	Maureen O&#39;Hara	|	1920.0	|	2015.0
-nm0000059 	|	Laurence Olivier	|	1907.0	|	1989.0
-nm0000060 	|	Gregory Peck	|	1916.0	|	2003.0
-nm0000061 	|	Tyrone Power	|	1914.0	|	1958.0
-nm0000062 	|	Elvis Presley	|	1935.0	|	1977.0
-nm0000063 	|	Anthony Quinn	|	1915.0	|	2001.0
-nm0000064 	|	Edward G. Robinson	|	1893.0	|	1973.0
-nm0000065 	|	Nino Rota	|	1911.0	|	1979.0
-nm0000066 	|	Jane Russell	|	1921.0	|	2011.0
-nm0000067 	|	Miklós Rózsa	|	1907.0	|	1995.0
-nm0000068 	|	Randolph Scott	|	1898.0	|	1987.0
-nm0000069 	|	Frank Sinatra	|	1915.0	|	1998.0
-nm0000070 	|	Max Steiner	|	1888.0	|	1971.0
-nm0000071 	|	James Stewart	|	1908.0	|	1997.0
-nm0000072 	|	Elizabeth Taylor	|	1932.0	|	2011.0
-nm0000073 	|	Shirley Temple	|	1928.0	|	2014.0
-nm0000074 	|	Gene Tierney	|	1920.0	|	1991.0
-nm0000075 	|	Spencer Tracy	|	1900.0	|	1967.0
-nm0000076 	|	François Truffaut	|	1932.0	|	1984.0
-nm0000077 	|	Franz Waxman	|	1906.0	|	1967.0
-nm0000078 	|	John Wayne	|	1907.0	|	1979.0
-nm0000079 	|	Raquel Welch	|	1940.0	|	None
-nm0000080 	|	Orson Welles	|	1915.0	|	1985.0
-nm0000081 	|	Natalie Wood	|	1938.0	|	1981.0
-nm0000082 	|	Victor Young	|	1900.0	|	1956.0
-nm0000083 	|	Alan Miller	|	None	|	None
-nm0000084 	|	Li Gong	|	1965.0	|	None
-nm0000085 	|	Henner Hofmann	|	1950.0	|	None
-nm0000086 	|	Louis de Funès	|	1914.0	|	1983.0
-nm0000087 	|	Elena Koreneva	|	1953.0	|	None
-nm0000088 	|	Aleksey Korenev	|	1927.0	|	1995.0
-nm0000089 	|	Richard Paul	|	1940.0	|	1998.0
-nm0000090 	|	Armin Mueller-Stahl	|	1930.0	|	None
-nm0000091 	|	Gérard Pirès	|	1942.0	|	None
-nm0000092 	|	John Cleese	|	1939.0	|	None
-nm0000093 	|	Brad Pitt	|	1963.0	|	None
-nm0000094 	|	J. Reifel	|	None	|	None
-nm0000095 	|	Woody Allen	|	1935.0	|	None
-nm0000096 	|	Gillian Anderson	|	1968.0	|	None
-nm0000097 	|	Pamela Anderson	|	1967.0	|	None
-nm0000098 	|	Jennifer Aniston	|	1969.0	|	None
-nm0000099 	|	Patricia Arquette	|	1968.0	|	None
-nm0000100 	|	Rowan Atkinson	|	1955.0	|	None
-nm0000101 	|	Dan Aykroyd	|	1952.0	|	None
-nm0000102 	|	Kevin Bacon	|	1958.0	|	None
-!!!TERMINATING EARLY!!!!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">    SELECT * FROM names LIMIT 100;</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-    SELECT * FROM names LIMIT 100;
- 
-;
-##########################################################################
-nconst      |      name      |      birth_year      |      death_year
---------------------------------------------------------------------------
-nm0000001 	|	Fred Astaire	|	1899.0	|	1987.0
-nm0000002 	|	Lauren Bacall	|	1924.0	|	2014.0
-nm0000003 	|	Brigitte Bardot	|	1934.0	|	None
-nm0000004 	|	John Belushi	|	1949.0	|	1982.0
-nm0000005 	|	Ingmar Bergman	|	1918.0	|	2007.0
-nm0000006 	|	Ingrid Bergman	|	1915.0	|	1982.0
-nm0000007 	|	Humphrey Bogart	|	1899.0	|	1957.0
-nm0000008 	|	Marlon Brando	|	1924.0	|	2004.0
-nm0000009 	|	Richard Burton	|	1925.0	|	1984.0
-nm0000010 	|	James Cagney	|	1899.0	|	1986.0
-nm0000011 	|	Gary Cooper	|	1901.0	|	1961.0
-nm0000012 	|	Bette Davis	|	1908.0	|	1989.0
-nm0000013 	|	Doris Day	|	1922.0	|	2019.0
-nm0000014 	|	Olivia de Havilland	|	1916.0	|	None
-nm0000015 	|	James Dean	|	1931.0	|	1955.0
-nm0000016 	|	Georges Delerue	|	1925.0	|	1992.0
-nm0000017 	|	Marlene Dietrich	|	1901.0	|	1992.0
-nm0000018 	|	Kirk Douglas	|	1916.0	|	None
-nm0000019 	|	Federico Fellini	|	1920.0	|	1993.0
-nm0000020 	|	Henry Fonda	|	1905.0	|	1982.0
-nm0000021 	|	Joan Fontaine	|	1917.0	|	2013.0
-nm0000022 	|	Clark Gable	|	1901.0	|	1960.0
-nm0000023 	|	Judy Garland	|	1922.0	|	1969.0
-nm0000024 	|	John Gielgud	|	1904.0	|	2000.0
-nm0000025 	|	Jerry Goldsmith	|	1929.0	|	2004.0
-nm0000026 	|	Cary Grant	|	1904.0	|	1986.0
-nm0000027 	|	Alec Guinness	|	1914.0	|	2000.0
-nm0000028 	|	Rita Hayworth	|	1918.0	|	1987.0
-nm0000029 	|	Margaux Hemingway	|	1954.0	|	1996.0
-nm0000030 	|	Audrey Hepburn	|	1929.0	|	1993.0
-nm0000031 	|	Katharine Hepburn	|	1907.0	|	2003.0
-nm0000032 	|	Charlton Heston	|	1923.0	|	2008.0
-nm0000033 	|	Alfred Hitchcock	|	1899.0	|	1980.0
-nm0000034 	|	William Holden	|	1918.0	|	1981.0
-nm0000035 	|	James Horner	|	1953.0	|	2015.0
-nm0000036 	|	Buster Keaton	|	1895.0	|	1966.0
-nm0000037 	|	Gene Kelly	|	1912.0	|	1996.0
-nm0000038 	|	Grace Kelly	|	1929.0	|	1982.0
-nm0000039 	|	Deborah Kerr	|	1921.0	|	2007.0
-nm0000040 	|	Stanley Kubrick	|	1928.0	|	1999.0
-nm0000041 	|	Akira Kurosawa	|	1910.0	|	1998.0
-nm0000042 	|	Alan Ladd	|	1913.0	|	1964.0
-nm0000043 	|	Veronica Lake	|	1922.0	|	1973.0
-nm0000044 	|	Burt Lancaster	|	1913.0	|	1994.0
-nm0000045 	|	Bruce Lee	|	1940.0	|	1973.0
-nm0000046 	|	Vivien Leigh	|	1913.0	|	1967.0
-nm0000047 	|	Sophia Loren	|	1934.0	|	None
-nm0000048 	|	Peter Lorre	|	1904.0	|	1964.0
-nm0000049 	|	Henry Mancini	|	1924.0	|	1994.0
-nm0000050 	|	Groucho Marx	|	1890.0	|	1977.0
-nm0000051 	|	James Mason	|	1909.0	|	1984.0
-nm0000052 	|	Marcello Mastroianni	|	1924.0	|	1996.0
-nm0000053 	|	Robert Mitchum	|	1917.0	|	1997.0
-nm0000054 	|	Marilyn Monroe	|	1926.0	|	1962.0
-nm0000055 	|	Alfred Newman	|	1901.0	|	1970.0
-nm0000056 	|	Paul Newman	|	1925.0	|	2008.0
-nm0000057 	|	David Niven	|	1910.0	|	1983.0
-nm0000058 	|	Maureen O&#39;Hara	|	1920.0	|	2015.0
-nm0000059 	|	Laurence Olivier	|	1907.0	|	1989.0
-nm0000060 	|	Gregory Peck	|	1916.0	|	2003.0
-nm0000061 	|	Tyrone Power	|	1914.0	|	1958.0
-nm0000062 	|	Elvis Presley	|	1935.0	|	1977.0
-nm0000063 	|	Anthony Quinn	|	1915.0	|	2001.0
-nm0000064 	|	Edward G. Robinson	|	1893.0	|	1973.0
-nm0000065 	|	Nino Rota	|	1911.0	|	1979.0
-nm0000066 	|	Jane Russell	|	1921.0	|	2011.0
-nm0000067 	|	Miklós Rózsa	|	1907.0	|	1995.0
-nm0000068 	|	Randolph Scott	|	1898.0	|	1987.0
-nm0000069 	|	Frank Sinatra	|	1915.0	|	1998.0
-nm0000070 	|	Max Steiner	|	1888.0	|	1971.0
-nm0000071 	|	James Stewart	|	1908.0	|	1997.0
-nm0000072 	|	Elizabeth Taylor	|	1932.0	|	2011.0
-nm0000073 	|	Shirley Temple	|	1928.0	|	2014.0
-nm0000074 	|	Gene Tierney	|	1920.0	|	1991.0
-nm0000075 	|	Spencer Tracy	|	1900.0	|	1967.0
-nm0000076 	|	François Truffaut	|	1932.0	|	1984.0
-nm0000077 	|	Franz Waxman	|	1906.0	|	1967.0
-nm0000078 	|	John Wayne	|	1907.0	|	1979.0
-nm0000079 	|	Raquel Welch	|	1940.0	|	None
-nm0000080 	|	Orson Welles	|	1915.0	|	1985.0
-nm0000081 	|	Natalie Wood	|	1938.0	|	1981.0
-nm0000082 	|	Victor Young	|	1900.0	|	1956.0
-nm0000083 	|	Alan Miller	|	None	|	None
-nm0000084 	|	Li Gong	|	1965.0	|	None
-nm0000085 	|	Henner Hofmann	|	1950.0	|	None
-nm0000086 	|	Louis de Funès	|	1914.0	|	1983.0
-nm0000087 	|	Elena Koreneva	|	1953.0	|	None
-nm0000088 	|	Aleksey Korenev	|	1927.0	|	1995.0
-nm0000089 	|	Richard Paul	|	1940.0	|	1998.0
-nm0000090 	|	Armin Mueller-Stahl	|	1930.0	|	None
-nm0000091 	|	Gérard Pirès	|	1942.0	|	None
-nm0000092 	|	John Cleese	|	1939.0	|	None
-nm0000093 	|	Brad Pitt	|	1963.0	|	None
-nm0000094 	|	J. Reifel	|	None	|	None
-nm0000095 	|	Woody Allen	|	1935.0	|	None
-nm0000096 	|	Gillian Anderson	|	1968.0	|	None
-nm0000097 	|	Pamela Anderson	|	1967.0	|	None
-nm0000098 	|	Jennifer Aniston	|	1969.0	|	None
-nm0000099 	|	Patricia Arquette	|	1968.0	|	None
-nm0000100 	|	Rowan Atkinson	|	1955.0	|	None
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Reading-Directly-into-a-DataFrame">Reading Directly into a DataFrame<a class="anchor-link" href="#Reading-Directly-into-a-DataFrame">&#182;</a></h2><p>We haven't yet started to work with the Pandas Dataframes (next lecture) but we will use Dataframes in this lecture to make it easier to see the table output.  In the following line of code we use the <code>read_sql</code> command to construct a dataframe containing the results from the SQL query.</p>
-<p>The following function prints the SQL query and returns the dataframe.  Notice that Jupyter is able to render the dataframe in a easy to read format.  Also notice that the following code would accidentally pull a lot more data than might fit in memory.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Normally this will be at the top of the notebook </span>
@@ -14022,7 +13617,7 @@ nm0000100 	|	Rowan Atkinson	|	1955.0	|	None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pretty_print_query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">stop_early</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
@@ -14037,7 +13632,7 @@ nm0000100 	|	Rowan Atkinson	|	1955.0	|	None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -14069,7 +13664,7 @@ nm0000100 	|	Rowan Atkinson	|	1955.0	|	None
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -14199,21 +13794,21 @@ nm0000100 	|	Rowan Atkinson	|	1955.0	|	None
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Examining-the-other-tables">Examining the other tables<a class="anchor-link" href="#Examining-the-other-tables">&#182;</a></h1>
+<h2 id="Listing-Tables-with-sqlalchemy">Listing Tables with <code>sqlalchemy</code><a class="anchor-link" href="#Listing-Tables-with-sqlalchemy">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Each database has a different way to get information about the database.  In sqlite you can query the <code>sqlite_master</code> table to get information about the database contents.</p>
+<p>Each database has a different way to get information about the database.  The <code>sqlalchemy</code> library provides a common abstraction using the <code>table_names()</code> function:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">engine</span><span class="o">.</span><span class="n">table_names</span><span class="p">()</span>
@@ -14229,13 +13824,13 @@ nm0000100 	|	Rowan Atkinson	|	1955.0	|	None
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&#39;name_to_title&#39;, &#39;students&#39;, &#39;titles&#39;, &#39;names&#39;, &#39;profession&#39;, &#39;genres&#39;]</pre>
+<pre>[&#39;genres&#39;, &#39;name_to_title&#39;, &#39;names&#39;, &#39;profession&#39;, &#39;students&#39;, &#39;titles&#39;]</pre>
 </div>
 
 </div>
@@ -14247,23 +13842,20 @@ nm0000100 	|	Rowan Atkinson	|	1955.0	|	None
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Listing-Tables-in-Postgres-using-SQL-query">Listing Tables in Postgres using SQL query<a class="anchor-link" href="#Listing-Tables-in-Postgres-using-SQL-query">&#182;</a></h3>
+<h1 id="Taking-a-Random-Sample">Taking a Random Sample<a class="anchor-link" href="#Taking-a-Random-Sample">&#182;</a></h1><p>In lecture we talked about a method to take a random sample.  Here we apply that method to learn about the tables.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># engine = sqlalchemy.create_engine(&quot;postgres://jegonzal:@localhost:5432/data100&quot;)</span>
-<span class="c1"># conn = engine.connect()</span>
-
-<span class="n">pretty_print_query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT *</span>
-<span class="s2">FROM pg_catalog.pg_tables</span>
-<span class="s2">WHERE schemaname != &#39;pg_catalog&#39;</span>
-<span class="s2">    AND schemaname != &#39;information_schema&#39;;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    SELECT * FROM names </span>
+<span class="s2">    ORDER BY RANDOM() </span>
+<span class="s2">    LIMIT 5</span>
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -14282,10 +13874,9 @@ nm0000100 	|	Rowan Atkinson	|	1955.0	|	None
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-SELECT *
-FROM pg_catalog.pg_tables
-WHERE schemaname != &#39;pg_catalog&#39;
-    AND schemaname != &#39;information_schema&#39;;
+    SELECT * FROM names 
+    ORDER BY RANDOM() 
+    LIMIT 5
  
 ;
 </pre>
@@ -14294,7 +13885,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -14317,82 +13908,47 @@ WHERE schemaname != &#39;pg_catalog&#39;
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>schemaname</th>
-      <th>tablename</th>
-      <th>tableowner</th>
-      <th>tablespace</th>
-      <th>hasindexes</th>
-      <th>hasrules</th>
-      <th>hastriggers</th>
-      <th>rowsecurity</th>
+      <th>nconst</th>
+      <th>name</th>
+      <th>birth_year</th>
+      <th>death_year</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>public</td>
-      <td>name_to_title</td>
-      <td>jegonzal</td>
-      <td>None</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>nm4772047</td>
+      <td>Colleen Brown</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>public</td>
-      <td>students</td>
-      <td>jegonzal</td>
-      <td>None</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>nm1315703</td>
+      <td>Artur Rother</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>public</td>
-      <td>titles</td>
-      <td>jegonzal</td>
-      <td>None</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>nm0938582</td>
+      <td>Brenda A. Wolley</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>public</td>
-      <td>names</td>
-      <td>jegonzal</td>
-      <td>None</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>nm0228712</td>
+      <td>Peter Dix</td>
+      <td>1924.0</td>
+      <td>2007.0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>public</td>
-      <td>profession</td>
-      <td>jegonzal</td>
-      <td>None</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>public</td>
-      <td>genres</td>
-      <td>jegonzal</td>
-      <td>None</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>nm6412895</td>
+      <td>Andrea Ziedenberg</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
@@ -14408,38 +13964,14 @@ WHERE schemaname != &#39;pg_catalog&#39;
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Listing-Tables-in-SQLite-using-SQL-query">Listing Tables in SQLite using SQL query<a class="anchor-link" href="#Listing-Tables-in-SQLite-using-SQL-query">&#182;</a></h3>
+<p>The <strong>names</strong> table contains the <em>primary key</em> <code>nconst</code> and the <code>name</code>, <code>birth_year</code>, and <code>death_year</code> of the actors.  Note there are some missing values.  Try running the query multiple times.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># engine = sqlalchemy.create_engine(&quot;sqlite:///im.db&quot;)</span>
-<span class="c1"># conn = engine.connect()</span>
-
-<span class="c1"># pretty_print_query(&quot;&quot;&quot;</span>
-<span class="c1">#     SELECT * FROM sqlite_master;</span>
-<span class="c1"># &quot;&quot;&quot;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Taking-a-Random-Sample">Taking a Random Sample<a class="anchor-link" href="#Taking-a-Random-Sample">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -14475,7 +14007,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -14505,28 +14037,28 @@ WHERE schemaname != &#39;pg_catalog&#39;
   <tbody>
     <tr>
       <th>0</th>
-      <td>special_effects</td>
-      <td>nm11132622</td>
+      <td>miscellaneous</td>
+      <td>nm3561263</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>None</td>
-      <td>nm1150744</td>
+      <td>actress</td>
+      <td>nm2674711</td>
     </tr>
     <tr>
       <th>2</th>
       <td>actor</td>
-      <td>nm9505645</td>
+      <td>nm8538105</td>
     </tr>
     <tr>
       <th>3</th>
       <td>cinematographer</td>
-      <td>nm2318045</td>
+      <td>nm8469455</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>camera_department</td>
-      <td>nm2580234</td>
+      <td>actor</td>
+      <td>nm1778618</td>
     </tr>
   </tbody>
 </table>
@@ -14539,9 +14071,17 @@ WHERE schemaname != &#39;pg_catalog&#39;
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>profession</strong> table contains the described profession and what appears to be a foreign key <code>nconst</code> that appears to reference the <strong>names</strong> table.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -14577,7 +14117,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -14611,47 +14151,47 @@ WHERE schemaname != &#39;pg_catalog&#39;
   <tbody>
     <tr>
       <th>0</th>
-      <td>tt2114074</td>
-      <td>Don't Gnocc It Til You Try It</td>
+      <td>tt3304036</td>
+      <td>Family Traditions and Gift Giving</td>
       <td>tvEpisode</td>
-      <td>2006.0</td>
-      <td>NaN</td>
+      <td>2013.0</td>
+      <td>None</td>
       <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>tt5656504</td>
-      <td>La abadía de Northanger V</td>
+      <td>tt11418688</td>
+      <td>Episode #2.20</td>
       <td>tvEpisode</td>
-      <td>1968.0</td>
       <td>NaN</td>
+      <td>None</td>
       <td>0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>tt4798846</td>
-      <td>Episode dated 22 June 2015</td>
+      <td>tt0667216</td>
+      <td>El velador</td>
       <td>tvEpisode</td>
-      <td>2015.0</td>
-      <td>NaN</td>
+      <td>1975.0</td>
+      <td>None</td>
       <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>tt1786704</td>
-      <td>State of Georgia</td>
-      <td>tvSeries</td>
-      <td>2011.0</td>
-      <td>2011.0</td>
+      <td>tt0846095</td>
+      <td>Strangers</td>
+      <td>short</td>
+      <td>2006.0</td>
+      <td>None</td>
       <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>tt4231508</td>
-      <td>April Fools</td>
-      <td>movie</td>
-      <td>2015.0</td>
-      <td>NaN</td>
+      <td>tt9674558</td>
+      <td>Vegas, Baby!</td>
+      <td>tvEpisode</td>
+      <td>2019.0</td>
+      <td>None</td>
       <td>0</td>
     </tr>
   </tbody>
@@ -14665,9 +14205,17 @@ WHERE schemaname != &#39;pg_catalog&#39;
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>titles</strong> table contains information about each film and appears to have the primary key <code>tconst</code>.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -14703,7 +14251,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -14733,28 +14281,28 @@ WHERE schemaname != &#39;pg_catalog&#39;
   <tbody>
     <tr>
       <th>0</th>
-      <td>tt6418340</td>
-      <td>nm8705037</td>
+      <td>tt7963974</td>
+      <td>nm9604682</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>\N</td>
-      <td>nm9018943</td>
+      <td>tt0171954</td>
+      <td>nm0148711</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>tt0042123</td>
-      <td>nm3528499</td>
+      <td>tt0131459</td>
+      <td>nm2305773</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>tt3563660</td>
-      <td>nm6320334</td>
+      <td>tt7701888</td>
+      <td>nm9465475</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>\N</td>
-      <td>nm4560353</td>
+      <td>tt0989801</td>
+      <td>nm2595711</td>
     </tr>
   </tbody>
 </table>
@@ -14766,6 +14314,14 @@ WHERE schemaname != &#39;pg_catalog&#39;
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>name_to_title</strong> table (which probably should have been called staring in) contains which titles in which each actor starred.  Notice that their are two <em>foreign key</em> reference in this table.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14785,7 +14341,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -14817,7 +14373,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -14874,7 +14430,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -14906,7 +14462,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -14970,11 +14526,15 @@ WHERE schemaname != &#39;pg_catalog&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">    SELECT names.nconst, name, birth_year, profession </span>
+<span class="s2">    SELECT </span>
+<span class="s2">        names.nconst, </span>
+<span class="s2">        name, </span>
+<span class="s2">        birth_year, </span>
+<span class="s2">        profession </span>
 <span class="s2">    FROM names, profession </span>
 <span class="s2">    WHERE </span>
 <span class="s2">        names.nconst = profession.nconst</span>
@@ -14998,7 +14558,11 @@ WHERE schemaname != &#39;pg_catalog&#39;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-    SELECT names.nconst, name, birth_year, profession 
+    SELECT 
+        names.nconst, 
+        name, 
+        birth_year, 
+        profession 
     FROM names, profession 
     WHERE 
         names.nconst = profession.nconst
@@ -15012,7 +14576,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -15098,7 +14662,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -15140,7 +14704,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[33]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -15226,7 +14790,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -15276,7 +14840,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[34]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -15386,7 +14950,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>That is a lot!  Could be multiple roles or it could be issues in the data.  We should probably investigate!</p>
+<p>That is a lot!  Could be multiple roles or it could be issues in the data.  We should probably investigate but not today.</p>
 
 </div>
 </div>
@@ -15409,7 +14973,7 @@ WHERE schemaname != &#39;pg_catalog&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -15477,7 +15041,7 @@ LIMIT 10
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[35]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -15509,73 +15073,73 @@ LIMIT 10
   <tbody>
     <tr>
       <th>0</th>
-      <td>Jada Pinkett Smith</td>
-      <td>34.0</td>
-      <td>2005.0</td>
-      <td>actress</td>
+      <td>Fred Astaire</td>
+      <td>60.0</td>
+      <td>1959.0</td>
+      <td>actor</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Bruce Willis</td>
-      <td>44.0</td>
-      <td>1999.0</td>
+      <td>Fred Astaire</td>
+      <td>75.0</td>
+      <td>1974.0</td>
       <td>actor</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Bruce Willis</td>
-      <td>33.0</td>
-      <td>1988.0</td>
+      <td>Fred Astaire</td>
+      <td>51.0</td>
+      <td>1950.0</td>
       <td>actor</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Bruce Willis</td>
-      <td>30.0</td>
-      <td>1985.0</td>
+      <td>Fred Astaire</td>
+      <td>58.0</td>
+      <td>1957.0</td>
       <td>actor</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Bruce Willis</td>
-      <td>39.0</td>
-      <td>1994.0</td>
-      <td>actor</td>
+      <td>Lauren Bacall</td>
+      <td>50.0</td>
+      <td>1974.0</td>
+      <td>actress</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Donna D'Errico</td>
-      <td>47.0</td>
-      <td>2015.0</td>
+      <td>Lauren Bacall</td>
+      <td>20.0</td>
+      <td>1944.0</td>
       <td>actress</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>Donna D'Errico</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>Lauren Bacall</td>
+      <td>72.0</td>
+      <td>1996.0</td>
       <td>actress</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>Donna D'Errico</td>
-      <td>50.0</td>
-      <td>2018.0</td>
+      <td>Lauren Bacall</td>
+      <td>22.0</td>
+      <td>1946.0</td>
       <td>actress</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>Richard Dean Anderson</td>
-      <td>35.0</td>
-      <td>1985.0</td>
-      <td>actor</td>
+      <td>Brigitte Bardot</td>
+      <td>31.0</td>
+      <td>1965.0</td>
+      <td>actress</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>Richard Dean Anderson</td>
-      <td>54.0</td>
-      <td>2004.0</td>
-      <td>actor</td>
+      <td>Brigitte Bardot</td>
+      <td>29.0</td>
+      <td>1963.0</td>
+      <td>actress</td>
     </tr>
   </tbody>
 </table>
@@ -15598,7 +15162,7 @@ LIMIT 10
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">actors_with_profession</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -15615,9 +15179,17 @@ LIMIT 10
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is done using python f-strings (format strings).</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
@@ -15679,7 +15251,7 @@ LIMIT 10
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -15711,257 +15283,73 @@ LIMIT 10
   <tbody>
     <tr>
       <th>0</th>
-      <td>Barbara Bach</td>
-      <td>34.0</td>
-      <td>1981.0</td>
-      <td>actress</td>
+      <td>Fred Astaire</td>
+      <td>60.0</td>
+      <td>1959.0</td>
+      <td>actor</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Barbara Bach</td>
-      <td>21.0</td>
-      <td>1968.0</td>
-      <td>actress</td>
+      <td>Fred Astaire</td>
+      <td>75.0</td>
+      <td>1974.0</td>
+      <td>actor</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Barbara Bach</td>
-      <td>30.0</td>
-      <td>1977.0</td>
-      <td>actress</td>
+      <td>Fred Astaire</td>
+      <td>51.0</td>
+      <td>1950.0</td>
+      <td>actor</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Barbara Bach</td>
-      <td>32.0</td>
-      <td>1979.0</td>
-      <td>actress</td>
+      <td>Fred Astaire</td>
+      <td>58.0</td>
+      <td>1957.0</td>
+      <td>actor</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Jean-Paul Belmondo</td>
-      <td>27.0</td>
-      <td>1960.0</td>
-      <td>actor</td>
+      <td>Lauren Bacall</td>
+      <td>50.0</td>
+      <td>1974.0</td>
+      <td>actress</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Jean-Paul Belmondo</td>
-      <td>32.0</td>
-      <td>1965.0</td>
-      <td>actor</td>
+      <td>Lauren Bacall</td>
+      <td>20.0</td>
+      <td>1944.0</td>
+      <td>actress</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>Jean-Paul Belmondo</td>
-      <td>34.0</td>
-      <td>1967.0</td>
-      <td>actor</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Jean-Paul Belmondo</td>
-      <td>55.0</td>
-      <td>1988.0</td>
-      <td>actor</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Bruce Davison</td>
-      <td>47.0</td>
-      <td>1993.0</td>
-      <td>actor</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Brooke Shields</td>
-      <td>31.0</td>
+      <td>Lauren Bacall</td>
+      <td>72.0</td>
       <td>1996.0</td>
       <td>actress</td>
     </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Randomly-sample-entries">Randomly sample entries<a class="anchor-link" href="#Randomly-sample-entries">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">WITH actors_with_profession AS (</span><span class="si">{actors_with_profession}</span><span class="s2">)</span>
-<span class="s2">SELECT </span>
-<span class="s2">    a.name, </span>
-<span class="s2">    t.start_year - a.birth_year AS age, </span>
-<span class="s2">    t.start_year as year, </span>
-<span class="s2">    profession</span>
-<span class="s2">FROM </span>
-<span class="s2">    actors_with_profession a, </span>
-<span class="s2">    name_to_title nt, </span>
-<span class="s2">    titles t</span>
-<span class="s2">WHERE </span>
-<span class="s2">    a.nconst = nt.nconst AND nt.tconst = t.tconst</span>
-<span class="s2">ORDER BY RANDOM()</span>
-<span class="s2">LIMIT 10</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-WITH actors_with_profession AS (
-    SELECT names.nconst, name, birth_year, profession 
-    FROM names, profession 
-    WHERE 
-        names.nconst = profession.nconst AND
-        (profession = &#39;actor&#39; OR profession = &#39;actress&#39;)
-)
-SELECT 
-    a.name, 
-    t.start_year - a.birth_year AS age, 
-    t.start_year as year, 
-    profession
-FROM 
-    actors_with_profession a, 
-    name_to_title nt, 
-    titles t
-WHERE 
-    a.nconst = nt.nconst AND nt.tconst = t.tconst
-ORDER BY RANDOM()
-LIMIT 10
- 
-;
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[38]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>age</th>
-      <th>year</th>
-      <th>profession</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Huang Humiao</td>
-      <td>None</td>
-      <td>2016.0</td>
-      <td>actor</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Lila Golubitskaya</td>
-      <td>None</td>
-      <td>2017.0</td>
-      <td>actress</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Julian Hudson</td>
-      <td>None</td>
-      <td>1991.0</td>
-      <td>actor</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Amanda Scarpin</td>
-      <td>None</td>
-      <td>2014.0</td>
-      <td>actress</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Edwin Flores</td>
-      <td>None</td>
-      <td>2011.0</td>
-      <td>actor</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Marcie Clowry</td>
-      <td>None</td>
-      <td>2007.0</td>
-      <td>actress</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Victor M. Slone</td>
-      <td>None</td>
-      <td>2001.0</td>
-      <td>actor</td>
-    </tr>
     <tr>
       <th>7</th>
-      <td>Isaac Harrison</td>
-      <td>None</td>
-      <td>2007.0</td>
-      <td>actor</td>
+      <td>Lauren Bacall</td>
+      <td>22.0</td>
+      <td>1946.0</td>
+      <td>actress</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>Charly Wierczejewski</td>
-      <td>None</td>
-      <td>1980.0</td>
-      <td>actor</td>
+      <td>Brigitte Bardot</td>
+      <td>31.0</td>
+      <td>1965.0</td>
+      <td>actress</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>Sanjay Gadhvi</td>
-      <td>None</td>
-      <td>2002.0</td>
-      <td>actor</td>
+      <td>Brigitte Bardot</td>
+      <td>29.0</td>
+      <td>1963.0</td>
+      <td>actress</td>
     </tr>
   </tbody>
 </table>
@@ -15977,22 +15365,14 @@ LIMIT 10
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Notice that some of the age values are NaN.  We will need to address that.  Let's examine the age a bit further.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Ordering-by-Age">Ordering by Age<a class="anchor-link" href="#Ordering-by-Age">&#182;</a></h3><p>I have added the birth year of the actor and the title of the film.</p>
+<h2 id="Checking-the-Actor-Age-Calculation">Checking the Actor Age Calculation<a class="anchor-link" href="#Checking-the-Actor-Age-Calculation">&#182;</a></h2><p>I have added the birth year of the actor and the title of the film and ordered by age.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
@@ -16060,7 +15440,7 @@ LIMIT 10;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[39]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -16094,92 +15474,92 @@ LIMIT 10;
   <tbody>
     <tr>
       <th>0</th>
-      <td>Belle Delphine</td>
-      <td>-83.0</td>
-      <td>1999.0</td>
-      <td>1916.0</td>
-      <td>Unknown</td>
+      <td>Donna D'Errico</td>
+      <td>None</td>
+      <td>1968.0</td>
+      <td>NaN</td>
+      <td>116 MacDougal</td>
       <td>actress</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Johanna de Vries</td>
-      <td>-69.0</td>
-      <td>1987.0</td>
-      <td>1918.0</td>
-      <td>De kroon der schande</td>
+      <td>Alexandra Paul</td>
+      <td>None</td>
+      <td>1963.0</td>
+      <td>NaN</td>
+      <td>The B Team</td>
       <td>actress</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Richard Lingscheidt</td>
-      <td>-65.0</td>
-      <td>1990.0</td>
-      <td>1925.0</td>
-      <td>Die Stadt der Millionen</td>
+      <td>Alan Smithee</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>1997.0</td>
+      <td>An Alan Smithee Film: Burn Hollywood Burn</td>
       <td>actor</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Madison Keys</td>
-      <td>-58.0</td>
-      <td>1995.0</td>
-      <td>1937.0</td>
-      <td>Wimbledon</td>
-      <td>actress</td>
+      <td>Alan Smithee</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>2011.0</td>
+      <td>Another Night of the Living Dead</td>
+      <td>actor</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Kimber Closson</td>
-      <td>-58.0</td>
-      <td>1969.0</td>
-      <td>1911.0</td>
-      <td>Contagion</td>
-      <td>actress</td>
+      <td>Alan Smithee</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>1983.0</td>
+      <td>Twilight Zone: The Movie</td>
+      <td>actor</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Josie Duggar</td>
-      <td>-57.0</td>
-      <td>2009.0</td>
-      <td>1952.0</td>
-      <td>Today</td>
-      <td>actress</td>
+      <td>Alan Smithee</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>1996.0</td>
+      <td>Hellraiser: Bloodline</td>
+      <td>actor</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>Jordyn-Grace Makiya Duggar</td>
-      <td>-56.0</td>
-      <td>2008.0</td>
-      <td>1952.0</td>
-      <td>Today</td>
-      <td>actress</td>
+      <td>Christopher Atkins</td>
+      <td>None</td>
+      <td>1961.0</td>
+      <td>NaN</td>
+      <td>Bangers</td>
+      <td>actor</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>Atti Pacsay</td>
-      <td>-55.0</td>
-      <td>1970.0</td>
-      <td>1915.0</td>
-      <td>The Undesirable</td>
-      <td>actor</td>
+      <td>Maxine Bahns</td>
+      <td>None</td>
+      <td>1971.0</td>
+      <td>NaN</td>
+      <td>Agent II</td>
+      <td>actress</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>Callum Skinner</td>
-      <td>-55.0</td>
-      <td>1992.0</td>
-      <td>1937.0</td>
-      <td>Wimbledon</td>
-      <td>actor</td>
+      <td>Oksana Baiul</td>
+      <td>None</td>
+      <td>1977.0</td>
+      <td>NaN</td>
+      <td>Sonja Queen of Ice</td>
+      <td>actress</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>Johanna Konta</td>
-      <td>-54.0</td>
-      <td>1991.0</td>
-      <td>1937.0</td>
-      <td>Wimbledon</td>
+      <td>Cynthia Gibb</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>1990.0</td>
+      <td>Death Warrant</td>
       <td>actress</td>
     </tr>
   </tbody>
@@ -16196,14 +15576,14 @@ LIMIT 10;
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>More issues!  For now let's focuso n more recent films and constrain the age to be a positive value.  This will be throwing away data that might be significant.  In a real analysis we would want to examine the data we are removing to understand biases we may be introducing.</p>
+<p>More issues!  For now let's focus on more recent films and constrain the age to be a positive value.  This will be throwing away data that might be significant.  In a real analysis we would want to examine the data we are removing to understand biases we may be introducing.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pretty_print_query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
@@ -16273,7 +15653,7 @@ LIMIT 20
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[40]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -16305,143 +15685,143 @@ LIMIT 20
   <tbody>
     <tr>
       <th>0</th>
-      <td>Ana Hercigonja</td>
-      <td>39.0</td>
-      <td>1961.0</td>
-      <td>actress</td>
+      <td>Rafal Walentynowicz</td>
+      <td>34.0</td>
+      <td>1996.0</td>
+      <td>actor</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Joe Koons</td>
-      <td>26.0</td>
-      <td>2005.0</td>
-      <td>actor</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Ervin Borsodi</td>
-      <td>41.0</td>
-      <td>1961.0</td>
-      <td>actor</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Augusto Di Giovanni</td>
-      <td>37.0</td>
-      <td>1947.0</td>
-      <td>actor</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Blanca Soto</td>
-      <td>28.0</td>
-      <td>2007.0</td>
+      <td>Youssra</td>
+      <td>43.0</td>
+      <td>1994.0</td>
       <td>actress</td>
     </tr>
     <tr>
+      <th>2</th>
+      <td>Swan Wen</td>
+      <td>23.0</td>
+      <td>2014.0</td>
+      <td>actress</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Olesya Rulin</td>
+      <td>29.0</td>
+      <td>2015.0</td>
+      <td>actress</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Ramon Fontserè</td>
+      <td>51.0</td>
+      <td>2007.0</td>
+      <td>actor</td>
+    </tr>
+    <tr>
       <th>5</th>
-      <td>Hildegard Grethe</td>
-      <td>46.0</td>
-      <td>1945.0</td>
+      <td>April Audia</td>
+      <td>51.0</td>
+      <td>2014.0</td>
       <td>actress</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>Ann Tempest</td>
-      <td>14.0</td>
-      <td>1955.0</td>
+      <td>Maura Ruth Hashman</td>
+      <td>23.0</td>
+      <td>2008.0</td>
       <td>actress</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>Kaushal Inamdar</td>
-      <td>30.0</td>
-      <td>2001.0</td>
-      <td>actor</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Sandra de Sá</td>
-      <td>51.0</td>
-      <td>2006.0</td>
-      <td>actress</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Karel Wiencek</td>
-      <td>25.0</td>
-      <td>2013.0</td>
-      <td>actor</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Maddi Sinn</td>
-      <td>16.0</td>
-      <td>2004.0</td>
-      <td>actress</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Allie Carieri</td>
-      <td>8.0</td>
-      <td>2001.0</td>
-      <td>actress</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Mike Leach</td>
-      <td>18.0</td>
+      <td>Kôjirô Kusanagi</td>
+      <td>50.0</td>
       <td>1979.0</td>
       <td>actor</td>
     </tr>
     <tr>
-      <th>13</th>
-      <td>Kôichi Kitamura</td>
+      <th>8</th>
+      <td>Kikis Herrera Calles</td>
+      <td>49.0</td>
+      <td>1977.0</td>
+      <td>actress</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Sophie Marceau</td>
+      <td>33.0</td>
+      <td>1999.0</td>
+      <td>actress</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Anette Toftgaard</td>
+      <td>27.0</td>
+      <td>1998.0</td>
+      <td>actress</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Kendall Toole</td>
+      <td>16.0</td>
+      <td>2009.0</td>
+      <td>actress</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Bette Henritze</td>
       <td>58.0</td>
-      <td>1989.0</td>
+      <td>1982.0</td>
+      <td>actress</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Chief Eugene Standingbear</td>
+      <td>73.0</td>
+      <td>1979.0</td>
       <td>actor</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>Naama Preis</td>
-      <td>34.0</td>
-      <td>2016.0</td>
+      <td>Ariane Sommer</td>
+      <td>25.0</td>
+      <td>2002.0</td>
       <td>actress</td>
     </tr>
     <tr>
       <th>15</th>
-      <td>Akhil Akkineni</td>
-      <td>25.0</td>
-      <td>2019.0</td>
+      <td>Loclann Aiken</td>
+      <td>48.0</td>
+      <td>2018.0</td>
       <td>actor</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>Heather B.</td>
-      <td>45.0</td>
-      <td>2016.0</td>
-      <td>actress</td>
+      <td>David Grain</td>
+      <td>28.0</td>
+      <td>1957.0</td>
+      <td>actor</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>Igor Bezgin</td>
-      <td>50.0</td>
-      <td>1980.0</td>
+      <td>Matti Krause</td>
+      <td>26.0</td>
+      <td>2012.0</td>
       <td>actor</td>
     </tr>
     <tr>
       <th>18</th>
-      <td>Laurent Kiefer</td>
-      <td>28.0</td>
-      <td>2000.0</td>
+      <td>Kerry King</td>
+      <td>44.0</td>
+      <td>2008.0</td>
       <td>actor</td>
     </tr>
     <tr>
       <th>19</th>
-      <td>Frankie Ingrassia</td>
-      <td>21.0</td>
-      <td>1999.0</td>
-      <td>actress</td>
+      <td>Joey Luft</td>
+      <td>8.0</td>
+      <td>1963.0</td>
+      <td>actor</td>
     </tr>
   </tbody>
 </table>
@@ -16464,7 +15844,7 @@ LIMIT 20
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pretty_print_query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
@@ -16533,7 +15913,7 @@ ORDER BY year, profession
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[41]:</div>
+    <div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -16662,12 +16042,13 @@ ORDER BY year, profession
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.offline</span> <span class="k">as</span> <span class="nn">py</span>
 <span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
 <span class="kn">import</span> <span class="nn">cufflinks</span> <span class="k">as</span> <span class="nn">cf</span>
+<span class="n">cf</span><span class="o">.</span><span class="n">set_config_file</span><span class="p">(</span><span class="n">sharing</span><span class="o">=</span><span class="s2">&quot;private&quot;</span><span class="p">,</span> <span class="n">offline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">offline_connected</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -16705,13 +16086,40 @@ ORDER BY year, profession
 
 </div>
 
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+        <script type="text/javascript">
+        window.PlotlyConfig = {MathJaxConfig: 'local'};
+        if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+        if (typeof require !== 'undefined') {
+        require.undef("plotly");
+        requirejs.config({
+            paths: {
+                'plotly': ['https://cdn.plot.ly/plotly-latest.min']
+            }
+        });
+        require(['plotly'], function(Plotly) {
+            window._Plotly = Plotly;
+        });
+        }
+        </script>
+        
+</div>
+
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;cnt&quot;</span><span class="p">,</span> <span class="n">yTitle</span><span class="o">=</span><span class="s2">&quot;Count&quot;</span><span class="p">,</span>
@@ -16742,21 +16150,21 @@ ORDER BY year, profession
 <div>
         
         
-            <div id="09af8bfb-7f8b-4dda-b1eb-1993983eebc1" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="b7ab4ad0-e51d-4356-8550-60af170ab522" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     window.PLOTLYENV.BASE_URL='https://plot.ly';
                     
-                if (document.getElementById("09af8bfb-7f8b-4dda-b1eb-1993983eebc1")) {
+                if (document.getElementById("b7ab4ad0-e51d-4356-8550-60af170ab522")) {
                     Plotly.newPlot(
-                        '09af8bfb-7f8b-4dda-b1eb-1993983eebc1',
+                        'b7ab4ad0-e51d-4356-8550-60af170ab522',
                         [{"marker": {"color": "blue", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "lines+markers", "name": "actor", "textfont": {"color": "#666666"}, "type": "scatter", "x": [1941.0, 1942.0, 1943.0, 1944.0, 1945.0, 1946.0, 1947.0, 1948.0, 1949.0, 1950.0, 1951.0, 1952.0, 1953.0, 1954.0, 1955.0, 1956.0, 1957.0, 1958.0, 1959.0, 1960.0, 1961.0, 1962.0, 1963.0, 1964.0, 1965.0, 1966.0, 1967.0, 1968.0, 1969.0, 1970.0, 1971.0, 1972.0, 1973.0, 1974.0, 1975.0, 1976.0, 1977.0, 1978.0, 1979.0, 1980.0, 1981.0, 1982.0, 1983.0, 1984.0, 1985.0, 1986.0, 1987.0, 1988.0, 1989.0, 1990.0, 1991.0, 1992.0, 1993.0, 1994.0, 1995.0, 1996.0, 1997.0, 1998.0, 1999.0, 2000.0, 2001.0, 2002.0, 2003.0, 2004.0, 2005.0, 2006.0, 2007.0, 2008.0, 2009.0, 2010.0, 2011.0, 2012.0, 2013.0, 2014.0, 2015.0, 2016.0, 2017.0, 2018.0, 2019.0], "y": [2102, 1998, 1823, 1837, 1685, 2188, 2194, 2719, 2974, 3361, 2952, 3234, 3413, 3031, 4125, 4067, 4044, 4100, 4524, 4330, 4653, 4393, 4936, 4933, 5538, 5375, 5132, 5261, 5104, 6906, 5167, 5834, 5668, 5210, 5031, 5436, 5218, 5549, 5740, 5662, 5945, 5475, 5714, 6374, 6676, 6340, 6824, 6517, 7128, 6982, 6082, 6609, 7639, 7467, 8324, 8362, 8902, 9149, 10997, 11072, 11443, 11377, 12083, 13804, 15203, 15505, 15448, 15881, 16276, 15372, 15852, 14930, 14729, 15089, 15138, 15477, 14329, 12140, 8844]}, {"marker": {"color": "red", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "lines+markers", "name": "actress", "textfont": {"color": "#666666"}, "type": "scatter", "x": [1941.0, 1942.0, 1943.0, 1944.0, 1945.0, 1946.0, 1947.0, 1948.0, 1949.0, 1950.0, 1951.0, 1952.0, 1953.0, 1954.0, 1955.0, 1956.0, 1957.0, 1958.0, 1959.0, 1960.0, 1961.0, 1962.0, 1963.0, 1964.0, 1965.0, 1966.0, 1967.0, 1968.0, 1969.0, 1970.0, 1971.0, 1972.0, 1973.0, 1974.0, 1975.0, 1976.0, 1977.0, 1978.0, 1979.0, 1980.0, 1981.0, 1982.0, 1983.0, 1984.0, 1985.0, 1986.0, 1987.0, 1988.0, 1989.0, 1990.0, 1991.0, 1992.0, 1993.0, 1994.0, 1995.0, 1996.0, 1997.0, 1998.0, 1999.0, 2000.0, 2001.0, 2002.0, 2003.0, 2004.0, 2005.0, 2006.0, 2007.0, 2008.0, 2009.0, 2010.0, 2011.0, 2012.0, 2013.0, 2014.0, 2015.0, 2016.0, 2017.0, 2018.0, 2019.0], "y": [1228, 1267, 1177, 1200, 1075, 1432, 1385, 1532, 1774, 2089, 1835, 1950, 1910, 1718, 2594, 2407, 2414, 2370, 2508, 2616, 2712, 2391, 2593, 2818, 2893, 2634, 2764, 2680, 2798, 3638, 2766, 3022, 2790, 2813, 2721, 2913, 2800, 2860, 3030, 2959, 3280, 3028, 3064, 3512, 3578, 3293, 3806, 3610, 3766, 4166, 3386, 3912, 4264, 4784, 5314, 5295, 5737, 5985, 7043, 7681, 8193, 8102, 8667, 10241, 11419, 11166, 11620, 11452, 11475, 10398, 10581, 10474, 10000, 10223, 10347, 10411, 9549, 8031, 5724]}],
                         {"legend": {"bgcolor": "#FFFFFF", "font": {"color": "#666666"}}, "paper_bgcolor": "#FFFFFF", "plot_bgcolor": "#E5E5E5", "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"font": {"color": "#151516"}}, "xaxis": {"gridcolor": "#F6F6F6", "showgrid": true, "tickfont": {"color": "#666666"}, "title": {"font": {"color": "#666666"}, "text": ""}, "zerolinecolor": "#F6F6F6"}, "yaxis": {"gridcolor": "#F6F6F6", "showgrid": true, "tickfont": {"color": "#666666"}, "title": {"font": {"color": "#666666"}, "text": "Count"}, "zerolinecolor": "#F6F6F6"}},
                         {"showLink": true, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plot.ly", "responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('09af8bfb-7f8b-4dda-b1eb-1993983eebc1');
+var gd = document.getElementById('b7ab4ad0-e51d-4356-8550-60af170ab522');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -16797,21 +16205,21 @@ if (outputEl) {{
 <div>
         
         
-            <div id="ff788baa-e40d-483f-b137-8b485b182950" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="9cadc7aa-7d15-4b83-a20e-2e958ec88c6f" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     window.PLOTLYENV.BASE_URL='https://plot.ly';
                     
-                if (document.getElementById("ff788baa-e40d-483f-b137-8b485b182950")) {
+                if (document.getElementById("9cadc7aa-7d15-4b83-a20e-2e958ec88c6f")) {
                     Plotly.newPlot(
-                        'ff788baa-e40d-483f-b137-8b485b182950',
+                        '9cadc7aa-7d15-4b83-a20e-2e958ec88c6f',
                         [{"marker": {"color": "blue", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "lines+markers", "name": "actor", "textfont": {"color": "#666666"}, "type": "scatter", "x": [1941.0, 1942.0, 1943.0, 1944.0, 1945.0, 1946.0, 1947.0, 1948.0, 1949.0, 1950.0, 1951.0, 1952.0, 1953.0, 1954.0, 1955.0, 1956.0, 1957.0, 1958.0, 1959.0, 1960.0, 1961.0, 1962.0, 1963.0, 1964.0, 1965.0, 1966.0, 1967.0, 1968.0, 1969.0, 1970.0, 1971.0, 1972.0, 1973.0, 1974.0, 1975.0, 1976.0, 1977.0, 1978.0, 1979.0, 1980.0, 1981.0, 1982.0, 1983.0, 1984.0, 1985.0, 1986.0, 1987.0, 1988.0, 1989.0, 1990.0, 1991.0, 1992.0, 1993.0, 1994.0, 1995.0, 1996.0, 1997.0, 1998.0, 1999.0, 2000.0, 2001.0, 2002.0, 2003.0, 2004.0, 2005.0, 2006.0, 2007.0, 2008.0, 2009.0, 2010.0, 2011.0, 2012.0, 2013.0, 2014.0, 2015.0, 2016.0, 2017.0, 2018.0, 2019.0], "y": [39.1465271170314, 39.332332332332335, 39.78826110806363, 38.92651061513337, 39.64569732937685, 40.255484460694696, 39.57976298997265, 39.18425891872012, 40.086079354404845, 39.467717941088964, 38.922425474254744, 37.9882498453927, 37.41224728977439, 39.45199604091059, 38.51587878787879, 37.90213916892058, 39.02274975272008, 39.3990243902439, 39.55636604774536, 38.37136258660508, 38.72061035890823, 39.252447074891876, 37.66936790923825, 37.933306304480034, 37.33441675695197, 39.731906976744185, 39.71375681995323, 38.571754419311915, 39.09188871473354, 34.07471763683753, 38.70098703309464, 38.32293452176894, 39.848094565984475, 40.369097888675626, 39.83701053468495, 40.48841059602649, 40.309505557684936, 39.91295728960173, 40.584146341463416, 40.881314023313315, 40.349537426408745, 40.40840182648402, 40.610605530276516, 39.58048321305303, 38.922109047333734, 39.769242902208205, 39.86869871043376, 39.60932944606414, 40.1597923681257, 38.90303637926095, 39.807464649786255, 38.58828869723105, 38.79041759392591, 38.15749296906388, 37.2312590100913, 37.71848839990433, 37.988654235003374, 37.44267133020002, 37.14758570519233, 36.072976878612714, 36.51402604212182, 36.49538542673815, 36.52445584705785, 36.4315415821501, 36.27803722949418, 36.68984198645598, 37.12558259968928, 37.51552169258863, 37.2727942983534, 37.64799635701275, 38.26249053747161, 38.7158740790355, 39.36594473487678, 38.88388892570747, 39.61210199497952, 39.6502552174194, 39.43771372740596, 39.65345963756178, 40.26108095884215]}, {"marker": {"color": "red", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "lines+markers", "name": "actress", "textfont": {"color": "#666666"}, "type": "scatter", "x": [1941.0, 1942.0, 1943.0, 1944.0, 1945.0, 1946.0, 1947.0, 1948.0, 1949.0, 1950.0, 1951.0, 1952.0, 1953.0, 1954.0, 1955.0, 1956.0, 1957.0, 1958.0, 1959.0, 1960.0, 1961.0, 1962.0, 1963.0, 1964.0, 1965.0, 1966.0, 1967.0, 1968.0, 1969.0, 1970.0, 1971.0, 1972.0, 1973.0, 1974.0, 1975.0, 1976.0, 1977.0, 1978.0, 1979.0, 1980.0, 1981.0, 1982.0, 1983.0, 1984.0, 1985.0, 1986.0, 1987.0, 1988.0, 1989.0, 1990.0, 1991.0, 1992.0, 1993.0, 1994.0, 1995.0, 1996.0, 1997.0, 1998.0, 1999.0, 2000.0, 2001.0, 2002.0, 2003.0, 2004.0, 2005.0, 2006.0, 2007.0, 2008.0, 2009.0, 2010.0, 2011.0, 2012.0, 2013.0, 2014.0, 2015.0, 2016.0, 2017.0, 2018.0, 2019.0], "y": [31.383550488599347, 31.910023677979478, 30.95751911639762, 31.2375, 32.50046511627907, 31.76745810055866, 33.184837545126356, 32.84073107049608, 33.33032694475761, 32.799425562470084, 32.36076294277929, 31.69076923076923, 31.691099476439792, 32.676949941792785, 32.803392444101775, 33.373493975903614, 32.05965202982601, 32.651476793248946, 32.786682615629985, 32.19533639143731, 32.892699115044245, 32.94604767879548, 31.56999614346317, 32.886089425124204, 31.712409263740064, 33.17046317388003, 32.77206946454414, 32.79962686567164, 33.115082201572555, 29.345794392523363, 33.49060014461316, 33.47948378557247, 34.09390681003584, 34.41414859580519, 34.84270488790886, 35.0868520425678, 35.21214285714286, 34.21923076923077, 34.623102310231026, 35.5981750591416, 34.33079268292683, 34.6664464993395, 34.865208877284594, 34.09510250569476, 33.17467859139184, 33.13786820528394, 34.16395165528113, 34.18614958448754, 33.080722251725966, 33.134901584253484, 33.385410513880686, 32.454243353783234, 32.39258911819888, 31.599916387959865, 30.49529544599172, 30.93748819641171, 31.493637789785602, 30.82673350041771, 30.14297884424251, 30.218461137872673, 29.398266813133162, 29.621945198716368, 29.55394023306796, 29.572209745142075, 29.36377966546983, 30.437399247716282, 30.466265060240964, 31.022878099895216, 30.856993464052287, 31.720619349874976, 32.27435970135148, 32.881420660683595, 33.4349, 33.608725423065636, 34.18333816565188, 34.05820766496974, 34.797046811184416, 35.416884572282406, 35.6722571628232]}],
                         {"legend": {"bgcolor": "#FFFFFF", "font": {"color": "#666666"}}, "paper_bgcolor": "#FFFFFF", "plot_bgcolor": "#E5E5E5", "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"font": {"color": "#151516"}}, "xaxis": {"gridcolor": "#F6F6F6", "showgrid": true, "tickfont": {"color": "#666666"}, "title": {"font": {"color": "#666666"}, "text": ""}, "zerolinecolor": "#F6F6F6"}, "yaxis": {"gridcolor": "#F6F6F6", "showgrid": true, "tickfont": {"color": "#666666"}, "title": {"font": {"color": "#666666"}, "text": "Average Age"}, "zerolinecolor": "#F6F6F6"}},
                         {"showLink": true, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plot.ly", "responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('ff788baa-e40d-483f-b137-8b485b182950');
+var gd = document.getElementById('9cadc7aa-7d15-4b83-a20e-2e958ec88c6f');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -16853,9 +16261,17 @@ if (outputEl) {{
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We look at just the data <code>WHERE (t.start_year = 1970 OR t.start_year = 1971)</code></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df70s</span> <span class="o">=</span> <span class="n">pretty_print_query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
@@ -16918,7 +16334,7 @@ GROUP BY age, t.start_year
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[44]:</div>
+    <div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -17025,9 +16441,17 @@ GROUP BY age, t.start_year
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Visualizing the distribution of actors at each age we see a large number of young actors in 1970 that are not present in 1971.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df70s</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;year&quot;</span><span class="p">:</span><span class="s2">&quot;str&quot;</span><span class="p">}),</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;cnt&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">barmode</span><span class="o">=</span><span class="s2">&quot;overlay&quot;</span><span class="p">)</span>
@@ -17051,20 +16475,20 @@ GROUP BY age, t.start_year
 <div>
         
         
-            <div id="db52b0a6-e05b-45f0-99b9-5b03f25dd808" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="e016a60f-765c-4987-8f26-c0efe5f8a2e1" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("db52b0a6-e05b-45f0-99b9-5b03f25dd808")) {
+                if (document.getElementById("e016a60f-765c-4987-8f26-c0efe5f8a2e1")) {
                     Plotly.newPlot(
-                        'db52b0a6-e05b-45f0-99b9-5b03f25dd808',
+                        'e016a60f-765c-4987-8f26-c0efe5f8a2e1',
                         [{"alignmentgroup": "True", "hoverlabel": {"namelength": 0}, "hovertemplate": "year=1970.0<br>age=%{x}<br>cnt=%{y}", "legendgroup": "year=1970.0", "marker": {"color": "#636efa", "opacity": 0.5}, "name": "year=1970.0", "offsetgroup": "year=1970.0", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 25.0, 26.0, 27.0, 28.0, 29.0, 30.0, 31.0, 32.0, 33.0, 34.0, 35.0, 36.0, 37.0, 38.0, 39.0, 40.0, 41.0, 42.0, 43.0, 44.0, 45.0, 46.0, 47.0, 48.0, 49.0, 50.0, 51.0, 52.0, 53.0, 54.0, 55.0, 56.0, 57.0, 58.0, 59.0, 60.0, 61.0, 62.0, 63.0, 64.0, 65.0, 66.0, 67.0, 68.0, 69.0, 70.0, 71.0, 72.0, 73.0, 74.0, 75.0, 76.0, 77.0, 78.0, 79.0, 80.0, 81.0, 82.0, 83.0, 84.0, 86.0, 87.0, 89.0, 93.0, 95.0, 97.0, 110.0, 112.0, 121.0], "xaxis": "x", "y": [97, 103, 89, 107, 89, 110, 121, 120, 126, 106, 113, 117, 116, 110, 121, 109, 103, 130, 137, 180, 173, 255, 271, 257, 318, 320, 309, 284, 269, 295, 255, 274, 225, 242, 238, 209, 185, 214, 210, 229, 204, 222, 230, 171, 180, 183, 165, 183, 168, 170, 102, 96, 98, 92, 82, 84, 60, 69, 67, 58, 44, 46, 45, 47, 45, 42, 35, 34, 29, 15, 15, 15, 19, 17, 10, 13, 14, 4, 6, 7, 3, 3, 2, 1, 2, 2, 1, 1, 1, 2, 2, 1, 1], "yaxis": "y"}, {"alignmentgroup": "True", "hoverlabel": {"namelength": 0}, "hovertemplate": "year=1971.0<br>age=%{x}<br>cnt=%{y}", "legendgroup": "year=1971.0", "marker": {"color": "#EF553B", "opacity": 0.5}, "name": "year=1971.0", "offsetgroup": "year=1971.0", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 25.0, 26.0, 27.0, 28.0, 29.0, 30.0, 31.0, 32.0, 33.0, 34.0, 35.0, 36.0, 37.0, 38.0, 39.0, 40.0, 41.0, 42.0, 43.0, 44.0, 45.0, 46.0, 47.0, 48.0, 49.0, 50.0, 51.0, 52.0, 53.0, 54.0, 55.0, 56.0, 57.0, 58.0, 59.0, 60.0, 61.0, 62.0, 63.0, 64.0, 65.0, 66.0, 67.0, 68.0, 69.0, 70.0, 71.0, 72.0, 73.0, 74.0, 75.0, 76.0, 77.0, 78.0, 79.0, 80.0, 81.0, 82.0, 83.0, 84.0, 86.0, 89.0, 90.0, 91.0, 94.0, 100.0, 101.0, 108.0, 109.0], "xaxis": "x", "y": [17, 5, 14, 14, 18, 27, 21, 22, 34, 43, 30, 42, 49, 50, 33, 38, 42, 77, 76, 96, 136, 165, 209, 212, 250, 225, 249, 275, 213, 219, 232, 233, 248, 206, 184, 199, 185, 175, 177, 201, 185, 185, 226, 170, 174, 167, 162, 158, 129, 135, 138, 85, 74, 63, 79, 59, 89, 55, 80, 56, 54, 35, 38, 45, 46, 40, 43, 21, 33, 20, 21, 13, 19, 13, 12, 5, 7, 9, 11, 7, 7, 4, 3, 2, 4, 1, 3, 1, 2, 1, 1, 1, 1], "yaxis": "y"}],
                         {"barmode": "overlay", "legend": {"tracegroupgap": 0}, "margin": {"t": 60}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "age"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "cnt"}}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('db52b0a6-e05b-45f0-99b9-5b03f25dd808');
+var gd = document.getElementById('e016a60f-765c-4987-8f26-c0efe5f8a2e1');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -17109,7 +16533,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df70s_1</span> <span class="o">=</span> <span class="n">pretty_print_query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
@@ -17166,7 +16590,7 @@ WHERE
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[46]:</div>
+    <div class="prompt output_prompt">Out[37]:</div>
 
 
 
@@ -17209,21 +16633,21 @@ WHERE
     </tr>
     <tr>
       <th>1</th>
-      <td>1968.0</td>
-      <td>Florian Gärtner</td>
-      <td>actor</td>
-      <td>Tatort</td>
-      <td>tvSeries</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
       <td>1963.0</td>
       <td>Maurice Benard</td>
       <td>actor</td>
       <td>All My Children</td>
       <td>tvSeries</td>
       <td>7.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1968.0</td>
+      <td>Florian Gärtner</td>
+      <td>actor</td>
+      <td>Tatort</td>
+      <td>tvSeries</td>
+      <td>2.0</td>
     </tr>
     <tr>
       <th>3</th>
@@ -17236,12 +16660,12 @@ WHERE
     </tr>
     <tr>
       <th>4</th>
-      <td>1962.0</td>
-      <td>Chip Albers</td>
-      <td>actor</td>
-      <td>All My Children</td>
-      <td>tvSeries</td>
-      <td>8.0</td>
+      <td>1963.0</td>
+      <td>Stella Adorf</td>
+      <td>actress</td>
+      <td>Der Bettenstudent oder Was mach' ich mit den M...</td>
+      <td>movie</td>
+      <td>7.0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -17263,15 +16687,6 @@ WHERE
     </tr>
     <tr>
       <th>958</th>
-      <td>1963.0</td>
-      <td>Jirí Ondrousek</td>
-      <td>actor</td>
-      <td>Lucie and the Miracles</td>
-      <td>movie</td>
-      <td>7.0</td>
-    </tr>
-    <tr>
-      <th>959</th>
       <td>1964.0</td>
       <td>Ralf Drexler</td>
       <td>actor</td>
@@ -17280,7 +16695,7 @@ WHERE
       <td>6.0</td>
     </tr>
     <tr>
-      <th>960</th>
+      <th>959</th>
       <td>1966.0</td>
       <td>Regina Balaton</td>
       <td>actress</td>
@@ -17289,13 +16704,22 @@ WHERE
       <td>4.0</td>
     </tr>
     <tr>
-      <th>961</th>
+      <th>960</th>
       <td>1962.0</td>
       <td>Ibolya Verebics</td>
       <td>actress</td>
       <td>Musical TV Theater</td>
       <td>tvSeries</td>
       <td>8.0</td>
+    </tr>
+    <tr>
+      <th>961</th>
+      <td>1963.0</td>
+      <td>Jirí Ondrousek</td>
+      <td>actor</td>
+      <td>Lucie and the Miracles</td>
+      <td>movie</td>
+      <td>7.0</td>
     </tr>
   </tbody>
 </table>
@@ -17309,9 +16733,17 @@ WHERE
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the following line I am cheating by grouping by title as well using the Pandas DataFrame API (<code>value_counts</code>).</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df70s_1</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;barh&#39;</span><span class="p">)</span>
@@ -17335,21 +16767,21 @@ WHERE
 <div>
         
         
-            <div id="2c76eb1b-8e15-4829-adba-41676b0d652a" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="1a40ad23-8df1-48db-89fa-c80851f37875" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     window.PLOTLYENV.BASE_URL='https://plot.ly';
                     
-                if (document.getElementById("2c76eb1b-8e15-4829-adba-41676b0d652a")) {
+                if (document.getElementById("1a40ad23-8df1-48db-89fa-c80851f37875")) {
                     Plotly.newPlot(
-                        '2c76eb1b-8e15-4829-adba-41676b0d652a',
-                        [{"marker": {"color": "rgba(226, 74, 51, 0.6)", "line": {"color": "rgba(226, 74, 51, 1.0)", "width": 1}}, "name": "title", "orientation": "h", "text": "", "type": "bar", "x": [664, 87, 84, 31, 9, 7, 5, 4, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "y": ["Tatort", "NFL Monday Night Football", "All My Children", "Musical TV Theater", "Play for Today", "A Question of Sport", "NBC Nightly News with Lester Holt", "Nanny and the Professor", "Pan Tau", "The Partridge Family", "Monique", "Lucie and the Miracles", "Lis\u00e1ci-Mys\u00e1ci a Sibenic\u00e1k", "Ehen vor Gericht", "Nase malo misto", "The Interns", "Mezzanotte d'amore", "Vi i femman", "Fruit of Paradise", "Mazi kalbimde yaradir", "Tough Guys of the Prairie", "Evening at Pops", "The Odd Couple", "Porch Glider", "The Hero", "Sunflower", "WPVI Action News", "Nevesta", "Pig Hunt", "Lisa dagli occhi blu", "Erkek gibi \u00f6lenler", "Krasnaya ploshchad", "Behold Homolka", "Meine Frau erf\u00e4hrt kein Wort", "Mang nu jin jian", "Alex in Wonderland", "Pound", "The Wild Child", "Rabbit, Run", "Somerset", "Make Room for Granddaddy", "Wakamono no hata", "AVRO's Toppop", "Menace", "Dr\u00fccker", "Diary of a Mad Housewife", "Zig Zag", "Du huo zhang", "Good-Bye Nana", "Hyah Stine", "Nine O'Clock News", "Marcovaldo", "Klassewerk", "Dodes'ka-den", "Opekun", "Der Bettenstudent oder Was mach' ich mit den M\u00e4dchen?", "Captain Korda", "Dream No Evil", "Fools", "Scrooge", "Priklyucheniya zhyoltogo chemodanchika", "The Ballad of Cable Hogue", "Kyrkoherden", "Eartha Kitt Sings", "We Two", "The Psychiatrist", "Doomwatch"]}],
+                        '1a40ad23-8df1-48db-89fa-c80851f37875',
+                        [{"marker": {"color": "rgba(226, 74, 51, 0.6)", "line": {"color": "rgba(226, 74, 51, 1.0)", "width": 1}}, "name": "title", "orientation": "h", "text": "", "type": "bar", "x": [664, 87, 84, 31, 9, 7, 5, 4, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "y": ["Tatort", "NFL Monday Night Football", "All My Children", "Musical TV Theater", "Play for Today", "A Question of Sport", "NBC Nightly News with Lester Holt", "Nanny and the Professor", "Pan Tau", "The Partridge Family", "Mezzanotte d'amore", "Lucie and the Miracles", "Lis\u00e1ci-Mys\u00e1ci a Sibenic\u00e1k", "Nase malo misto", "The Interns", "Monique", "Ehen vor Gericht", "Vi i femman", "Somerset", "Dream No Evil", "Dr\u00fccker", "Fruit of Paradise", "Mang nu jin jian", "The Odd Couple", "Rabbit, Run", "Erkek gibi \u00f6lenler", "Menace", "Nevesta", "Wakamono no hata", "Krasnaya ploshchad", "Der Bettenstudent oder Was mach' ich mit den M\u00e4dchen?", "The Ballad of Cable Hogue", "Zig Zag", "Du huo zhang", "The Psychiatrist", "Fools", "Hyah Stine", "Behold Homolka", "We Two", "Dodes'ka-den", "The Wild Child", "WPVI Action News", "Captain Korda", "Pound", "Scrooge", "Klassewerk", "Alex in Wonderland", "Good-Bye Nana", "Marcovaldo", "Evening at Pops", "Priklyucheniya zhyoltogo chemodanchika", "Meine Frau erf\u00e4hrt kein Wort", "AVRO's Toppop", "The Hero", "Doomwatch", "Nine O'Clock News", "Opekun", "Sunflower", "Lisa dagli occhi blu", "Pig Hunt", "Porch Glider", "Tough Guys of the Prairie", "Eartha Kitt Sings", "Kyrkoherden", "Make Room for Granddaddy", "Mazi kalbimde yaradir", "Diary of a Mad Housewife"]}],
                         {"legend": {"bgcolor": "#FFFFFF", "font": {"color": "#666666"}}, "paper_bgcolor": "#FFFFFF", "plot_bgcolor": "#E5E5E5", "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"font": {"color": "#151516"}}, "xaxis": {"gridcolor": "#F6F6F6", "showgrid": true, "tickfont": {"color": "#666666"}, "title": {"font": {"color": "#666666"}, "text": ""}, "zerolinecolor": "#F6F6F6"}, "yaxis": {"gridcolor": "#F6F6F6", "showgrid": true, "tickfont": {"color": "#666666"}, "title": {"font": {"color": "#666666"}, "text": ""}, "zerolinecolor": "#F6F6F6"}},
                         {"showLink": true, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plot.ly", "responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('2c76eb1b-8e15-4829-adba-41676b0d652a');
+var gd = document.getElementById('1a40ad23-8df1-48db-89fa-c80851f37875');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -17387,13 +16819,21 @@ if (outputEl) {{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>We would normally want to investigate the TV show Tatort a bit more but not today.  Instead we will restrict our attentions to titles that are actually movies.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Focusing-on-Movies-Only">Focusing on Movies Only<a class="anchor-link" href="#Focusing-on-Movies-Only">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pretty_print_query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
@@ -17460,7 +16900,7 @@ ORDER BY year, profession
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[48]:</div>
+    <div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -17581,7 +17021,7 @@ ORDER BY year, profession
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;cnt&quot;</span><span class="p">,</span> <span class="n">categories</span><span class="o">=</span><span class="s2">&quot;profession&quot;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;actor&quot;</span><span class="p">:</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;actress&quot;</span><span class="p">:</span> <span class="s2">&quot;red&quot;</span><span class="p">},</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;lines+markers&quot;</span><span class="p">)</span>
@@ -17606,21 +17046,21 @@ ORDER BY year, profession
 <div>
         
         
-            <div id="f6f15ba7-d3c8-49b1-889f-88a98d9f6883" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="3c6a4d7f-f4de-438a-9042-59af80e1992a" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     window.PLOTLYENV.BASE_URL='https://plot.ly';
                     
-                if (document.getElementById("f6f15ba7-d3c8-49b1-889f-88a98d9f6883")) {
+                if (document.getElementById("3c6a4d7f-f4de-438a-9042-59af80e1992a")) {
                     Plotly.newPlot(
-                        'f6f15ba7-d3c8-49b1-889f-88a98d9f6883',
+                        '3c6a4d7f-f4de-438a-9042-59af80e1992a',
                         [{"marker": {"color": "blue", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "lines+markers", "name": "actor", "textfont": {"color": "#666666"}, "type": "scatter", "x": [1941.0, 1942.0, 1943.0, 1944.0, 1945.0, 1946.0, 1947.0, 1948.0, 1949.0, 1950.0, 1951.0, 1952.0, 1953.0, 1954.0, 1955.0, 1956.0, 1957.0, 1958.0, 1959.0, 1960.0, 1961.0, 1962.0, 1963.0, 1964.0, 1965.0, 1966.0, 1967.0, 1968.0, 1969.0, 1970.0, 1971.0, 1972.0, 1973.0, 1974.0, 1975.0, 1976.0, 1977.0, 1978.0, 1979.0, 1980.0, 1981.0, 1982.0, 1983.0, 1984.0, 1985.0, 1986.0, 1987.0, 1988.0, 1989.0, 1990.0, 1991.0, 1992.0, 1993.0, 1994.0, 1995.0, 1996.0, 1997.0, 1998.0, 1999.0, 2000.0, 2001.0, 2002.0, 2003.0, 2004.0, 2005.0, 2006.0, 2007.0, 2008.0, 2009.0, 2010.0, 2011.0, 2012.0, 2013.0, 2014.0, 2015.0, 2016.0, 2017.0, 2018.0, 2019.0], "y": [2008, 1910, 1753, 1763, 1602, 1873, 1836, 2056, 2291, 2021, 2157, 2148, 2329, 2253, 2206, 2629, 2556, 2636, 2658, 2575, 2607, 2707, 2407, 2699, 2875, 2843, 2963, 3130, 2981, 3181, 3245, 3270, 3400, 3320, 3165, 3355, 3296, 3309, 3610, 3782, 3662, 3332, 3745, 3876, 3781, 4048, 4110, 4129, 4264, 3897, 3967, 3834, 3900, 3847, 4198, 4419, 4789, 4774, 5344, 5459, 6178, 6165, 6250, 6890, 7104, 7956, 8023, 8429, 8739, 7970, 7827, 7613, 7505, 7716, 7489, 7576, 7198, 6464, 4835]}, {"marker": {"color": "red", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "lines+markers", "name": "actress", "textfont": {"color": "#666666"}, "type": "scatter", "x": [1941.0, 1942.0, 1943.0, 1944.0, 1945.0, 1946.0, 1947.0, 1948.0, 1949.0, 1950.0, 1951.0, 1952.0, 1953.0, 1954.0, 1955.0, 1956.0, 1957.0, 1958.0, 1959.0, 1960.0, 1961.0, 1962.0, 1963.0, 1964.0, 1965.0, 1966.0, 1967.0, 1968.0, 1969.0, 1970.0, 1971.0, 1972.0, 1973.0, 1974.0, 1975.0, 1976.0, 1977.0, 1978.0, 1979.0, 1980.0, 1981.0, 1982.0, 1983.0, 1984.0, 1985.0, 1986.0, 1987.0, 1988.0, 1989.0, 1990.0, 1991.0, 1992.0, 1993.0, 1994.0, 1995.0, 1996.0, 1997.0, 1998.0, 1999.0, 2000.0, 2001.0, 2002.0, 2003.0, 2004.0, 2005.0, 2006.0, 2007.0, 2008.0, 2009.0, 2010.0, 2011.0, 2012.0, 2013.0, 2014.0, 2015.0, 2016.0, 2017.0, 2018.0, 2019.0], "y": [1188, 1213, 1146, 1167, 1032, 1178, 1148, 1121, 1392, 1181, 1291, 1314, 1379, 1268, 1386, 1638, 1572, 1499, 1472, 1488, 1610, 1445, 1311, 1508, 1561, 1435, 1645, 1615, 1617, 1629, 1724, 1669, 1658, 1702, 1699, 1722, 1730, 1658, 1792, 1924, 1917, 1842, 1975, 2152, 1987, 2050, 2210, 2274, 2216, 2120, 2001, 1987, 2017, 2086, 2395, 2458, 2654, 2701, 2853, 3109, 3495, 3517, 3491, 3865, 4006, 4688, 4789, 4810, 5131, 4654, 4542, 4465, 4520, 4784, 4579, 4717, 4369, 4031, 2861]}],
                         {"legend": {"bgcolor": "#FFFFFF", "font": {"color": "#666666"}}, "paper_bgcolor": "#FFFFFF", "plot_bgcolor": "#E5E5E5", "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"font": {"color": "#151516"}}, "xaxis": {"gridcolor": "#F6F6F6", "showgrid": true, "tickfont": {"color": "#666666"}, "title": {"font": {"color": "#666666"}, "text": ""}, "zerolinecolor": "#F6F6F6"}, "yaxis": {"gridcolor": "#F6F6F6", "showgrid": true, "tickfont": {"color": "#666666"}, "title": {"font": {"color": "#666666"}, "text": ""}, "zerolinecolor": "#F6F6F6"}},
                         {"showLink": true, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plot.ly", "responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('f6f15ba7-d3c8-49b1-889f-88a98d9f6883');
+var gd = document.getElementById('3c6a4d7f-f4de-438a-9042-59af80e1992a');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -17661,21 +17101,21 @@ if (outputEl) {{
 <div>
         
         
-            <div id="4921a898-21c0-4fe2-aa0d-700889578e0e" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="d74a5794-143b-4144-905f-d1a40a606059" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     window.PLOTLYENV.BASE_URL='https://plot.ly';
                     
-                if (document.getElementById("4921a898-21c0-4fe2-aa0d-700889578e0e")) {
+                if (document.getElementById("d74a5794-143b-4144-905f-d1a40a606059")) {
                     Plotly.newPlot(
-                        '4921a898-21c0-4fe2-aa0d-700889578e0e',
+                        'd74a5794-143b-4144-905f-d1a40a606059',
                         [{"marker": {"color": "blue", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "lines+markers", "name": "actor", "textfont": {"color": "#666666"}, "type": "scatter", "x": [1941.0, 1942.0, 1943.0, 1944.0, 1945.0, 1946.0, 1947.0, 1948.0, 1949.0, 1950.0, 1951.0, 1952.0, 1953.0, 1954.0, 1955.0, 1956.0, 1957.0, 1958.0, 1959.0, 1960.0, 1961.0, 1962.0, 1963.0, 1964.0, 1965.0, 1966.0, 1967.0, 1968.0, 1969.0, 1970.0, 1971.0, 1972.0, 1973.0, 1974.0, 1975.0, 1976.0, 1977.0, 1978.0, 1979.0, 1980.0, 1981.0, 1982.0, 1983.0, 1984.0, 1985.0, 1986.0, 1987.0, 1988.0, 1989.0, 1990.0, 1991.0, 1992.0, 1993.0, 1994.0, 1995.0, 1996.0, 1997.0, 1998.0, 1999.0, 2000.0, 2001.0, 2002.0, 2003.0, 2004.0, 2005.0, 2006.0, 2007.0, 2008.0, 2009.0, 2010.0, 2011.0, 2012.0, 2013.0, 2014.0, 2015.0, 2016.0, 2017.0, 2018.0, 2019.0], "y": [39.44721115537848, 39.64188481675393, 39.93553907586994, 39.073737946681796, 39.7103620474407, 40.295248264815804, 40.07843137254902, 40.409046692607006, 40.63683980794413, 40.75259772389906, 40.48864163189615, 40.54655493482309, 40.76899957063117, 40.61784287616511, 40.0362647325476, 40.74324838341575, 40.098591549295776, 40.55955993930197, 40.19676448457487, 39.92155339805825, 39.4054468738013, 39.900997414111565, 39.87744079767345, 39.420526120785475, 39.13808695652174, 39.63137530777348, 39.77387782652717, 39.500319488817894, 39.50016772895002, 39.716127004086765, 39.673343605547, 39.61743119266055, 40.89705882352941, 40.918072289156626, 40.60505529225908, 41.26140089418778, 41.03367718446602, 40.676337262012694, 41.050969529085876, 41.53172924378636, 41.50955761878755, 41.512905162064826, 41.31188251001335, 40.94091847265222, 41.14255487966147, 41.2126976284585, 42.052311435523116, 41.37563574715428, 41.706144465290805, 41.4300744162176, 41.37736324678598, 41.16275430359937, 41.823846153846155, 40.97400571874188, 40.56241067174845, 40.568001810364336, 40.92921277928586, 40.63824884792627, 40.712013473053894, 39.23758930206998, 39.307866623502754, 39.447526358475265, 39.56464, 39.195500725689406, 38.72015765765766, 38.68464052287582, 39.14732643649508, 39.531854312492584, 39.228630278063854, 39.80577164366374, 40.812060815127126, 40.873637199527124, 41.73244503664224, 41.138543286677034, 41.91854720256376, 41.93862196409715, 42.073075854404, 41.89418316831683, 41.92843846949328]}, {"marker": {"color": "red", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "lines+markers", "name": "actress", "textfont": {"color": "#666666"}, "type": "scatter", "x": [1941.0, 1942.0, 1943.0, 1944.0, 1945.0, 1946.0, 1947.0, 1948.0, 1949.0, 1950.0, 1951.0, 1952.0, 1953.0, 1954.0, 1955.0, 1956.0, 1957.0, 1958.0, 1959.0, 1960.0, 1961.0, 1962.0, 1963.0, 1964.0, 1965.0, 1966.0, 1967.0, 1968.0, 1969.0, 1970.0, 1971.0, 1972.0, 1973.0, 1974.0, 1975.0, 1976.0, 1977.0, 1978.0, 1979.0, 1980.0, 1981.0, 1982.0, 1983.0, 1984.0, 1985.0, 1986.0, 1987.0, 1988.0, 1989.0, 1990.0, 1991.0, 1992.0, 1993.0, 1994.0, 1995.0, 1996.0, 1997.0, 1998.0, 1999.0, 2000.0, 2001.0, 2002.0, 2003.0, 2004.0, 2005.0, 2006.0, 2007.0, 2008.0, 2009.0, 2010.0, 2011.0, 2012.0, 2013.0, 2014.0, 2015.0, 2016.0, 2017.0, 2018.0, 2019.0], "y": [31.663299663299664, 32.19043693322341, 31.11692844677138, 31.25706940874036, 32.56782945736434, 31.661290322580644, 33.28745644599303, 33.57270294380018, 33.497126436781606, 33.17104149026249, 33.62432223082882, 32.55251141552512, 32.53952139231327, 33.07018927444795, 33.6031746031746, 34.1978021978022, 32.170483460559794, 32.71847898599066, 32.60801630434783, 31.99798387096774, 32.701863354037265, 32.44498269896194, 31.889397406559876, 32.54509283819629, 31.847533632286996, 32.49268292682927, 31.47659574468085, 32.805572755417955, 32.817563388991964, 32.98281154082259, 33.33352668213457, 33.510485320551226, 33.89083232810615, 34.22385428907168, 34.93996468510889, 34.74157955865273, 35.489017341040466, 34.9897466827503, 34.71372767857143, 35.37370062370062, 35.231090245174755, 35.13083604777416, 34.655696202531644, 35.013011152416354, 34.30951182687468, 34.00878048780488, 35.55701357466064, 35.173262972735266, 34.75992779783393, 34.552358490566036, 35.021989005497254, 34.914947156517364, 35.07635101636093, 34.54841802492809, 33.372025052192065, 33.775834011391375, 34.19366993217785, 34.045538689374304, 33.95583596214511, 33.47700225152782, 33.57081545064378, 33.3488768837077, 33.09997135491263, 33.220957309184996, 32.50898652021967, 33.03839590443686, 33.11547295886406, 33.63866943866944, 33.71642954589748, 33.83304684142673, 34.59467195068252, 35.231354983202685, 35.255973451327435, 35.33444816053512, 36.22974448569557, 36.04303582785669, 36.75783932249943, 36.883651699330194, 36.87347081440056]}],
                         {"legend": {"bgcolor": "#FFFFFF", "font": {"color": "#666666"}}, "paper_bgcolor": "#FFFFFF", "plot_bgcolor": "#E5E5E5", "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"font": {"color": "#151516"}}, "xaxis": {"gridcolor": "#F6F6F6", "showgrid": true, "tickfont": {"color": "#666666"}, "title": {"font": {"color": "#666666"}, "text": ""}, "zerolinecolor": "#F6F6F6"}, "yaxis": {"gridcolor": "#F6F6F6", "showgrid": true, "tickfont": {"color": "#666666"}, "title": {"font": {"color": "#666666"}, "text": ""}, "zerolinecolor": "#F6F6F6"}},
                         {"showLink": true, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plot.ly", "responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('4921a898-21c0-4fe2-aa0d-700889578e0e');
+var gd = document.getElementById('d74a5794-143b-4144-905f-d1a40a606059');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -17709,6 +17149,14 @@ if (outputEl) {{
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Do you see any interesting trends?</p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
