@@ -28,6 +28,7 @@ function highlightAndScrollToWeek() {
             }
         }
     }
+    // Auto Scroll To Current Week's Tab
     currentWeekTab.scrollIntoView();
 }
 
