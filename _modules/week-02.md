@@ -12,7 +12,7 @@ days:
       "**Lab**{: .label .label-lab } [Lab 1](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab01/) (due Feb. 3)":
   - date: 2020-01-30
     events:
-      "**Lecture**{: .label .label } SQL, Pandas ([code](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp20&urlpath=tree%2Fsp20%2Flecture%2Flec04))":
+      "**Lecture**{: .label .label } [Finish SQL and Start Pandas](https://drive.google.com/open?id=1PP6Ah2SyEVql62xEMNeqMJeJqbYVtbl3), Joins Notebook ([html](../resources/assets/lectures/lec04/Joins.html)), Pandas Part 1 Notebook ([html](../resources/assets/lectures/lec04/04-pandas-basics.html)) ([raw code](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp20&urlpath=tree%2Fsp20%2Flecture%2Flec04))":
         "[Ch. 9](https://www.textbook.ds100.org/ch/09/sql_intro.html), [Ch. 3](https://www.textbook.ds100.org/ch/03/pandas_intro.html)"
   - date: 2019-01-31
     events:
