@@ -7,8 +7,9 @@ description: An embedded Google Calendar displaying the weekly event schedule.
 
 # Calendar
 
-Jump to Calendars for [Discussion, Lab, and Lecture](#dll) or [Office Hours](#oh)
+Jump to Calendars for [Discussion, Lab, and Lecture](#dll) or [Office Hours](#oh).
 
+**Note**: Some of the GSIs' office hour locations have changed. Click on the [link](#loc) to see the new locations.
 
 <!-- <link rel="stylesheet" property="stylesheet" href="https://unpkg.com/@fullcalendar/core/main.css">
 <link rel="stylesheet" property="stylesheet" href="https://unpkg.com/@fullcalendar/timegrid/main.css"> -->
@@ -70,7 +71,11 @@ Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs 
 
 ## Office Hours
 
-**Note:** All GSI office hours are in **Soda 341A**. We are currently actively adding in more office hours.
+<a name = 'loc'></a>
+**Note:** Here are the <span style="color:#C0392B">**updated locations**</span> for all GSI office hours:
+- Monday 3-4PM: **Soda 310**
+- Monday 4-6PM: **Jacobs Design Lounge**
+- Rest of Monday and Tuesday through Friday: **Soda 341A**
 
 GSI office hours are in <span style="color:DodgerBlue">**blue**</span>, and Professor Gonzalez and Adhikari's office hours are in <span style="color:Violet">**pink**</span>.
 
