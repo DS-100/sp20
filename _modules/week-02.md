@@ -16,5 +16,5 @@ days:
         "[Ch. 9](https://www.textbook.ds100.org/ch/09/sql_intro.html), [Ch. 3](https://www.textbook.ds100.org/ch/03/pandas_intro.html)"
   - date: 2019-01-31
     events:
-      "**Discussion**{: .label .label-disc } [Discussion 2](../resources/assets/discussions/disc02.pdf)":
+      "**Discussion**{: .label .label-disc } [Discussion 2](../resources/assets/discussions/disc02.pdf) ([solutions](../resources/assets/discussions/disc02_sol.pdf))":
 ---
