@@ -76,6 +76,7 @@ Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs 
 - We will **not** being holding office hours on Wednesday from 9am-12pm. Please attend the homework party **at SDH 254** instead.
 - Monday 9-2PM, 5-7PM: **Evans B6**
 - Monday 2-5PM: **Cory 105**
+- Friday 1-4PM: **Jacobs Design Lounge**
 - Rest of Monday and Tuesday through Friday: **Soda 341A**
 
 GSI office hours are in <span style="color:DodgerBlue">**blue**</span>, Professor Gonzalez and Adhikari's office hours are in <span style="color:Violet">**pink**</span>, and Homework Parties are in <span style="color:#28A85B">**green**</span>.
