@@ -7,7 +7,7 @@ description: An embedded Google Calendar displaying the weekly event schedule.
 
 # Calendar
 
-Jump to Calendars for [Discussion, Lab, and Lecture](#dll) or [Office Hours](#oh).
+Jump to Calendars for [Discussion, Lab, and Lecture](#dll) or [Office Hours and Homework Parties](#oh).
 
 **Note**: Some of the GSIs' office hour locations have changed. Click on the [link](#loc) to see the new locations.
 
@@ -69,14 +69,15 @@ Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs 
 
 <a name = 'oh'></a>
 
-## Office Hours
+## Office Hours and Homework Party
 
 <a name = 'loc'></a>
-**Note:** Here are the <span style="color:#C0392B">**updated locations**</span> for all GSI office hours:
-- Monday 3-4PM: **Soda 310**
-- Monday 4-6PM: **Jacobs Design Lounge**
+**Note:** (Effective Immediately) Here are the <span style="color:#C0392B">**updated locations**</span> for all GSI office hours:
+- We will **not** being holding office hours on Wednesday from 9am-12pm. Please attend the homework party **at SDH 254** instead.
+- Monday 9-2PM, 5-7PM: **Evans B6**
+- Monday 2-5PM: **Cory 105**
 - Rest of Monday and Tuesday through Friday: **Soda 341A**
 
-GSI office hours are in <span style="color:DodgerBlue">**blue**</span>, and Professor Gonzalez and Adhikari's office hours are in <span style="color:Violet">**pink**</span>.
+GSI office hours are in <span style="color:DodgerBlue">**blue**</span>, Professor Gonzalez and Adhikari's office hours are in <span style="color:Violet">**pink**</span>, and Homework Parties are in <span style="color:#28A85B">**green**</span>.
 
-<iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1XzlvZTRkcTUyMTY2YzhwaGJwMTZtaTZtdG5jQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X2t1MXZpYWFqZ2gxMTM3ZGY4bWU4ZDl0MnE0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%2329527A&amp;color=%23B1365F&amp;mode=WEEK&amp;title=%20" style="border-width:0" width="750" height="550" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1X3JqaWdlMDA2M21qcWY0Y3Uxbm9nZTJ2YWFjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1XzlvZTRkcTUyMTY2YzhwaGJwMTZtaTZtdG5jQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X2t1MXZpYWFqZ2gxMTM3ZGY4bWU4ZDl0MnE0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%230B8043&amp;color=%234285F4&amp;color=%23D81B60&amp;title=%20&amp;mode=WEEK" style="border-width:0" width="750" height="550" frameborder="0" scrolling="no"></iframe>
