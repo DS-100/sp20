@@ -6,7 +6,7 @@ days:
     events:
       "**Lecture**{: .label .label } Pandas":
         "[Ch. 3](https://www.textbook.ds100.org/ch/03/pandas_intro.html)"
-      "**Lab**{: .label .label-lab } Lab 2":
+      "**Lab**{: .label .label-lab } [Lab 2](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab02/) (due Feb. 10)":
   - date: 2020-02-06
     events:
       "**Lecture**{: .label .label } Data Cleaning and EDA":
