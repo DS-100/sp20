@@ -1,18 +1,21 @@
 test = {   'name': 'q6',
     'points': 3,
     'suites': [   {   'cases': [   {   'code': '>>> missingRatingsDf.shape == '
-                                               '(2, 2)\n',
+                                               '(2, 2)\n'
+                                               'True',
                                        'hidden': False,
                                        'locked': False},
                                    {   'code': '>>> '
                                                'set(missingRatingsDf.columns) '
                                                "== set(['has_rating', "
-                                               "'total'])\n",
+                                               "'total'])\n"
+                                               'True',
                                        'hidden': False,
                                        'locked': False},
                                    {   'code': '>>> '
                                                "set(missingRatingsDf['has_rating']) "
-                                               "== set(['yes', 'no'])\n",
+                                               "== set(['yes', 'no'])\n"
+                                               'True',
                                        'hidden': False,
                                        'locked': False}],
                       'scored': True,
