@@ -60,7 +60,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## Discussion, Lab, and Lecture
 
-**Note**: Per course policies, you should only attend the discussion / lab section you are assigned to.
+**Note**:
+- Per course policies, you should only attend the discussion / lab section you are assigned to.
+- <span style="color:red">**IMPORTANT:**</span> All lab sections on **Wednesday from 9am - 12pm** in SDH 254 are now **homework parties** instead. Please see the [homework party calendar](#oh) below for more details.
 
 Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs are in <span style="color:MediumSeaGreen">**green**</span>, and lectures are in <span style="color:Orange">**yellow**</span>. Click a discussion / lab event to see the different GSIs teaching at that time. 
 
