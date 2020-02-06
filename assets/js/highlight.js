@@ -29,7 +29,10 @@ function highlightAndScrollToWeek() {
         }
     }
     // Auto Scroll To Current Week's Tab
-    currentWeekTab.scrollIntoView();
+    currentWeekTab.scrollIntoView({
+        behavior: 'auto',
+        block: 'center'
+    });
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
