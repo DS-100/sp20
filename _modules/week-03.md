@@ -16,5 +16,5 @@ days:
         "[Ch. 4](https://www.textbook.ds100.org/ch/04/eda_intro.html), [Ch. 5](https://www.textbook.ds100.org/ch/05/cleaning_structure.html)"
   - date: 2019-02-07
     events:
-      "**Discussion**{: .label .label-disc } Discussion 3":
+      "**Discussion**{: .label .label-disc } [Discussion 3](../resources/assets/discussions/disc03.pdf) ([notebook](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=discussion/disc03/))":
 ---
