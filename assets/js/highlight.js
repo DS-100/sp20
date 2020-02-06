@@ -33,6 +33,7 @@ function highlightAndScrollToWeek() {
         behavior: 'auto',
         block: 'center'
     });
+
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
