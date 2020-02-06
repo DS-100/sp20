@@ -12,7 +12,7 @@ days:
       "**Lab**{: .label .label-lab } [Lab 2](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab02/) (due Feb. 10)":
   - date: 2020-02-06
     events:
-      "**Lecture**{: .label .label } [Data Cleaning and EDA](https://drive.google.com/open?id=11Gk1dZwALgUiZYgOKGTAbDs_kfuqLx4M) ([code](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lecture/lec06/))":
+      "**Lecture**{: .label .label } [Data Cleaning and EDA](https://drive.google.com/open?id=11Gk1dZwALgUiZYgOKGTAbDs_kfuqLx4M) ([webcast](https://www.youtube.com/watch?v=6MpCZKK034I)) ([code](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lecture/lec06/))":
         "[Ch. 4](https://www.textbook.ds100.org/ch/04/eda_intro.html), [Ch. 5](https://www.textbook.ds100.org/ch/05/cleaning_structure.html)"
   - date: 2019-02-07
     events:
