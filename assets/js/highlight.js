@@ -5,7 +5,7 @@ function highlightAndScrollToWeek() {
     const currentMilli = (new Date()).getTime();
     const currWeekIndex = Math.floor((currentMilli - startOfSp20InMilli) / oneWeekInMilli);
     var currentWeekTab = document.getElementsByClassName("module")[currWeekIndex];
-    currentWeekTab.style.background = "linear-gradient(90deg, #2869e6 1.5%, white 1.5%)";
+    currentWeekTab.style.background = "linear-gradient(90deg, #2869e6 1%, white 1%)";
     var header = currentWeekTab.children[0];
     header.style.borderStyle = "none";
     var body = currentWeekTab.children[1];
