@@ -2,6 +2,9 @@
 title: Week 8
 weekNumber: 8
 days:
+  - date: 2020-03-09
+    events:
+      "**Exam**{: .label .label-exam } Midterm (8:30pm - 10:00pm)":
   - date: 2020-03-10
     events:
       "**Lecture**{: .label .label } Probability for Generalization":
