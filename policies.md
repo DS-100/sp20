@@ -30,7 +30,7 @@ description: >-
 - **Labs:** Labs are weekly assignments that complement the homeworks. All lab autograder tests are visible. Your two lowest lab scores will be dropped. 
 - **Vitamins (undergrad only):** Vitamins are weekly short assignments to check that you are keeping up with lectures. Vitamins should take fewer than 10 minutes to complete. Your two lowest vitamin scores will be dropped.
 - **Projects:** Projects are two-week long assignments that synthesize multiple topics.
-- **Midterms:** There will be one midterm: date and time to be announced shortly.
+- **Midterms:** There will be one midterm on Monday, March 9th, from 8:30 pm to 10:00 pm. See Piazza for more details.
 - **Final:** The final exam is required, and will be on Wednesday, May 13th, 11:30 am to 2:30 pm, exam group 10.
 - **Undergrad vs. grad:** All students enrolled in the graduate version of the course (CS C200A) will be graded according to the graduate grading scheme. Students enrolled in the undergraduate version of the course (CS C100) will be graded according to the undergraduate grading scheme. 
 
