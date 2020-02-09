@@ -4,7 +4,7 @@ weekNumber: 4
 days:
   - date: 2020-02-10
     events:
-      "**Vitamin**{: .label .label-vitamin } [Vitamin 1](https://www.gradescope.com/courses/78615/assignments/353070/) (due Feb. 10)":
+      "**Vitamin**{: .label .label-vit } [Vitamin 1](https://www.gradescope.com/courses/78615/assignments/353070/) (due Feb. 10)":
   - date: 2020-02-11
     events:
       "**Lecture**{: .label .label } Regular Expressions":
