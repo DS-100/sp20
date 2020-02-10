@@ -65,10 +65,13 @@ As a data scientist you will often need to search for information on various lib
   - [Python + Numpy Tutorial](http://cs231n.github.io/python-numpy-tutorial/) this tutorial provides a great overview of a lot of the functionality we will be using in DS100.
   - [Python 101](http://nbviewer.jupyter.org/urls/bitbucket.org/hrojas/learn-pandas/raw/master/lessons/Python_101.ipynb): A notebook demonstrating a lot of python functionality with some (minimal explanation).
 
-* **Plotting:**
+* **Data Visualization:**
 
-  - [matplotlib.pyplot tutorial](http://matplotlib.org/users/pyplot_tutorial.html#pyplot-tutorial): This short tutorial provides an overview of the basic plotting utilities we will be using.
-  - [seaborn](http://seaborn.pydata.org/tutorial.html): The Seaborn library has some nice additional visualization functions that we may use occasionally.
+  - [Altair Documentation](https://altair-viz.github.io/): We will be using Altair(Vega-Lite) for DS100 this spring (a change from previous semesters). In particular, you should find the [example gallery](https://altair-viz.github.io/gallery/index.html) helpful.
+  - [Prof. Jeff Heer's Visualization Curriculum](https://github.com/uwdata/visualization-curriculum): This repository contains a series of Python-based Jupyter notebooks that teaches data visualization using Vega-Lite and Altair.
+  - If you are interested in learning more about data visualization, you can find more materials in:
+    - [Edward Tufte's book sequences](https://www.edwardtufte.com/tufte/books_vdqi) -- a classic!
+    - Prof. Heer's [class](https://courses.cs.washington.edu/courses/cse512/19sp/).
 
 * **Pandas:**
 
