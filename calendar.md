@@ -76,7 +76,7 @@ Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs 
 <a name = 'loc'></a>
 **Note:** (Effective Immediately) Here are the <span style="color:#C0392B">**updated locations**</span> for all GSI office hours:
 - We will **not** being holding office hours on Wednesday from 9am-12pm. Please attend the homework party **at SDH 254** instead.
-- Monday 9-2PM, 5-7PM: **Evans B6**
+- Monday 9-2PM: **Evans B6**
 - Monday 2-4PM: **320 Soda (Tentative)**
 - Monday 4-7PM: **Evans 458**
 - Friday 1-4PM: **Jacobs Design Lounge**
