@@ -8,7 +8,7 @@ days:
       "**Project**{: .label .label-proj } [Project 1A](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=proj/proj1a/) (due Feb. 17)":
   - date: 2020-02-11
     events:
-      "**Lecture**{: .label .label } Regular Expressions":
+      "**Lecture**{: .label .label } Regular Expressions [Regex](https://drive.google.com/open?id=1mfpm9FWR_ipvxEavzevHm3WlGh_hZncQ) ([code](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lecture/lec07/))":
         "[Ch. 8](https://www.textbook.ds100.org/ch/08/text_intro.html)"
       "**Lab**{: .label .label-lab } Project 1 Office Hours (no lab assignment)":
   - date: 2020-02-13
