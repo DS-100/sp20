@@ -2,6 +2,10 @@
 title: Week 5
 weekNumber: 5
 days:
+  - date: 2020-02-17
+    events:
+      "**Project**{: .label .label-proj } Project 1B":
+        "[Ch. 6](https://www.textbook.ds100.org/ch/06/viz_intro.html)"
   - date: 2020-02-18
     events:
       "**Lecture**{: .label .label } Visualization II":

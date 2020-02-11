@@ -5,6 +5,7 @@ days:
   - date: 2020-02-10
     events:
       "**Vitamin**{: .label .label-vit } [Vitamin 1](https://www.gradescope.com/courses/78615/assignments/353070/) (due Feb. 10)":
+      "**Project**{: .label .label-proj } [Project 1A](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=proj/proj1a/) (due Feb. 17)":
   - date: 2020-02-11
     events:
       "**Lecture**{: .label .label } Regular Expressions":
