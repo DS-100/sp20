@@ -38,7 +38,7 @@ Jump to [Instructors](#inst), [Teaching Assistants](#tas), or [Tutors](#tutors)
 ## Tutors
 
 <div class="role">
-  {% assign readers = site.staffers | where: 'role', 'Reader' %}
+  {% assign readers = site.staffers | where: 'role', 'Tutor' %}
   {% for staffer in readers %}
   {{ staffer }}
   {% endfor %}
