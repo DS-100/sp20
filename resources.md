@@ -66,8 +66,8 @@ As a data scientist you will often need to search for information on various lib
   - [Python 101](http://nbviewer.jupyter.org/urls/bitbucket.org/hrojas/learn-pandas/raw/master/lessons/Python_101.ipynb): A notebook demonstrating a lot of python functionality with some (minimal explanation).
 
 * **Data Visualization:**
-
-  - [Altair Documentation](https://altair-viz.github.io/): We will be using Altair(Vega-Lite) for DS100 this spring (a change from previous semesters). In particular, you should find the [example gallery](https://altair-viz.github.io/gallery/index.html) helpful.
+  - [matplotlib.pyplot tutorial](http://matplotlib.org/users/pyplot_tutorial.html#pyplot-tutorial): This short tutorial provides an overview of the basic plotting utilities we will be using.
+  - [Altair Documentation](https://altair-viz.github.io/): Altair(Vega-Lite) is a new and powerful visualization library.  We might not get to teach it this semester, but you should check it out if you are interested in pursuing visualization deeper. In particular, you should find the [example gallery](https://altair-viz.github.io/gallery/index.html) helpful.
   - [Prof. Jeff Heer's Visualization Curriculum](https://github.com/uwdata/visualization-curriculum): This repository contains a series of Python-based Jupyter notebooks that teaches data visualization using Vega-Lite and Altair.
   - If you are interested in learning more about data visualization, you can find more materials in:
     - [Edward Tufte's book sequences](https://www.edwardtufte.com/tufte/books_vdqi) -- a classic!
