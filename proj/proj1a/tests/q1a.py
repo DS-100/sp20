@@ -1,8 +1,9 @@
 test = {   'name': 'q1a',
     'points': 3,
-    'suites': [   {   'cases': [   {   'code': '>>> '
-                                               "sorted(list_files('data'))[0].name "
-                                               "== 'bus.csv.bz2'\n"
+    'suites': [   {   'cases': [   {   'code': ">>> 'bus.csv.bz2' in "
+                                               "[list_files('data')[i].name "
+                                               'for i in '
+                                               "range(len(list_files('data')))]\n"
                                                'True',
                                        'hidden': False,
                                        'locked': False},
