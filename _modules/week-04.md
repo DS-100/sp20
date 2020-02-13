@@ -13,7 +13,7 @@ days:
       "**Lab**{: .label .label-lab } Project 1 Office Hours (no lab assignment)":
   - date: 2020-02-13
     events:
-      "**Lecture**{: .label .label } Visualization I":
+      "**Lecture**{: .label .label } [Visualization I](https://drive.google.com/open?id=1DYflNORRI3nhGJrBwlr3i1f-okW5uBBc) ([webcast](https://www.youtube.com/watch?v=5CD8QR2pdro))":
         "[Ch. 6](https://www.textbook.ds100.org/ch/06/viz_intro.html)"
   - date: 2019-02-14
     events:
