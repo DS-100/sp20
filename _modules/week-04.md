@@ -17,5 +17,5 @@ days:
         "[Ch. 6](https://www.textbook.ds100.org/ch/06/viz_intro.html)"
   - date: 2019-02-14
     events:
-      "**Discussion**{: .label .label-disc } [Discussion 4](../resources/assets/discussions/disc04.pdf) ([notebook](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=discussion/disc04/))":
+      "**Discussion**{: .label .label-disc } [Discussion 4](../resources/assets/discussions/disc04.pdf) ([notebook](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=discussion/disc04/)) ([solutions](../resources/assets/discussions/disc04_sol.pdf))":
 ---
