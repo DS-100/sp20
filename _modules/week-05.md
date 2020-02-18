@@ -10,7 +10,7 @@ days:
     events:
       "**Lecture**{: .label .label } Visualization II":
         "[Ch. 6](https://www.textbook.ds100.org/ch/06/viz_intro.html)"
-      "**Lab**{: .label .label-lab } Lab 4":
+      "**Lab**{: .label .label-lab } [Lab 3](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab03/) (due Feb. 24)":
   - date: 2020-02-20
     events:
       "**Lecture**{: .label .label } Model Design, Linear Regression":
