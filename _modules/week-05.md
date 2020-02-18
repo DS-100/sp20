@@ -5,7 +5,7 @@ days:
   - date: 2020-02-17
     events:
       "**Vitamin**{: .label .label-vit } [Vitamin 2](https://www.gradescope.com/courses/78615/assignments/361358/) (due Feb. 17)":
-      "**Project**{: .label .label-proj } Project 1B":
+      "**Project**{: .label .label-proj } [Project 1B](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=proj/proj1b/) (due Feb. 24)":
         "[Ch. 6](https://www.textbook.ds100.org/ch/06/viz_intro.html)"
   - date: 2020-02-18
     events:
