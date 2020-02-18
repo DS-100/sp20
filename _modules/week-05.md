@@ -9,7 +9,7 @@ days:
         "[Ch. 6](https://www.textbook.ds100.org/ch/06/viz_intro.html)"
   - date: 2020-02-18
     events:
-      "**Lecture**{: .label .label } [Visualization II](https://drive.google.com/file/d/1VigN14FVNDLiUT9zdB8OaR42maHYyVZC/view?usp=sharing) ([code](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lecture/lec09/))":
+      "**Lecture**{: .label .label } [Visualization II](https://drive.google.com/file/d/1VigN14FVNDLiUT9zdB8OaR42maHYyVZC/view?usp=sharing) ([webcast](https://www.youtube.com/watch?v=NSL_zlEdcN8)) ([code](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lecture/lec09/))":
         "[Ch. 6](https://www.textbook.ds100.org/ch/06/viz_intro.html)"
       "**Lab**{: .label .label-lab } [Lab 3](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab03/) (due Feb. 24)":
   - date: 2020-02-20
