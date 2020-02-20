@@ -14,9 +14,9 @@ days:
       "**Lab**{: .label .label-lab } [Lab 3](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab03/) (due Feb. 24)":
   - date: 2020-02-20
     events:
-      "**Lecture**{: .label .label } [Modeling and Estimation](https://drive.google.com/file/d/1aIZ1Oz-OF9g8EM_JsjmdMZN5Ettfq3ho/view?usp=sharing) ([code](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lecture/lec10/))":
+      "**Lecture**{: .label .label } [Modeling and Estimation](https://drive.google.com/file/d/1aIZ1Oz-OF9g8EM_JsjmdMZN5Ettfq3ho/view?usp=sharing) ([webcast](https://www.youtube.com/watch?v=SPu2yJkje6Q)) ([code](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lecture/lec10/))":
         "[Ch. 10](https://www.textbook.ds100.org/ch/10/modeling_intro.html), [Ch. 13](https://www.textbook.ds100.org/ch/13/linear_models.html)"
   - date: 2019-02-21
     events:
-      "**Discussion**{: .label .label-disc } Discussion 5":
+      "**Discussion**{: .label .label-disc } [Discussion 5](../resources/assets/discussions/disc05.pdf) ([notebook](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=discussion/disc05/))":
 ---
