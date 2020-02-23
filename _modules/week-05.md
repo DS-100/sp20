@@ -18,5 +18,5 @@ days:
         "[Ch. 10](https://www.textbook.ds100.org/ch/10/modeling_intro.html), [Ch. 13](https://www.textbook.ds100.org/ch/13/linear_models.html)"
   - date: 2019-02-21
     events:
-      "**Discussion**{: .label .label-disc } [Discussion 5](../resources/assets/discussions/disc05.pdf) ([notebook](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=discussion/disc05/))":
+      "**Discussion**{: .label .label-disc } [Discussion 5](../resources/assets/discussions/disc05.pdf) ([solutions](../resources/assets/discussions/disc05-sol.pdf)) ([notebook](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=discussion/disc05/))":
 ---
