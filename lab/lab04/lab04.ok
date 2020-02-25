@@ -1,0 +1,1 @@
+{"name": "lab04", "endpoint": "cal/data100/sp20/lab04", "src": ["lab04.ipynb"], "tests": {"tests/q*.py": "ok_test"}, "protocols": ["file_contents", "grading", "backup"]}
