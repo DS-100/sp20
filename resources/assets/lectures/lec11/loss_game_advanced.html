@@ -1,0 +1,155 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The Loss Game V2 Advanced</title>
+  <meta name="description" content="Computing the Loss">
+  <meta name="author" content="Prof Gonzalez">
+
+<style>
+
+#box {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}
+
+
+
+#lossPlot {
+    width: 300px;
+    height: 50px;
+    text-align: center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+  
+    <h1>The Loss Game Advanced</h1>
+    The goal of this game is to move the sliders to minimize the loss.  The loss is depicted by the red rectangle.
+    
+    <div id="game">
+        <h2> The Loss </h2>
+
+        <div id="lossPlot">
+            <div id="box">
+            </div>
+        </div>
+
+        <div>
+        <button type="button" id="compute">Compute Loss</button>
+        <div id="calls">Calls: 0 </div> 
+        </div>
+        <div id="knobs">
+            <div>
+            <h2> Parameter 1 </h2>
+            <div id="grad1"> </div>
+            <input type="range" min="1" max="100" value="50" id="var1">
+            </div>
+
+            <div>
+            <h2> Parameter 2 </h2>
+            <div id="grad2"> </div>
+            <input type="range" min="1" max="100" value="50" id="var2">
+            </div>
+            
+            <div>
+            <h2> Parameter 3 </h2>
+            <div id="grad3"> </div>
+            <input type="range" min="1" max="100" value="50" id="var3">
+            </div>
+            
+
+        </div>
+        <h1 id="winner"></h1>
+        
+    </div>
+
+    <div>
+        Please consider submitting an improved version of the game interface!  It could really use some Bootstrap/D3 love.
+    </div>
+
+<script>
+
+
+var box = document.getElementById("box");
+var calls = document.getElementById("calls");
+var g1box = document.getElementById("grad1");
+var g2box = document.getElementById("grad2");
+var g3box = document.getElementById("grad3");
+var slider1 = document.getElementById("var1");
+var slider2 = document.getElementById("var2");
+var slider3 = document.getElementById("var3");
+var button = document.getElementById("compute");
+var win = document.getElementById("winner");
+var hasWon = false;
+var counter = 0;
+
+function update_figure() {
+    counter++
+    calls.innerHTML = "Calls: " + counter
+    if (!hasWon) {
+        var x1 = slider1.value
+        var x2 = slider2.value
+        var x3 = slider3.value
+        var y =  Math.sqrt(Math.abs(x1 - 20) * Math.abs(x2 - 70) * Math.abs(x3 - 40))
+        var g1 = Math.abs(x2 - 70) * Math.abs(x3 - 40) * Math.sign(x1 - 20)
+        var g2 = Math.abs(x1 - 20) * Math.abs(x3 - 40) * Math.sign(x2 - 70)
+        var g3 = Math.abs(x1 - 20) * Math.abs(x2 - 70) * Math.sign(x3 - 40)
+
+        // g1box.style.width = Math.abs(g1)
+        // g2box.style.width = Math.abs(g2)
+        // g3box.style.wdith = Math.abs(g3)
+
+        function fix_box(box, g) {
+            if(g > 0) {
+                box.innerHTML = g
+                box.style.x = 100 + "px"
+                box.style.width = g + "px"
+                box.style.background = "green"
+            } else {
+                box.innerHTML = g
+                // box.style.x = (100 + g) + "px"
+                box.style.width = Math.abs(g) + "px"
+                box.style.background = "red"
+            }
+        }
+        fix_box(g1box, g1)
+        fix_box(g2box, g2)
+        fix_box(g3box, g3)        
+
+        box.style.width = y + "px"
+        if (y < 3.0) {
+            win.innerHTML = "You Win!"
+            hasWon = true;
+        }    
+    }
+}
+
+update_figure()
+
+// Update the current slider value (each time you drag the slider handle)
+// slider1.oninput = function() {
+//     update_figure()
+// }
+// slider2.oninput = function() {
+//     update_figure()
+// }
+// slider3.oninput = function() {
+//     update_figure()
+// }
+button.onclick = function() {
+    update_figure()
+}
+
+</script> 
+
+
+</body>
+</html>
