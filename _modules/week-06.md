@@ -4,7 +4,7 @@ weekNumber: 6
 days:
   - date: 2020-02-25
     events:
-      "**Lecture**{: .label .label } Optimization using Gradient Descent":
+      "**Lecture**{: .label .label } [Optimization using Gradient Descent](https://drive.google.com/open?id=1koxrfbqSkvye2FSqg9RqsB_vtKI08gCX) ([code](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lecture/lec10/)) ([Interactive Notebook](../resources/assets/lectures/lec11/Lec11.html)) ([Bonus PyTorch Tutorial](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html))":
         "[Ch. 11](https://www.textbook.ds100.org/ch/11/gradient_descent.html)"
       "**Lab**{: .label .label-lab } Lab 5":
   - date: 2020-02-27
