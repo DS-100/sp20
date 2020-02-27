@@ -12,7 +12,7 @@ days:
       "**Lab**{: .label .label-lab } [Lab 4](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab04/) (due Mar. 2)":
   - date: 2020-02-27
     events:
-      "**Lecture**{: .label .label } Feature Engineering I":
+      "**Lecture**{: .label .label } [Gradient Descent and Pytorch](https://drive.google.com/open?id=1vGS8spBvrEgbWlAPbRnZdwPOnChHlW4S) ([code](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lecture/lec11/)) ([Interactive Notebook](../resources/assets/lectures/lec11/Lec11.html)) ([Loss Game](../resources/assets/lectures/lec11/loss_game_advanced.html)) ([Bonus PyTorch Tutorial](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html))":
         "[Ch. 14](https://www.textbook.ds100.org/ch/14/feature_engineering.html)"
   - date: 2019-02-28
     events:
