@@ -16,5 +16,5 @@ days:
         "[Ch. 14](https://www.textbook.ds100.org/ch/14/feature_engineering.html)"
   - date: 2019-02-28
     events:
-      "**Discussion**{: .label .label-disc } [Discussion 6](../resources/assets/discussions/disc06.pdf)":
+      "**Discussion**{: .label .label-disc } [Discussion 6](../resources/assets/discussions/disc06.pdf) ([solutions](../resources/assets/discussions/disc06_sol.pdf))":
 ---
