@@ -7,7 +7,7 @@ days:
       "**Vitamin**{: .label .label-vit } [Vitamin 4](https://www.gradescope.com/courses/78615/assignments/375141) (due Mar. 2)":
   - date: 2020-03-03
     events:
-      "**Lecture**{: .label .label } Feature Engineering II":
+      "**Lecture**{: .label .label } Ethics in Data Science I, Review of Modeling and Optimization":
         "[Ch. 14](https://www.textbook.ds100.org/ch/14/feature_engineering.html)"
       "**Lab**{: .label .label-lab } Lab 6":
   - date: 2020-03-05
