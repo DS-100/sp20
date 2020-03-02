@@ -2,6 +2,9 @@
 title: Week 7
 weekNumber: 7
 days:
+  - date: 2020-03-02
+    events:
+      "**Vitamin**{: .label .label-vit } [Vitamin 4](https://www.gradescope.com/courses/78615/assignments/375141) (due Mar. 2)":
   - date: 2020-03-03
     events:
       "**Lecture**{: .label .label } Feature Engineering II":

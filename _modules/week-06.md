@@ -4,6 +4,7 @@ weekNumber: 6
 days:
   - date: 2020-02-24
     events:
+      "**Vitamin**{: .label .label-vit } [Vitamin 3](https://www.gradescope.com/courses/78615/assignments/368612) (due Feb. 24)":
       "**Homework**{: .label .label-hw } [Homework 4](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=hw/hw4/) (due Mar. 2)":
   - date: 2020-02-25
     events:
