@@ -9,7 +9,7 @@ days:
     events:
       "**Lecture**{: .label .label } Ethics in Data Science I, Review of Modeling and Optimization":
         "[Ch. 14](https://www.textbook.ds100.org/ch/14/feature_engineering.html)"
-      "**Lab**{: .label .label-lab } Lab 6":
+      "**Lab**{: .label .label-lab } [Lab 5](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab05/) (due Mar. 7)":
   - date: 2020-03-05
     events:
       "**Lecture**{: .label .label } Midterm Review":
