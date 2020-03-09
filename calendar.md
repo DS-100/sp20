@@ -74,7 +74,7 @@ Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs 
 ## Office Hours and Homework Party
 
 <a name = 'loc'></a>
-**Note:** (Effective Immediately) <span style="color:#C0392B">To address concerns about the coronavirus, we are actively making changes around our office hours locations and shifting some of our in-person office hours to be online instead. We will post the updated locations here once they are ready. In the meantime, please consult the calendar below for the most up-to-date information.</span>
+**Note:** <span style="color:#C0392B">To address concerns about the coronavirus, we are actively making changes around our office hours locations and shifting some of our in-person office hours to be online instead. Please consult the following calendars below for the most up-to-date information.</span>
 
 GSI **online** office hours are in <span stype="color:#575555">**dark grey**</span>. To view in-person office hours, please continue scrolling down.
 
