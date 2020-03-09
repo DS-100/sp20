@@ -74,14 +74,13 @@ Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs 
 ## Office Hours and Homework Party
 
 <a name = 'loc'></a>
-**Note:** (Effective Immediately) Here are the <span style="color:#C0392B">**updated locations**</span> for all GSI office hours:
-- We will **not** being holding office hours on Wednesday from 9am-12pm. Please attend the homework party **at SDH 254** instead.
-- Monday 9-2PM: **Evans B6**
-- Monday 2-4PM: **320 Soda (Tentative)**
-- Monday 4-7PM: **Evans 458**
-- Friday 1-4PM: **Jacobs Design Lounge**
-- Rest of Monday and Tuesday through Friday: **Soda 341A**
+**Note:** <span style="color:#C0392B">To address concerns about the coronavirus, we are actively making changes around our office hours locations and shifting some of our in-person office hours to be online instead. Please consult the following calendars below for the most up-to-date information.</span>
 
-GSI office hours are in <span style="color:DodgerBlue">**blue**</span>, Professor Gonzalez and Adhikari's office hours are in <span style="color:Violet">**pink**</span>, and Homework Parties are in <span style="color:#28A85B">**green**</span>.
+GSI **online** office hours are in <span stype="color:#575555">**dark grey**</span>. To view in-person office hours, please continue scrolling down.
+
+<iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1Xzk1MnBocWl1bzBmZDRxdDcxNXBpODE5MWZjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23616161&amp;title=%20&amp;mode=WEEK" style="border-width:0" width="750" height="550" frameborder="0" scrolling="no"></iframe>
+<br>
+
+GSI **in-person** office hours are in <span style="color:DodgerBlue">**blue**</span>, Professor Gonzalez and Adhikari's office hours are in <span style="color:Violet">**pink**</span>, and Homework Parties are in <span style="color:#28A85B">**green**</span>.
 
 <iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1X3JqaWdlMDA2M21qcWY0Y3Uxbm9nZTJ2YWFjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1XzlvZTRkcTUyMTY2YzhwaGJwMTZtaTZtdG5jQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X2t1MXZpYWFqZ2gxMTM3ZGY4bWU4ZDl0MnE0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%230B8043&amp;color=%234285F4&amp;color=%23D81B60&amp;title=%20&amp;mode=WEEK" style="border-width:0" width="750" height="550" frameborder="0" scrolling="no"></iframe>
