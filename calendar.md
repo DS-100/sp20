@@ -79,6 +79,7 @@ Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs 
 GSI **online** office hours are in <span stype="color:#575555">**dark grey**</span>. To view in-person office hours, please continue scrolling down.
 
 <iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1Xzk1MnBocWl1bzBmZDRxdDcxNXBpODE5MWZjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23616161&amp;title=%20&amp;mode=WEEK" style="border-width:0" width="750" height="550" frameborder="0" scrolling="no"></iframe>
+<br>
 
 GSI **in-person** office hours are in <span style="color:DodgerBlue">**blue**</span>, Professor Gonzalez and Adhikari's office hours are in <span style="color:Violet">**pink**</span>, and Homework Parties are in <span style="color:#28A85B">**green**</span>.
 
