@@ -74,13 +74,7 @@ Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs 
 ## Office Hours and Homework Party
 
 <a name = 'loc'></a>
-**Note:** (Effective Immediately) Here are the <span style="color:#C0392B">**updated locations**</span> for all GSI office hours:
-- We will **not** being holding office hours on Wednesday from 9am-12pm. Please attend the homework party **at SDH 254** instead.
-- Monday 9-2PM: **Evans B6**
-- Monday 2-4PM: **320 Soda (Tentative)**
-- Monday 4-7PM: **Evans 458**
-- Friday 1-4PM: **Jacobs Design Lounge**
-- Rest of Monday and Tuesday through Friday: **Soda 341A**
+**Note:** (Effective Immediately) <span style="color:#C0392B">To address concerns about the coronavirus, we are actively making changes around our office hours locations and shifting some of our in-person office hours to be online instead. We will post the updated locations here once they are ready. In the meantime, please consult the calendar below for the most up-to-date information.</span> 
 
 GSI office hours are in <span style="color:DodgerBlue">**blue**</span>, Professor Gonzalez and Adhikari's office hours are in <span style="color:Violet">**pink**</span>, and Homework Parties are in <span style="color:#28A85B">**green**</span>.
 
