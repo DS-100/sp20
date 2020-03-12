@@ -11,7 +11,7 @@ days:
       "**NO LAB**{: .label .label-lab }":
   - date: 2020-03-12
     events:
-      "**Lecture**{: .label .label } [Regression in SKLearn](../resources/assets/lectures/lec16/SKLearnDemo.html) ([code](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lecture/lec16/)),  Feature Engineering ":
+      "**Lecture**{: .label .label } [Regression in SKLearn](../resources/assets/lectures/lec16/SKLearnDemo.html) ([code](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lecture/lec16/)),  Feature Engineering (coming soon) ":
   - date: 2019-03-13
     events:
       "**Discussion**{: .label .label-disc } [Discussion 8](../resources/assets/discussions/disc07.pdf)":
