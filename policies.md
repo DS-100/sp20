@@ -24,10 +24,10 @@ description: >-
 
 | **Undergraduate Grading Scheme** | **Graduate Grading Scheme** |
 | -- | -- |
-| 20% Homeworks <br> 10% Labs <br> 5% Vitamins <br> 20% Projects <br> 20% Midterm <br> 25% Final | 20% Homeworks <br> 5% Labs <br> 15% Projects <br> 15% Final Project <br> 20% Midterm <br> 25% Final |
+| 20% Homeworks <br> 10% Labs <br> 5% Vitamins <br> 25% Projects (10% Project 1, 15% Project 2) <br> 10% Checkpoint <br> 30% Final | 20% Homeworks <br> 5% Labs <br> 20% Projects (7.5% Project 1, 12.5% Project 2) <br> 15% Final Project <br> 10% Checkpoint <br> 30% Final |
 
 - **Homeworks:** Homeworks are usually assigned weekly (see Projects below). They must be completed individually and will mix programming and short-answer questions. Your two lowest homework scores will be dropped. Homeworks have both visible and hidden autograder tests. The visible tests are mainly sanity checks, e.g. a probability is <= 1, and are visible to students while they do the assignment. The hidden tests generally check for correctness, and are invisible to students while they are doing the assignment.  
-- **Labs:** Labs are weekly assignments that complement the homeworks. All lab autograder tests are visible. Your two lowest lab scores will be dropped. 
+- **Labs:** Labs are weekly assignments that complement the homeworks. All lab autograder tests are visible. Your three lowest lab scores will be dropped. 
 - **Vitamins (undergrad only):** Vitamins are weekly short assignments to check that you are keeping up with lectures. Vitamins should take fewer than 10 minutes to complete. Your two lowest vitamin scores will be dropped.
 - **Projects:** Projects are two-week long assignments that synthesize multiple topics.
 - **Midterms:** There will be one midterm on Monday, March 9th, from 8:30 pm to 10:00 pm. See Piazza for more details.
