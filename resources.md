@@ -12,6 +12,7 @@ description: Past exams and other relevant material to aid you in the course.
 
 | Semester | Midterm 1 | Midterm 2  | Final |
 | -- | -- | -- | -- |
+| Spring 2020 | [Checkpoint](assets/exams/sp20/sp20checkpoint.pdf) [(Solutions)](assets/exams/sp20/sp20checkpointsol.pdf) | | |
 | Fall 2019| [Exam](assets/exams/fa19/fa19midterm1.pdf) [(Solutions)](assets/exams/fa19/fa19midterm1sol.pdf) | [Exam](assets/exams/fa19/fa19midterm2.pdf) [(Solutions)](assets/exams/fa19/fa19midterm2sol.pdf) | [Exam](assets/exams/fa19/fa19final.pdf) [(Solutions)](assets/exams/fa19/fa19finalsol.pdf) |
 | Summer 2019| [Exam](assets/exams/su19/su19mt_blank.pdf) [(Solutions)](assets/exams/su19/su19mt_sol.pdf) [[Video]](https://www.youtube.com/watch?v=7UVjFuRTHMc)    |  | [Exam](assets/exams/su19/su19final_blank.pdf) [(Solutions)](assets/exams/su19/su19final_sol.pdf) |
 | Spring 2019| [Exam](assets/exams/sp19/data100_sp19_mt1.pdf) [(Solutions)](assets/exams/sp19/data100_sp19_mt1_sol.pdf) [[Video](https://youtu.be/F3tu9PZHhyU)]     | [Exam](assets/exams/sp19/data100_sp19_mt2.pdf) [(Solutions)](assets/exams/sp19/data100_sp19_mt2_sol.pdf) [[Video](https://youtu.be/-XCRQ6CKNb0)] | [Exam](assets/exams/sp19/data100_sp19_final.pdf) [(Solutions)](assets/exams/sp19/data100_sp19_final_sol.pdf)     |
