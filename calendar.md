@@ -76,7 +76,7 @@ Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs 
 <a name = 'loc'></a>
 **Note:** <span style="color:#C0392B">To address concerns about the coronavirus, we have shifted all of our in-person office hours to be online instead. Please consult the following calendars below for the most up-to-date information.</span>
 
-GSI **online** office hours are in <span stype="color:#575555">**dark grey**</span>. To view in-person office hours, please continue scrolling down.
+GSI **online** office hours are in <span stype="color:#d92bf0">**purple**</span>. To view in-person office hours, please continue scrolling down.
 
-<iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1Xzk1MnBocWl1bzBmZDRxdDcxNXBpODE5MWZjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23616161&amp;title=%20&amp;mode=WEEK" style="border-width:0" width="750" height="550" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1Xzk1MnBocWl1bzBmZDRxdDcxNXBpODE5MWZjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%238E24AA&amp;title=%20&amp;mode=WEEK" style="border:solid 1px #777" width="750" height="550" frameborder="0" scrolling="no"></iframe>
 <br>
