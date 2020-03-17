@@ -14,5 +14,5 @@ days:
       "**Lecture**{: .label .label } Regularization, Cross Validation":
   - date: 2019-03-20
     events:
-      "**Discussion**{: .label .label-disc } Discussion 9":
+      "**No Discussion**{: .label .label-disc }":
 ---
