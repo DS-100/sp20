@@ -7,7 +7,7 @@ description: An embedded Google Calendar displaying the weekly event schedule.
 
 # Calendar
 
-Jump to Calendars for [Discussion, Lab, and Lecture](#dll) or [Office Hours and Homework Parties](#oh).
+Jump to Calendars for [Discussion, Lab, and Lecture](#dll) or [Office Hours](#oh).
 
 **Note**: Some of the GSIs' office hour locations have changed. Click on the [link](#loc) to see the new locations.
 
@@ -60,9 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## Discussion, Lab, and Lecture
 
-**Note**:
-- Per course policies, you should only attend the discussion / lab section you are assigned to.
-- <span style="color:red">**IMPORTANT:**</span> All lab sections on **Wednesday from 9am - 12pm in SDH 254** are now **homework parties** instead. Please see the [homework party calendar](#oh) below for more details.
+**Note:** <span style="color:#C0392B">To address concerns about the coronavirus, we have shifted all of our labs and discussions to be online instead. Please consult the following calendars below for the most up-to-date information. We also recommend you check on **Piazza** for the most up-to-date link for all Zoom/Google Meet video calls.</span>
 
 Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs are in <span style="color:MediumSeaGreen">**green**</span>, and lectures are in <span style="color:Orange">**yellow**</span>. Click a discussion / lab event to see the different GSIs teaching at that time. 
 
@@ -71,7 +69,7 @@ Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs 
 
 <a name = 'oh'></a>
 
-## Office Hours and Homework Party
+## Office Hours
 
 <a name = 'loc'></a>
 **Note:** <span style="color:#C0392B">To address concerns about the coronavirus, we have shifted all of our in-person office hours to be online instead. Please consult the following calendars below for the most up-to-date information.</span>
