@@ -76,5 +76,5 @@ Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs 
 
 GSI **online** office hours are in <span style="color:DodgerBlue">**blue**</span>. To access any online office hour, go to the link <http://oh.ds100.org>.
 
-<iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1Xzk1MnBocWl1bzBmZDRxdDcxNXBpODE5MWZjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%234285F4&amp;title=%20&amp;mode=WEEK" style="border-width:0" width="750" height="550" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=700&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1X2t1MXZpYWFqZ2gxMTM3ZGY4bWU4ZDl0MnE0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1Xzk1MnBocWl1bzBmZDRxdDcxNXBpODE5MWZjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23F09300&amp;color=%237986CB&amp;title=%20&amp;mode=WEEK" style="border-width:0" width="750" height="700" frameborder="0" scrolling="no"></iframe>
 <br>
