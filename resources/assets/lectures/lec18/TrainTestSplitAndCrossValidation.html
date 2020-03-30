@@ -13242,7 +13242,7 @@ The following short video describes the motivation behind the train test split a
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Data">The Data<a class="anchor-link" href="#The-Data">&#182;</a></h2><p>For this notebook we will use the seaborn <code>mpg</code> dataset which describes the fuel mileage (measured in miles per gallon or mpg) of various cars along with characteristics of those cars.  Our goal will be to build a model that can predict the fuel mileage of a car based on the characteristics of that car.</p>
+<h2 id="The-Data">The Data<a class="anchor-link" href="#The-Data">&#182;</a></h2><p>For this notebook, we will use the seaborn <code>mpg</code> dataset which describes the fuel mileage (measured in miles per gallon or mpg) of various cars along with characteristics of those cars.  Our goal will be to build a model that can predict the fuel mileage of a car based on the characteristics of that car.</p>
 
 </div>
 </div>
@@ -13449,15 +13449,7 @@ The following short video describes the motivation behind the train test split a
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Train-Test-Split">Train Test Split<a class="anchor-link" href="#Train-Test-Split">&#182;</a></h2><p>The first thing we will want to do with this data is construct a train/test split. Actual constructing a train test split before doing anything (including EDA and data cleaning) can often be helpful.  This allows us to see if our data cleaning and visualization generalize to new data.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Using-Pandas-Operations">Using Pandas Operations<a class="anchor-link" href="#Using-Pandas-Operations">&#182;</a></h3><p>We can sample the entire dataset to get a permutation and then select a range of rows.</p>
+<h2 id="Train-Test-Split">Train Test Split<a class="anchor-link" href="#Train-Test-Split">&#182;</a></h2><p>The first thing we will want to do with this data is construct a train/test split. Constructing a train test split before EDA and data cleaning can often be helpful.  This allows us to see if our data cleaning and any conclusions we draw from visualizations generalize to new data. This can be done by re-running the data cleaning and EDA process on the test dataset.</p>
 
 </div>
 </div>
@@ -13467,8 +13459,7 @@ The following short video describes the motivation behind the train test split a
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shuffled_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
-<span class="n">shuffled_data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;_Bzfy7BTjz0&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13482,6 +13473,55 @@ The following short video describes the motivation behind the train test split a
 <div class="output_area">
 
     <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/_Bzfy7BTjz0"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Using-Pandas-Operations">Using Pandas Operations<a class="anchor-link" href="#Using-Pandas-Operations">&#182;</a></h3><p>We can sample the entire dataset to get a permutation and then select a range of rows.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shuffled_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">shuffled_data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13517,64 +13557,64 @@ The following short video describes the motivation behind the train test split a
   </thead>
   <tbody>
     <tr>
-      <th>242</th>
-      <td>21.5</td>
+      <th>198</th>
+      <td>33.0</td>
       <td>4</td>
-      <td>121.0</td>
-      <td>110.0</td>
-      <td>2600</td>
-      <td>12.8</td>
-      <td>77</td>
-      <td>europe</td>
-      <td>bmw 320i</td>
+      <td>91.0</td>
+      <td>53.0</td>
+      <td>1795</td>
+      <td>17.4</td>
+      <td>76</td>
+      <td>japan</td>
+      <td>honda civic</td>
     </tr>
     <tr>
-      <th>50</th>
+      <th>396</th>
       <td>28.0</td>
       <td>4</td>
-      <td>116.0</td>
-      <td>90.0</td>
-      <td>2123</td>
-      <td>14.0</td>
-      <td>71</td>
-      <td>europe</td>
-      <td>opel 1900</td>
-    </tr>
-    <tr>
-      <th>281</th>
-      <td>19.8</td>
-      <td>6</td>
-      <td>200.0</td>
-      <td>85.0</td>
-      <td>2990</td>
-      <td>18.2</td>
-      <td>79</td>
+      <td>120.0</td>
+      <td>79.0</td>
+      <td>2625</td>
+      <td>18.6</td>
+      <td>82</td>
       <td>usa</td>
-      <td>mercury zephyr 6</td>
+      <td>ford ranger</td>
     </tr>
     <tr>
-      <th>150</th>
-      <td>26.0</td>
-      <td>4</td>
-      <td>108.0</td>
-      <td>93.0</td>
-      <td>2391</td>
-      <td>15.5</td>
-      <td>74</td>
-      <td>japan</td>
-      <td>subaru</td>
+      <th>33</th>
+      <td>19.0</td>
+      <td>6</td>
+      <td>232.0</td>
+      <td>100.0</td>
+      <td>2634</td>
+      <td>13.0</td>
+      <td>71</td>
+      <td>usa</td>
+      <td>amc gremlin</td>
     </tr>
     <tr>
-      <th>73</th>
+      <th>208</th>
       <td>13.0</td>
       <td>8</td>
-      <td>307.0</td>
-      <td>130.0</td>
-      <td>4098</td>
-      <td>14.0</td>
-      <td>72</td>
+      <td>318.0</td>
+      <td>150.0</td>
+      <td>3940</td>
+      <td>13.2</td>
+      <td>76</td>
       <td>usa</td>
-      <td>chevrolet chevelle concours (sw)</td>
+      <td>plymouth volare premier v8</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>14.0</td>
+      <td>8</td>
+      <td>318.0</td>
+      <td>150.0</td>
+      <td>4237</td>
+      <td>14.5</td>
+      <td>73</td>
+      <td>usa</td>
+      <td>plymouth fury gran sedan</td>
     </tr>
     <tr>
       <th>...</th>
@@ -13589,64 +13629,64 @@ The following short video describes the motivation behind the train test split a
       <td>...</td>
     </tr>
     <tr>
-      <th>120</th>
+      <th>71</th>
       <td>19.0</td>
-      <td>4</td>
-      <td>121.0</td>
-      <td>112.0</td>
-      <td>2868</td>
-      <td>15.5</td>
-      <td>73</td>
-      <td>europe</td>
-      <td>volvo 144ea</td>
+      <td>3</td>
+      <td>70.0</td>
+      <td>97.0</td>
+      <td>2330</td>
+      <td>13.5</td>
+      <td>72</td>
+      <td>japan</td>
+      <td>mazda rx2 coupe</td>
     </tr>
     <tr>
-      <th>221</th>
-      <td>17.5</td>
+      <th>106</th>
+      <td>12.0</td>
       <td>8</td>
-      <td>305.0</td>
-      <td>145.0</td>
-      <td>3880</td>
+      <td>350.0</td>
+      <td>180.0</td>
+      <td>4499</td>
       <td>12.5</td>
-      <td>77</td>
+      <td>73</td>
       <td>usa</td>
-      <td>chevrolet caprice classic</td>
+      <td>oldsmobile vista cruiser</td>
     </tr>
     <tr>
-      <th>278</th>
-      <td>31.5</td>
+      <th>270</th>
+      <td>21.1</td>
+      <td>4</td>
+      <td>134.0</td>
+      <td>95.0</td>
+      <td>2515</td>
+      <td>14.8</td>
+      <td>78</td>
+      <td>japan</td>
+      <td>toyota celica gt liftback</td>
+    </tr>
+    <tr>
+      <th>348</th>
+      <td>37.7</td>
       <td>4</td>
       <td>89.0</td>
-      <td>71.0</td>
-      <td>1990</td>
-      <td>14.9</td>
-      <td>78</td>
-      <td>europe</td>
-      <td>volkswagen scirocco</td>
+      <td>62.0</td>
+      <td>2050</td>
+      <td>17.3</td>
+      <td>81</td>
+      <td>japan</td>
+      <td>toyota tercel</td>
     </tr>
     <tr>
-      <th>214</th>
-      <td>13.0</td>
-      <td>8</td>
-      <td>302.0</td>
-      <td>130.0</td>
-      <td>3870</td>
-      <td>15.0</td>
-      <td>76</td>
-      <td>usa</td>
-      <td>ford f108</td>
-    </tr>
-    <tr>
-      <th>207</th>
-      <td>20.0</td>
+      <th>102</th>
+      <td>26.0</td>
       <td>4</td>
-      <td>130.0</td>
-      <td>102.0</td>
-      <td>3150</td>
-      <td>15.7</td>
-      <td>76</td>
+      <td>97.0</td>
+      <td>46.0</td>
+      <td>1950</td>
+      <td>21.0</td>
+      <td>73</td>
       <td>europe</td>
-      <td>volvo 245</td>
+      <td>volkswagen super beetle</td>
     </tr>
   </tbody>
 </table>
@@ -13670,15 +13710,789 @@ The following short video describes the motivation behind the train test split a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">split_point</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">shuffled_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mf">0.95</span><span class="p">)</span>
-<span class="n">tr</span> <span class="o">=</span> <span class="n">shuffled_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="n">split_point</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">split_point</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">shuffled_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mf">0.90</span><span class="p">)</span>
+<span class="n">split_point</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>358</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tr</span> <span class="o">=</span> <span class="n">shuffled_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="n">split_point</span><span class="p">]</span>
 <span class="n">te</span> <span class="o">=</span> <span class="n">shuffled_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">split_point</span><span class="p">:]</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tr</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mpg</th>
+      <th>cylinders</th>
+      <th>displacement</th>
+      <th>horsepower</th>
+      <th>weight</th>
+      <th>acceleration</th>
+      <th>model_year</th>
+      <th>origin</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>198</th>
+      <td>33.0</td>
+      <td>4</td>
+      <td>91.0</td>
+      <td>53.0</td>
+      <td>1795</td>
+      <td>17.4</td>
+      <td>76</td>
+      <td>japan</td>
+      <td>honda civic</td>
+    </tr>
+    <tr>
+      <th>396</th>
+      <td>28.0</td>
+      <td>4</td>
+      <td>120.0</td>
+      <td>79.0</td>
+      <td>2625</td>
+      <td>18.6</td>
+      <td>82</td>
+      <td>usa</td>
+      <td>ford ranger</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>19.0</td>
+      <td>6</td>
+      <td>232.0</td>
+      <td>100.0</td>
+      <td>2634</td>
+      <td>13.0</td>
+      <td>71</td>
+      <td>usa</td>
+      <td>amc gremlin</td>
+    </tr>
+    <tr>
+      <th>208</th>
+      <td>13.0</td>
+      <td>8</td>
+      <td>318.0</td>
+      <td>150.0</td>
+      <td>3940</td>
+      <td>13.2</td>
+      <td>76</td>
+      <td>usa</td>
+      <td>plymouth volare premier v8</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>14.0</td>
+      <td>8</td>
+      <td>318.0</td>
+      <td>150.0</td>
+      <td>4237</td>
+      <td>14.5</td>
+      <td>73</td>
+      <td>usa</td>
+      <td>plymouth fury gran sedan</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>391</th>
+      <td>36.0</td>
+      <td>4</td>
+      <td>135.0</td>
+      <td>84.0</td>
+      <td>2370</td>
+      <td>13.0</td>
+      <td>82</td>
+      <td>usa</td>
+      <td>dodge charger 2.2</td>
+    </tr>
+    <tr>
+      <th>134</th>
+      <td>16.0</td>
+      <td>6</td>
+      <td>258.0</td>
+      <td>110.0</td>
+      <td>3632</td>
+      <td>18.0</td>
+      <td>74</td>
+      <td>usa</td>
+      <td>amc matador</td>
+    </tr>
+    <tr>
+      <th>306</th>
+      <td>28.8</td>
+      <td>6</td>
+      <td>173.0</td>
+      <td>115.0</td>
+      <td>2595</td>
+      <td>11.3</td>
+      <td>79</td>
+      <td>usa</td>
+      <td>chevrolet citation</td>
+    </tr>
+    <tr>
+      <th>381</th>
+      <td>36.0</td>
+      <td>4</td>
+      <td>107.0</td>
+      <td>75.0</td>
+      <td>2205</td>
+      <td>14.5</td>
+      <td>82</td>
+      <td>japan</td>
+      <td>honda accord</td>
+    </tr>
+    <tr>
+      <th>319</th>
+      <td>31.3</td>
+      <td>4</td>
+      <td>120.0</td>
+      <td>75.0</td>
+      <td>2542</td>
+      <td>17.5</td>
+      <td>80</td>
+      <td>japan</td>
+      <td>mazda 626</td>
+    </tr>
+  </tbody>
+</table>
+<p>358 rows × 9 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">te</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mpg</th>
+      <th>cylinders</th>
+      <th>displacement</th>
+      <th>horsepower</th>
+      <th>weight</th>
+      <th>acceleration</th>
+      <th>model_year</th>
+      <th>origin</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>243</th>
+      <td>21.5</td>
+      <td>3</td>
+      <td>80.0</td>
+      <td>110.0</td>
+      <td>2720</td>
+      <td>13.5</td>
+      <td>77</td>
+      <td>japan</td>
+      <td>mazda rx-4</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>35.0</td>
+      <td>4</td>
+      <td>72.0</td>
+      <td>69.0</td>
+      <td>1613</td>
+      <td>18.0</td>
+      <td>71</td>
+      <td>japan</td>
+      <td>datsun 1200</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>28.0</td>
+      <td>4</td>
+      <td>116.0</td>
+      <td>90.0</td>
+      <td>2123</td>
+      <td>14.0</td>
+      <td>71</td>
+      <td>europe</td>
+      <td>opel 1900</td>
+    </tr>
+    <tr>
+      <th>174</th>
+      <td>18.0</td>
+      <td>6</td>
+      <td>171.0</td>
+      <td>97.0</td>
+      <td>2984</td>
+      <td>14.5</td>
+      <td>75</td>
+      <td>usa</td>
+      <td>ford pinto</td>
+    </tr>
+    <tr>
+      <th>189</th>
+      <td>15.5</td>
+      <td>8</td>
+      <td>304.0</td>
+      <td>120.0</td>
+      <td>3962</td>
+      <td>13.9</td>
+      <td>76</td>
+      <td>usa</td>
+      <td>amc matador</td>
+    </tr>
+    <tr>
+      <th>395</th>
+      <td>32.0</td>
+      <td>4</td>
+      <td>135.0</td>
+      <td>84.0</td>
+      <td>2295</td>
+      <td>11.6</td>
+      <td>82</td>
+      <td>usa</td>
+      <td>dodge rampage</td>
+    </tr>
+    <tr>
+      <th>187</th>
+      <td>17.5</td>
+      <td>8</td>
+      <td>305.0</td>
+      <td>140.0</td>
+      <td>4215</td>
+      <td>13.0</td>
+      <td>76</td>
+      <td>usa</td>
+      <td>chevrolet chevelle malibu classic</td>
+    </tr>
+    <tr>
+      <th>169</th>
+      <td>20.0</td>
+      <td>6</td>
+      <td>232.0</td>
+      <td>100.0</td>
+      <td>2914</td>
+      <td>16.0</td>
+      <td>75</td>
+      <td>usa</td>
+      <td>amc gremlin</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>25.0</td>
+      <td>4</td>
+      <td>97.5</td>
+      <td>80.0</td>
+      <td>2126</td>
+      <td>17.0</td>
+      <td>72</td>
+      <td>usa</td>
+      <td>dodge colt hardtop</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>18.0</td>
+      <td>6</td>
+      <td>250.0</td>
+      <td>88.0</td>
+      <td>3139</td>
+      <td>14.5</td>
+      <td>71</td>
+      <td>usa</td>
+      <td>ford mustang</td>
+    </tr>
+    <tr>
+      <th>344</th>
+      <td>39.0</td>
+      <td>4</td>
+      <td>86.0</td>
+      <td>64.0</td>
+      <td>1875</td>
+      <td>16.4</td>
+      <td>81</td>
+      <td>usa</td>
+      <td>plymouth champ</td>
+    </tr>
+    <tr>
+      <th>235</th>
+      <td>26.0</td>
+      <td>4</td>
+      <td>97.0</td>
+      <td>75.0</td>
+      <td>2265</td>
+      <td>18.2</td>
+      <td>77</td>
+      <td>japan</td>
+      <td>toyota corolla liftback</td>
+    </tr>
+    <tr>
+      <th>252</th>
+      <td>19.2</td>
+      <td>6</td>
+      <td>231.0</td>
+      <td>105.0</td>
+      <td>3535</td>
+      <td>19.2</td>
+      <td>78</td>
+      <td>usa</td>
+      <td>pontiac phoenix lj</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>24.0</td>
+      <td>4</td>
+      <td>107.0</td>
+      <td>90.0</td>
+      <td>2430</td>
+      <td>14.5</td>
+      <td>70</td>
+      <td>europe</td>
+      <td>audi 100 ls</td>
+    </tr>
+    <tr>
+      <th>313</th>
+      <td>28.0</td>
+      <td>4</td>
+      <td>151.0</td>
+      <td>90.0</td>
+      <td>2678</td>
+      <td>16.5</td>
+      <td>80</td>
+      <td>usa</td>
+      <td>chevrolet citation</td>
+    </tr>
+    <tr>
+      <th>160</th>
+      <td>17.0</td>
+      <td>6</td>
+      <td>231.0</td>
+      <td>110.0</td>
+      <td>3907</td>
+      <td>21.0</td>
+      <td>75</td>
+      <td>usa</td>
+      <td>buick century</td>
+    </tr>
+    <tr>
+      <th>276</th>
+      <td>21.6</td>
+      <td>4</td>
+      <td>121.0</td>
+      <td>115.0</td>
+      <td>2795</td>
+      <td>15.7</td>
+      <td>78</td>
+      <td>europe</td>
+      <td>saab 99gle</td>
+    </tr>
+    <tr>
+      <th>191</th>
+      <td>22.0</td>
+      <td>6</td>
+      <td>225.0</td>
+      <td>100.0</td>
+      <td>3233</td>
+      <td>15.4</td>
+      <td>76</td>
+      <td>usa</td>
+      <td>plymouth valiant</td>
+    </tr>
+    <tr>
+      <th>293</th>
+      <td>31.9</td>
+      <td>4</td>
+      <td>89.0</td>
+      <td>71.0</td>
+      <td>1925</td>
+      <td>14.0</td>
+      <td>79</td>
+      <td>europe</td>
+      <td>vw rabbit custom</td>
+    </tr>
+    <tr>
+      <th>343</th>
+      <td>39.1</td>
+      <td>4</td>
+      <td>79.0</td>
+      <td>58.0</td>
+      <td>1755</td>
+      <td>16.9</td>
+      <td>81</td>
+      <td>japan</td>
+      <td>toyota starlet</td>
+    </tr>
+    <tr>
+      <th>257</th>
+      <td>19.4</td>
+      <td>6</td>
+      <td>232.0</td>
+      <td>90.0</td>
+      <td>3210</td>
+      <td>17.2</td>
+      <td>78</td>
+      <td>usa</td>
+      <td>amc concord</td>
+    </tr>
+    <tr>
+      <th>308</th>
+      <td>33.5</td>
+      <td>4</td>
+      <td>151.0</td>
+      <td>90.0</td>
+      <td>2556</td>
+      <td>13.2</td>
+      <td>79</td>
+      <td>usa</td>
+      <td>pontiac phoenix</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>24.0</td>
+      <td>4</td>
+      <td>120.0</td>
+      <td>97.0</td>
+      <td>2489</td>
+      <td>15.0</td>
+      <td>74</td>
+      <td>japan</td>
+      <td>honda civic</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>26.0</td>
+      <td>4</td>
+      <td>122.0</td>
+      <td>80.0</td>
+      <td>2451</td>
+      <td>16.5</td>
+      <td>74</td>
+      <td>usa</td>
+      <td>ford pinto</td>
+    </tr>
+    <tr>
+      <th>151</th>
+      <td>31.0</td>
+      <td>4</td>
+      <td>79.0</td>
+      <td>67.0</td>
+      <td>2000</td>
+      <td>16.0</td>
+      <td>74</td>
+      <td>europe</td>
+      <td>fiat x1.9</td>
+    </tr>
+    <tr>
+      <th>359</th>
+      <td>28.1</td>
+      <td>4</td>
+      <td>141.0</td>
+      <td>80.0</td>
+      <td>3230</td>
+      <td>20.4</td>
+      <td>81</td>
+      <td>europe</td>
+      <td>peugeot 505s turbo diesel</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>18.0</td>
+      <td>6</td>
+      <td>232.0</td>
+      <td>100.0</td>
+      <td>2945</td>
+      <td>16.0</td>
+      <td>73</td>
+      <td>usa</td>
+      <td>amc hornet</td>
+    </tr>
+    <tr>
+      <th>372</th>
+      <td>27.0</td>
+      <td>4</td>
+      <td>151.0</td>
+      <td>90.0</td>
+      <td>2735</td>
+      <td>18.0</td>
+      <td>82</td>
+      <td>usa</td>
+      <td>pontiac phoenix</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>13.0</td>
+      <td>8</td>
+      <td>350.0</td>
+      <td>145.0</td>
+      <td>3988</td>
+      <td>13.0</td>
+      <td>73</td>
+      <td>usa</td>
+      <td>chevrolet malibu</td>
+    </tr>
+    <tr>
+      <th>330</th>
+      <td>40.9</td>
+      <td>4</td>
+      <td>85.0</td>
+      <td>NaN</td>
+      <td>1835</td>
+      <td>17.3</td>
+      <td>80</td>
+      <td>europe</td>
+      <td>renault lecar deluxe</td>
+    </tr>
+    <tr>
+      <th>214</th>
+      <td>13.0</td>
+      <td>8</td>
+      <td>302.0</td>
+      <td>130.0</td>
+      <td>3870</td>
+      <td>15.0</td>
+      <td>76</td>
+      <td>usa</td>
+      <td>ford f108</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>15.0</td>
+      <td>8</td>
+      <td>318.0</td>
+      <td>150.0</td>
+      <td>3399</td>
+      <td>11.0</td>
+      <td>73</td>
+      <td>usa</td>
+      <td>dodge dart custom</td>
+    </tr>
+    <tr>
+      <th>397</th>
+      <td>31.0</td>
+      <td>4</td>
+      <td>119.0</td>
+      <td>82.0</td>
+      <td>2720</td>
+      <td>19.4</td>
+      <td>82</td>
+      <td>usa</td>
+      <td>chevy s-10</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>25.0</td>
+      <td>4</td>
+      <td>110.0</td>
+      <td>87.0</td>
+      <td>2672</td>
+      <td>17.5</td>
+      <td>70</td>
+      <td>europe</td>
+      <td>peugeot 504</td>
+    </tr>
+    <tr>
+      <th>188</th>
+      <td>16.0</td>
+      <td>8</td>
+      <td>318.0</td>
+      <td>150.0</td>
+      <td>4190</td>
+      <td>13.0</td>
+      <td>76</td>
+      <td>usa</td>
+      <td>dodge coronet brougham</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>19.0</td>
+      <td>3</td>
+      <td>70.0</td>
+      <td>97.0</td>
+      <td>2330</td>
+      <td>13.5</td>
+      <td>72</td>
+      <td>japan</td>
+      <td>mazda rx2 coupe</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>12.0</td>
+      <td>8</td>
+      <td>350.0</td>
+      <td>180.0</td>
+      <td>4499</td>
+      <td>12.5</td>
+      <td>73</td>
+      <td>usa</td>
+      <td>oldsmobile vista cruiser</td>
+    </tr>
+    <tr>
+      <th>270</th>
+      <td>21.1</td>
+      <td>4</td>
+      <td>134.0</td>
+      <td>95.0</td>
+      <td>2515</td>
+      <td>14.8</td>
+      <td>78</td>
+      <td>japan</td>
+      <td>toyota celica gt liftback</td>
+    </tr>
+    <tr>
+      <th>348</th>
+      <td>37.7</td>
+      <td>4</td>
+      <td>89.0</td>
+      <td>62.0</td>
+      <td>2050</td>
+      <td>17.3</td>
+      <td>81</td>
+      <td>japan</td>
+      <td>toyota tercel</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>26.0</td>
+      <td>4</td>
+      <td>97.0</td>
+      <td>46.0</td>
+      <td>1950</td>
+      <td>21.0</td>
+      <td>73</td>
+      <td>europe</td>
+      <td>volkswagen super beetle</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13693,7 +14507,7 @@ The following short video describes the motivation behind the train test split a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">tr</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">te</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -13709,7 +14523,7 @@ The following short video describes the motivation behind the train test split a
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -13734,7 +14548,7 @@ The following short video describes the motivation behind the train test split a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -13747,7 +14561,7 @@ The following short video describes the motivation behind the train test split a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tr</span><span class="p">,</span> <span class="n">te</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">83</span><span class="p">)</span>
@@ -13760,7 +14574,7 @@ The following short video describes the motivation behind the train test split a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tr</span>
@@ -13776,7 +14590,7 @@ The following short video describes the motivation behind the train test split a
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -13957,7 +14771,7 @@ The following short video describes the motivation behind the train test split a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">te</span>
@@ -13973,7 +14787,7 @@ The following short video describes the motivation behind the train test split a
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -14509,7 +15323,7 @@ The following short video describes the motivation behind the train test split a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ff</span><span class="o">.</span><span class="n">create_distplot</span><span class="p">([</span><span class="n">tr</span><span class="p">[</span><span class="s1">&#39;mpg&#39;</span><span class="p">],</span> <span class="n">te</span><span class="p">[</span><span class="s1">&#39;mpg&#39;</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;train mpg&#39;</span><span class="p">,</span> <span class="s1">&#39;test mpg&#39;</span><span class="p">])</span>
@@ -14533,20 +15347,20 @@ The following short video describes the motivation behind the train test split a
 <div>
         
         
-            <div id="e04fc52a-1776-4d38-a46e-587fd43575e0" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="3ecafd6f-e84e-46d4-8b64-518f3f563e7b" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("e04fc52a-1776-4d38-a46e-587fd43575e0")) {
+                if (document.getElementById("3ecafd6f-e84e-46d4-8b64-518f3f563e7b")) {
                     Plotly.newPlot(
-                        'e04fc52a-1776-4d38-a46e-587fd43575e0',
+                        '3ecafd6f-e84e-46d4-8b64-518f3f563e7b',
                         [{"autobinx": false, "histnorm": "probability density", "legendgroup": "train mpg", "marker": {"color": "rgb(31, 119, 180)"}, "name": "train mpg", "opacity": 0.7, "type": "histogram", "x": [26.0, 36.0, 28.0, 14.0, 30.0, 14.0, 29.0, 13.0, 14.0, 14.0, 17.0, 30.0, 23.0, 21.0, 46.6, 32.0, 21.0, 17.0, 10.0, 24.0, 26.0, 38.0, 14.0, 16.5, 31.9, 39.4, 29.9, 15.0, 12.0, 29.8, 13.0, 29.0, 24.0, 36.1, 26.6, 26.0, 32.3, 27.2, 20.6, 25.0, 24.0, 19.0, 29.0, 28.4, 24.0, 15.0, 32.7, 34.1, 29.0, 14.0, 31.0, 35.0, 18.0, 24.5, 27.0, 38.0, 12.0, 20.0, 26.0, 12.0, 13.0, 20.0, 29.0, 21.0, 13.0, 16.0, 44.3, 27.2, 28.0, 23.0, 31.0, 31.5, 16.0, 13.0, 25.0, 16.0, 13.0, 15.5, 23.0, 28.1, 36.1, 19.0, 37.0, 34.0, 24.0, 34.0, 21.0, 33.8, 19.2, 11.0, 11.0, 13.0, 26.0, 34.3, 14.5, 18.0, 29.0, 32.0, 19.0, 23.9, 14.0, 19.0, 22.0, 25.0, 19.0, 15.0, 17.5, 19.0, 40.8, 24.3, 17.5, 11.0, 19.0, 16.0, 32.0, 21.1, 20.0, 21.0, 38.0, 23.0, 28.0, 33.0, 31.0, 24.0, 27.0, 15.5, 32.2, 36.0, 14.0, 14.0, 29.5, 14.0, 23.6, 33.0, 20.2, 21.0, 19.0, 25.0, 21.6, 26.8, 30.0, 24.0, 18.0, 22.0, 16.0, 25.8, 29.0, 25.0, 13.0, 39.0, 18.0, 17.7, 30.7, 20.5, 25.0, 13.0, 15.0, 34.2, 14.0, 21.5, 15.0, 22.0, 23.0, 27.5, 25.0, 28.0, 13.0, 29.0, 20.0, 19.1, 27.0, 12.0, 33.7, 30.0, 30.0, 16.0, 19.2, 38.1, 22.0, 18.0, 30.5, 12.0, 26.0, 25.5, 13.0, 29.8, 20.0, 14.0, 24.0, 15.0, 20.0, 32.0, 20.3, 31.0, 14.0, 37.7, 31.0, 18.0, 15.0, 24.0, 20.0, 15.0, 12.0, 17.6, 17.5, 13.0, 17.0, 20.2, 40.9, 26.0, 17.5, 15.0, 28.0, 19.0, 15.0, 22.0, 34.4, 17.0, 22.5, 36.0, 22.3, 23.5, 33.0, 33.5, 27.0, 13.0, 18.1, 31.6, 20.2, 34.5, 15.5, 18.5, 13.0, 30.5, 19.4, 18.2, 27.0, 22.0, 20.0, 17.6, 13.0, 14.0, 18.0, 25.4, 25.0, 16.0, 27.0, 32.0, 30.0, 16.5, 32.0, 30.0, 16.9, 32.4, 14.0, 22.0, 34.7, 19.0, 21.5, 15.0, 18.1, 44.6, 16.0, 22.0, 16.0, 16.5, 32.1, 31.8, 11.0, 24.0, 43.4, 28.0, 15.0, 27.0, 18.0, 34.5, 18.0, 15.0, 23.0, 22.4, 25.0, 28.0, 30.9, 20.6, 33.5, 26.0, 27.0, 33.5, 34.1, 19.9, 36.0, 21.0, 31.3, 20.0, 13.0, 13.0, 18.0, 27.2, 31.0, 28.0, 36.0, 18.0, 17.0, 17.0, 13.0, 9.0, 15.0, 10.0, 24.5, 25.4, 14.0, 27.9, 18.0, 23.7, 23.0, 38.0, 13.0, 18.6, 32.4, 35.0, 14.0, 20.5, 36.0, 21.0, 26.0, 16.0, 26.0, 13.0, 43.1, 37.3, 35.1, 31.0, 14.0, 18.5, 17.0, 26.0, 22.0, 32.9, 29.5, 25.0, 23.2, 26.0, 26.5, 37.0, 41.5, 18.0, 16.0, 18.5, 19.4, 25.1, 16.0, 20.8, 27.4, 44.0, 20.5, 35.7, 26.0, 23.0], "xaxis": "x", "xbins": {"end": 46.6, "size": 1.0, "start": 9.0}, "yaxis": "y"}, {"autobinx": false, "histnorm": "probability density", "legendgroup": "test mpg", "marker": {"color": "rgb(255, 127, 14)"}, "name": "test mpg", "opacity": 0.7, "type": "histogram", "x": [16.0, 20.2, 17.5, 16.2, 15.0, 26.4, 25.5, 19.0, 37.2, 28.8, 21.5, 18.0, 18.0, 18.0, 27.0, 23.9, 19.8, 19.2, 26.0, 37.0, 31.5, 23.0, 18.0, 39.1, 24.2, 36.4, 23.0, 28.0, 32.8, 25.0, 15.0, 15.5, 28.0, 14.0, 22.0, 26.6, 23.8, 24.0, 19.0, 15.5], "xaxis": "x", "xbins": {"end": 39.1, "size": 1.0, "start": 14.0}, "yaxis": "y"}, {"legendgroup": "train mpg", "marker": {"color": "rgb(31, 119, 180)"}, "mode": "lines", "name": "train mpg", "showlegend": false, "type": "scatter", "x": [9.0, 9.0752, 9.1504, 9.2256, 9.3008, 9.376, 9.4512, 9.5264, 9.6016, 9.6768, 9.752, 9.8272, 9.9024, 9.9776, 10.0528, 10.128, 10.2032, 10.2784, 10.3536, 10.428799999999999, 10.504, 10.5792, 10.6544, 10.7296, 10.8048, 10.879999999999999, 10.9552, 11.0304, 11.105599999999999, 11.1808, 11.256, 11.3312, 11.4064, 11.4816, 11.556799999999999, 11.632, 11.7072, 11.782399999999999, 11.8576, 11.9328, 12.008, 12.0832, 12.1584, 12.2336, 12.3088, 12.384, 12.4592, 12.5344, 12.6096, 12.6848, 12.76, 12.8352, 12.9104, 12.9856, 13.0608, 13.136, 13.2112, 13.2864, 13.3616, 13.4368, 13.512, 13.5872, 13.662400000000002, 13.7376, 13.8128, 13.888, 13.9632, 14.0384, 14.1136, 14.1888, 14.264, 14.3392, 14.4144, 14.4896, 14.5648, 14.64, 14.7152, 14.790400000000002, 14.8656, 14.9408, 15.016, 15.0912, 15.1664, 15.2416, 15.3168, 15.392, 15.4672, 15.5424, 15.6176, 15.6928, 15.768, 15.8432, 15.9184, 15.9936, 16.0688, 16.144, 16.2192, 16.2944, 16.3696, 16.4448, 16.52, 16.595200000000002, 16.6704, 16.7456, 16.8208, 16.896, 16.9712, 17.0464, 17.1216, 17.196800000000003, 17.272, 17.3472, 17.4224, 17.4976, 17.5728, 17.648, 17.7232, 17.7984, 17.8736, 17.9488, 18.024, 18.099200000000003, 18.1744, 18.2496, 18.324800000000003, 18.4, 18.4752, 18.5504, 18.6256, 18.7008, 18.776, 18.8512, 18.9264, 19.0016, 19.0768, 19.152, 19.2272, 19.3024, 19.3776, 19.452800000000003, 19.528, 19.6032, 19.6784, 19.7536, 19.8288, 19.904, 19.9792, 20.0544, 20.1296, 20.2048, 20.28, 20.3552, 20.4304, 20.5056, 20.580800000000004, 20.656, 20.7312, 20.8064, 20.8816, 20.9568, 21.032, 21.1072, 21.1824, 21.2576, 21.3328, 21.408, 21.4832, 21.5584, 21.6336, 21.708800000000004, 21.784, 21.8592, 21.9344, 22.0096, 22.0848, 22.16, 22.2352, 22.3104, 22.3856, 22.4608, 22.536, 22.6112, 22.6864, 22.7616, 22.8368, 22.912, 22.9872, 23.0624, 23.1376, 23.2128, 23.288, 23.3632, 23.4384, 23.5136, 23.5888, 23.664, 23.7392, 23.8144, 23.8896, 23.9648, 24.04, 24.1152, 24.190400000000004, 24.2656, 24.3408, 24.416, 24.4912, 24.5664, 24.6416, 24.7168, 24.792, 24.8672, 24.9424, 25.0176, 25.0928, 25.168, 25.2432, 25.3184, 25.393600000000003, 25.468799999999998, 25.544, 25.6192, 25.6944, 25.7696, 25.8448, 25.92, 25.9952, 26.070400000000003, 26.1456, 26.2208, 26.296, 26.3712, 26.4464, 26.521600000000003, 26.596799999999998, 26.672, 26.7472, 26.822400000000002, 26.8976, 26.9728, 27.048, 27.1232, 27.198400000000003, 27.273600000000002, 27.3488, 27.424, 27.499200000000002, 27.5744, 27.649600000000003, 27.7248, 27.8, 27.8752, 27.950400000000002, 28.0256, 28.1008, 28.176, 28.2512, 28.326400000000003, 28.401600000000002, 28.4768, 28.552, 28.627200000000002, 28.7024, 28.777600000000003, 28.8528, 28.928, 29.0032, 29.078400000000002, 29.1536, 29.2288, 29.304, 29.3792, 29.4544, 29.529600000000002, 29.6048, 29.68, 29.755200000000002, 29.8304, 29.905600000000003, 29.9808, 30.056, 30.1312, 30.206400000000002, 30.2816, 30.3568, 30.432, 30.5072, 30.5824, 30.657600000000002, 30.7328, 30.808, 30.883200000000002, 30.9584, 31.033600000000003, 31.1088, 31.184, 31.2592, 31.334400000000002, 31.4096, 31.4848, 31.56, 31.6352, 31.7104, 31.785600000000002, 31.860799999999998, 31.936, 32.0112, 32.0864, 32.16160000000001, 32.2368, 32.312, 32.3872, 32.4624, 32.5376, 32.6128, 32.688, 32.7632, 32.8384, 32.9136, 32.9888, 33.064, 33.1392, 33.2144, 33.28960000000001, 33.3648, 33.44, 33.5152, 33.5904, 33.6656, 33.7408, 33.816, 33.8912, 33.9664, 34.0416, 34.1168, 34.192, 34.2672, 34.3424, 34.41760000000001, 34.4928, 34.568, 34.6432, 34.7184, 34.7936, 34.8688, 34.944, 35.0192, 35.0944, 35.1696, 35.2448, 35.32, 35.3952, 35.4704, 35.54560000000001, 35.6208, 35.696, 35.7712, 35.8464, 35.9216, 35.9968, 36.072, 36.1472, 36.2224, 36.2976, 36.3728, 36.448, 36.5232, 36.5984, 36.6736, 36.7488, 36.824, 36.8992, 36.9744, 37.0496, 37.1248, 37.2, 37.2752, 37.3504, 37.4256, 37.5008, 37.576, 37.6512, 37.7264, 37.8016, 37.8768, 37.952, 38.0272, 38.1024, 38.1776, 38.25280000000001, 38.328, 38.4032, 38.4784, 38.5536, 38.6288, 38.704, 38.7792, 38.8544, 38.9296, 39.0048, 39.08, 39.1552, 39.2304, 39.3056, 39.38080000000001, 39.456, 39.5312, 39.6064, 39.6816, 39.7568, 39.832, 39.9072, 39.9824, 40.0576, 40.1328, 40.208, 40.2832, 40.3584, 40.4336, 40.50880000000001, 40.584, 40.6592, 40.7344, 40.8096, 40.8848, 40.96, 41.0352, 41.1104, 41.1856, 41.2608, 41.336, 41.4112, 41.4864, 41.561600000000006, 41.6368, 41.712, 41.787200000000006, 41.8624, 41.937599999999996, 42.012800000000006, 42.088, 42.1632, 42.2384, 42.3136, 42.3888, 42.464, 42.5392, 42.6144, 42.6896, 42.7648, 42.84, 42.915200000000006, 42.9904, 43.065599999999996, 43.140800000000006, 43.216, 43.2912, 43.3664, 43.4416, 43.5168, 43.592, 43.6672, 43.7424, 43.8176, 43.8928, 43.968, 44.043200000000006, 44.1184, 44.193599999999996, 44.268800000000006, 44.344, 44.419200000000004, 44.4944, 44.5696, 44.644800000000004, 44.72, 44.7952, 44.870400000000004, 44.9456, 45.0208, 45.096, 45.171200000000006, 45.2464, 45.3216, 45.396800000000006, 45.472, 45.547200000000004, 45.6224, 45.6976, 45.772800000000004, 45.848, 45.9232, 45.998400000000004, 46.0736, 46.1488, 46.224, 46.299200000000006, 46.3744, 46.4496, 46.524800000000006], "xaxis": "x", "y": [0.007833858316137593, 0.008156824565563842, 0.00848869996115265, 0.008829492731440146, 0.009179196748171864, 0.009537790977452837, 0.009905238959436834, 0.010281488320338145, 0.010666470320557606, 0.011060099442698135, 0.011462273023200941, 0.011872870931261808, 0.012291755298586237, 0.012718770303411488, 0.013153742012063957, 0.013596478281129072, 0.014046768723091794, 0.014504384738054134, 0.014969079613858962, 0.015440588696641094, 0.015918629633493168, 0.01640290268857518, 0.01689309113361394, 0.01738886171333447, 0.017889865185943092, 0.01839573693834225, 0.018906097675305586, 0.019420554181377024, 0.019938700153788937, 0.020460117104219844, 0.02098437532673871, 0.021511034928812345, 0.022039646921789995, 0.022569754366828135, 0.023100893571781876, 0.023632595334173695, 0.02416438622495474, 0.024695789907408065, 0.025226328485205757, 0.025755523873327784, 0.026282899185284734, 0.02680798012986001, 0.02733029641040117, 0.027849383119552276, 0.028364782122226286, 0.028876043419570785, 0.029382726486688406, 0.029884401576927674, 0.030380650985668996, 0.030871070266688772, 0.0313552693943924, 0.03183287386547082, 0.032303525733836914, 0.03276688457306011, 0.03322262836090991, 0.033670454281067845, 0.034110079437542705, 0.034541241477844424, 0.03496369912151992, 0.03537723259123196, 0.03578164394416258, 0.03617675730214569, 0.03656241897956758, 0.0369384975087203, 0.03730488356294487, 0.037661489778549724, 0.03800825047713942, 0.038345121290620336, 0.03867207869177365, 0.03898911943388536, 0.03929625990350009, 0.03959353539091134, 0.03988099928351593, 0.04015872218763568, 0.04042679098484522, 0.04068530782923568, 0.040934389092387516, 0.041174164263120865, 0.04140477480933146, 0.041626373009412104, 0.04183912076088875, 0.042043188373983374, 0.042238753357834634, 0.04242599920707382, 0.042605114196369046, 0.0427762901904013, 0.04293972147655045, 0.04309560362731432, 0.043244132399197825, 0.04338550267446787, 0.04351990745178731, 0.04364753689132411, 0.04376857741947447, 0.04388321089785197, 0.043991613860683766, 0.044093956824213305, 0.04419040367115777, 0.044281111112696434, 0.04436622822988813, 0.044445896095831286, 0.04452024747929473, 0.044589406629968575, 0.044653489144909894, 0.04471260191519797, 0.044766843151271704, 0.044816302484894883, 0.0448610611451987, 0.044901192205774224, 0.04493676089934647, 0.044967824996150305, 0.04499443524175252, 0.0450166358497263, 0.04503446504428331, 0.045047955647709394, 0.045057135707230106, 0.04506202915575612, 0.04506265650082061, 0.04505903553593046, 0.045051182068498695, 0.04503911065851634, 0.045022835362148746, 0.04500237047451393, 0.04497773126599979, 0.04494893470662385, 0.04491600017311118, 0.04487895013357204, 0.04483781080490128, 0.044792612778279124, 0.04474339160844598, 0.04469018836273178, 0.044633050126149834, 0.04457203045921281, 0.044507189805487894, 0.04443859584628153, 0.04436632380022325, 0.0442904566659071, 0.044211085406137975, 0.04412830907272345, 0.04404223487114024, 0.043952978164795035, 0.04386066241897572, 0.04376541908496704, 0.0436673874251656, 0.04356671428038276, 0.043463553780862425, 0.04335806700286466, 0.04325042157297504, 0.04314079122258999, 0.04302935529529982, 0.042916298210144456, 0.04280180888394949, 0.042686080116160006, 0.042569307939780386, 0.04245169094219403, 0.04233342955978294, 0.04221472535038681, 0.042095780247742465, 0.041976795802116974, 0.04185797241140286, 0.041739508546971636, 0.041621599978589295, 0.041504439002681685, 0.04138821367820111, 0.04127310707428338, 0.041159296533807954, 0.04104695295687095, 0.040936240108060254, 0.04082731395128461, 0.04072032201574798, 0.04061540279648861, 0.040512685192708474, 0.0404122879869145, 0.04031431936766848, 0.0402188764985134, 0.04012604513539137, 0.04003589929461752, 0.03994850097320224, 0.039863899923040645, 0.03978213348020962, 0.039703226450316, 0.03962719105055904, 0.03955402690886445, 0.039483721120158896, 0.03941624835955328, 0.03935157105191004, 0.039289639596977406, 0.039230392648987394, 0.03917375744933019, 0.039119650210648026, 0.039067976550420436, 0.039018631971864386, 0.038971502389720754, 0.038926464698275494, 0.03888338737874073, 0.03884213114292047, 0.038802549609900434, 0.03876449001233093, 0.03872779392872022, 0.03869229803802593, 0.03865783489271615, 0.03862423370638225, 0.03859132115191135, 0.038558922166177755, 0.03852686075718287, 0.03849496080956498, 0.03846304688441591, 0.038430945009377, 0.03839848345504519, 0.03836549349379806, 0.03833181013724677, 0.038297272848649276, 0.03826172622674999, 0.03822502065767765, 0.03818701293170862, 0.03814756682189647, 0.03810655362177941, 0.03806385263960818, 0.0380193516467712, 0.03797294727834967, 0.03792454538399979, 0.03787406132763153, 0.03782142023463625, 0.03776655718570487, 0.03770941735657073, 0.037649956103309165, 0.0375881389931258, 0.03752394178086362, 0.03745735033175506, 0.03738836049124211, 0.037316977902974446, 0.03724321777637739, 0.03716710460545571, 0.037088671840764094, 0.03700796151672405, 0.036925023836708586, 0.036839916718539416, 0.036752705303248895, 0.036663461430151374, 0.036572263081440605, 0.036479193799684256, 0.03638434208171756, 0.03628780075255312, 0.036189666323011814, 0.036090038334846475, 0.0359890186971784, 0.03588671101808492, 0.03578321993517592, 0.03567865044897324, 0.0355731072628576, 0.03546669413327903, 0.03535951323383169, 0.03525166453668276, 0.035143245214706756, 0.035034349067524305, 0.034925065974469885, 0.034815481377319935, 0.03470567579541028, 0.03459572437554065, 0.03448569647883822, 0.03437565530649762, 0.034265657566059156, 0.03415575317962285, 0.034045985035122385, 0.03393638878150715, 0.0338269926684002, 0.03371781743052282, 0.033608876216895185, 0.033500174564549116, 0.03339171041621797, 0.03328347418120484, 0.03317544883837823, 0.03306761007999477, 0.03295992649482294, 0.03285235978881621, 0.03274486504138563, 0.03263739099512961, 0.032529880376710146, 0.03242227024641214, 0.03231449237378935, 0.03220647363668539, 0.032098136440826645, 0.03198939915711178, 0.03188017657366856, 0.031770380359721455, 0.031659919538299525, 0.031548700964829694, 0.031436629808685695, 0.031323610034818816, 0.031209544882660385, 0.031094337339577262, 0.030977890606261015, 0.030860108551555746, 0.030740896154358287, 0.03062015993037559, 0.03049780834168097, 0.03037375218718154, 0.03024790497228598, 0.030120183256247126, 0.029990506975847386, 0.029858799744285625, 0.029724989124326563, 0.029589006874968973, 0.029450789171088402, 0.029310276795706254, 0.029167415304728272, 0.029022155164184202, 0.028874451860182084, 0.028724265981962715, 0.02857156327860774, 0.028416314690109575, 0.02825849635365769, 0.02809808958613011, 0.0279350808439024, 0.027769461661196194, 0.027601228568288578, 0.027430382990986282, 0.02725693113284214, 0.027080883841649143, 0.02690225646179087, 0.026721068674060818, 0.026537344324581793, 0.02635111124446146, 0.02616240106181695, 0.02597124900778129, 0.025777693718079506, 0.025581777031719637, 0.025383543788300118, 0.02518304162537267, 0.02498032077723916, 0.0247754338764844, 0.02456843575946979, 0.024359383276925887, 0.02414833511069378, 0.0239353515975698, 0.023720494561111128, 0.023503827152160737, 0.02328541369874851, 0.02306531956592256, 0.022843611025964113, 0.02262035513933577, 0.022395619646612925, 0.022169472871550022, 0.02194198363533603, 0.021713221181999618, 0.021483255114835138, 0.02125215534363327, 0.021019992042418167, 0.020786835617314425, 0.020552756684095664, 0.02031782605489622, 0.020082114733506618, 0.01984569391861606, 0.01960863501431223, 0.01937100964710481, 0.019132889688697894, 0.01889434728370266, 0.018655454881454737, 0.01841628527107715, 0.01817691161891484, 0.01793740750745592, 0.01769784697485221, 0.017458304554150646, 0.0172188553113576, 0.016979574881469173, 0.016740539501619894, 0.016501826040526232, 0.0162635120234309, 0.01602567565178716, 0.015788395816962297, 0.0155517521072831, 0.015315824807793274, 0.0150806948921457, 0.014846444006108198, 0.014613154442220552, 0.014380909105202695, 0.01414979146778117, 0.013919885516666158, 0.013691275688483615, 0.013464046795537513, 0.013238283941350544, 0.01301407242600474, 0.012791497641379185, 0.012570644956453814, 0.012351599592924386, 0.012134446491444973, 0.011919270168885785, 0.01170615456706423, 0.011495182893474202, 0.011286437454602451, 0.011079999482483059, 0.010875948955198875, 0.010674364412091719, 0.010475322764494175, 0.010278899102839828, 0.010085166501049155, 0.009894195819123545, 0.00970605550490916, 0.009520811396016137, 0.009338526522897088, 0.009159260914101037, 0.008983071404724903, 0.008810011449085237, 0.008640130938627318, 0.008473476026076144, 0.008310088956817395, 0.008150007908472472, 0.007993266839602229, 0.007839895348440954, 0.007689918542521134, 0.007543356920005788, 0.007400226263495508, 0.007260537547024214, 0.007124296856899212, 0.006991505326980265, 0.006862159088927797, 0.006736249237881964, 0.006613761813964515, 0.006494677799922851, 0.006378973135160865, 0.006266618746325569, 0.006157580594542124, 0.006051819739311044, 0.0059492924190053, 0.005849950147825811, 0.00575373982899758, 0.005660603883911781, 0.005570480396844467, 0.005483303274808501, 0.005399002422023598, 0.005317503928420569, 0.0052387302715276, 0.005162600531023461, 0.005089030615180835, 0.005017933498365495, 0.004949219468703066, 0.004882796384975224, 0.004818569941761306, 0.004756443941799689, 0.004696320574506793, 0.004638100699559491, 0.0045816841344197695, 0.0045269699446586625, 0.004473856735920377, 0.0044222429463563395, 0.004372027138353752, 0.004323108288383534, 0.004275386073798819, 0.004228761155426909, 0.004183135454815448, 0.004138412425017002, 0.004094497313825601, 0.004051297418413447, 0.00400872233035664, 0.003966684170084413, 0.003925097809837333, 0.0038838810842759587, 0.0038429549879417193, 0.0038022438588372854, 0.003761675547462138, 0.0037211815707122856, 0.0036806972501286198, 0.0036401618340575173, 0.0035995186033683955, 0.0035587149604558556, 0.003517702501338701, 0.003476437070753249, 0.0034348788002239346, 0.003392992129179586, 0.003350745809268111, 0.0033081128921055723, 0.0032650707007767987, 0.0032216007854831614, 0.0031776888638093428, 0.0031333247461525363, 0.003088502246926289, 0.0030432190822146433, 0.0029974767546113216, 0.0029512804260325267, 0.002904638779339965, 0.0028575638696531577, 0.0028100709662665607, 0.0027621783861167238, 0.0027139073197689476, 0.002665281650909535, 0.002616327770341172, 0.0025670743854828934, 0.002517552326374202, 0.0024677943491750276, 0.0024178349381386638, 0.0023677101070152346, 0.0023174572008176253, 0.0022671146988513776, 0.002216722019874816, 0.0021663193302156936, 0.002115947355627253, 0.002065647197619334, 0.0020154601549497086, 0.0019654275509084352, 0.001915590566972595, 0.0018659900833527805], "yaxis": "y"}, {"legendgroup": "test mpg", "marker": {"color": "rgb(255, 127, 14)"}, "mode": "lines", "name": "test mpg", "showlegend": false, "type": "scatter", "x": [14.0, 14.0502, 14.1004, 14.1506, 14.2008, 14.251, 14.3012, 14.3514, 14.4016, 14.4518, 14.502, 14.5522, 14.6024, 14.6526, 14.7028, 14.753, 14.8032, 14.8534, 14.9036, 14.9538, 15.004, 15.0542, 15.1044, 15.1546, 15.2048, 15.254999999999999, 15.3052, 15.3554, 15.4056, 15.4558, 15.506, 15.5562, 15.6064, 15.656600000000001, 15.7068, 15.757, 15.8072, 15.8574, 15.9076, 15.9578, 16.008, 16.0582, 16.1084, 16.1586, 16.2088, 16.259, 16.3092, 16.3594, 16.4096, 16.4598, 16.509999999999998, 16.560200000000002, 16.6104, 16.660600000000002, 16.7108, 16.761, 16.8112, 16.8614, 16.9116, 16.9618, 17.012, 17.0622, 17.1124, 17.1626, 17.2128, 17.262999999999998, 17.313200000000002, 17.3634, 17.4136, 17.4638, 17.514, 17.5642, 17.6144, 17.6646, 17.7148, 17.765, 17.8152, 17.8654, 17.9156, 17.9658, 18.016, 18.066200000000002, 18.1164, 18.166600000000003, 18.2168, 18.267, 18.3172, 18.3674, 18.4176, 18.4678, 18.518, 18.5682, 18.6184, 18.6686, 18.7188, 18.769, 18.819200000000002, 18.8694, 18.9196, 18.9698, 19.02, 19.0702, 19.1204, 19.1706, 19.2208, 19.271, 19.3212, 19.3714, 19.4216, 19.4718, 19.522, 19.572200000000002, 19.6224, 19.6726, 19.7228, 19.773, 19.8232, 19.8734, 19.9236, 19.9738, 20.024, 20.0742, 20.1244, 20.1746, 20.224800000000002, 20.275, 20.325200000000002, 20.3754, 20.4256, 20.4758, 20.526, 20.5762, 20.6264, 20.6766, 20.7268, 20.777, 20.8272, 20.8774, 20.927599999999998, 20.977800000000002, 21.028, 21.078200000000002, 21.1284, 21.1786, 21.2288, 21.279, 21.3292, 21.3794, 21.4296, 21.4798, 21.53, 21.5802, 21.6304, 21.6806, 21.730800000000002, 21.781, 21.831200000000003, 21.8814, 21.9316, 21.9818, 22.032, 22.0822, 22.1324, 22.1826, 22.2328, 22.283, 22.3332, 22.3834, 22.4336, 22.483800000000002, 22.534, 22.584200000000003, 22.6344, 22.6846, 22.7348, 22.785, 22.8352, 22.885399999999997, 22.9356, 22.9858, 23.036, 23.0862, 23.136400000000002, 23.1866, 23.236800000000002, 23.287, 23.337200000000003, 23.3874, 23.4376, 23.4878, 23.538, 23.5882, 23.6384, 23.6886, 23.7388, 23.789, 23.839199999999998, 23.889400000000002, 23.9396, 23.989800000000002, 24.04, 24.090200000000003, 24.1404, 24.1906, 24.2408, 24.291, 24.3412, 24.3914, 24.4416, 24.4918, 24.542, 24.5922, 24.642400000000002, 24.6926, 24.742800000000003, 24.793, 24.843200000000003, 24.8934, 24.9436, 24.9938, 25.044, 25.0942, 25.1444, 25.1946, 25.2448, 25.295, 25.3452, 25.395400000000002, 25.4456, 25.495800000000003, 25.546, 25.596200000000003, 25.6464, 25.6966, 25.7468, 25.797, 25.8472, 25.8974, 25.9476, 25.9978, 26.048000000000002, 26.0982, 26.148400000000002, 26.1986, 26.248800000000003, 26.299, 26.349200000000003, 26.3994, 26.4496, 26.4998, 26.55, 26.6002, 26.6504, 26.7006, 26.7508, 26.801000000000002, 26.8512, 26.901400000000002, 26.9516, 27.001800000000003, 27.052, 27.1022, 27.1524, 27.2026, 27.2528, 27.303, 27.3532, 27.4034, 27.4536, 27.503800000000002, 27.554000000000002, 27.6042, 27.654400000000003, 27.7046, 27.754800000000003, 27.805, 27.8552, 27.9054, 27.9556, 28.0058, 28.055999999999997, 28.1062, 28.1564, 28.2066, 28.256800000000002, 28.307000000000002, 28.3572, 28.407400000000003, 28.4576, 28.507800000000003, 28.558, 28.6082, 28.6584, 28.7086, 28.7588, 28.808999999999997, 28.8592, 28.9094, 28.959600000000002, 29.0098, 29.060000000000002, 29.1102, 29.160400000000003, 29.2106, 29.260800000000003, 29.311, 29.3612, 29.4114, 29.4616, 29.5118, 29.561999999999998, 29.6122, 29.6624, 29.712600000000002, 29.7628, 29.813000000000002, 29.8632, 29.913400000000003, 29.9636, 30.0138, 30.064, 30.1142, 30.1644, 30.2146, 30.2648, 30.315, 30.3652, 30.4154, 30.465600000000002, 30.5158, 30.566, 30.6162, 30.666400000000003, 30.716600000000003, 30.7668, 30.817, 30.8672, 30.9174, 30.9676, 31.017799999999998, 31.068, 31.1182, 31.168400000000002, 31.218600000000002, 31.2688, 31.319, 31.3692, 31.419400000000003, 31.469600000000003, 31.5198, 31.57, 31.6202, 31.6704, 31.7206, 31.770799999999998, 31.821, 31.8712, 31.921400000000002, 31.971600000000002, 32.0218, 32.072, 32.1222, 32.1724, 32.2226, 32.272800000000004, 32.323, 32.3732, 32.4234, 32.473600000000005, 32.523799999999994, 32.574, 32.6242, 32.674400000000006, 32.7246, 32.7748, 32.825, 32.8752, 32.925399999999996, 32.9756, 33.025800000000004, 33.076, 33.1262, 33.1764, 33.226600000000005, 33.2768, 33.327, 33.3772, 33.427400000000006, 33.4776, 33.5278, 33.578, 33.6282, 33.678399999999996, 33.7286, 33.778800000000004, 33.829, 33.8792, 33.9294, 33.979600000000005, 34.0298, 34.08, 34.1302, 34.180400000000006, 34.2306, 34.2808, 34.331, 34.3812, 34.4314, 34.4816, 34.531800000000004, 34.582, 34.6322, 34.6824, 34.732600000000005, 34.7828, 34.833, 34.8832, 34.933400000000006, 34.9836, 35.0338, 35.084, 35.1342, 35.1844, 35.2346, 35.284800000000004, 35.335, 35.3852, 35.4354, 35.485600000000005, 35.5358, 35.586, 35.6362, 35.686400000000006, 35.7366, 35.7868, 35.837, 35.8872, 35.9374, 35.9876, 36.037800000000004, 36.088, 36.1382, 36.1884, 36.238600000000005, 36.2888, 36.339, 36.3892, 36.439400000000006, 36.4896, 36.5398, 36.59, 36.6402, 36.6904, 36.7406, 36.790800000000004, 36.841, 36.8912, 36.9414, 36.991600000000005, 37.0418, 37.092, 37.1422, 37.192400000000006, 37.2426, 37.2928, 37.343, 37.3932, 37.4434, 37.4936, 37.543800000000005, 37.594, 37.6442, 37.6944, 37.744600000000005, 37.7948, 37.845, 37.8952, 37.94540000000001, 37.9956, 38.0458, 38.096000000000004, 38.1462, 38.1964, 38.2466, 38.296800000000005, 38.347, 38.3972, 38.4474, 38.497600000000006, 38.5478, 38.598, 38.6482, 38.69840000000001, 38.7486, 38.7988, 38.849000000000004, 38.8992, 38.9494, 38.9996, 39.049800000000005], "xaxis": "x", "y": [0.03140177588551357, 0.03178463542425452, 0.03216691397017144, 0.032548500344261995, 0.032929283326505035, 0.033309151737332544, 0.03368799451952444, 0.03406570082044383, 0.03444216007452993, 0.03481726208596487, 0.03519089711143041, 0.035562955942870116, 0.03593332999017125, 0.03630191136368226, 0.03666859295647895, 0.037033268526295286, 0.03739583277703186, 0.037756181439757334, 0.0381142113531173, 0.03846982054306539, 0.038822908301831924, 0.039173375266045744, 0.0395211234939259, 0.039866056541459076, 0.04020807953748173, 0.040547099257583624, 0.040883024196753395, 0.041215764640685534, 0.04154523273567015, 0.04187134255698798, 0.04219401017573405, 0.042513153723994855, 0.0428286934583051, 0.043140551821311976, 0.04344865350157557, 0.043752925491436806, 0.04405329714288452, 0.044349700221356696, 0.04464206895741087, 0.04493034009620268, 0.04521445294471101, 0.045494349416653014, 0.04576997407503178, 0.04604127417226336, 0.04630819968783158, 0.04657070336342051, 0.04682874073547891, 0.04708227016517079, 0.04733125286567063, 0.04757565292676395, 0.0478154373367159, 0.04805057600137364, 0.048281041760471294, 0.048506810401108845, 0.04872786066837822, 0.0489441742731149, 0.0491557358967536, 0.049362533193272176, 0.04956455678820853, 0.04976180027474089, 0.04995426020682193, 0.05014193608936376, 0.05032483036547104, 0.05050294840072434, 0.050676298464519015, 0.05084489170846727, 0.05100874214187574, 0.051167866604312585, 0.05132228473528348, 0.05147201894103706, 0.05161709435852584, 0.05175753881655044, 0.051893382794119036, 0.052024659376057755, 0.052151404205909926, 0.05227365543616709, 0.05239145367587651, 0.05250484193567422, 0.0526138655702962, 0.052718572218622306, 0.05281901174131275, 0.05291523615609813, 0.053007299570789104, 0.053095258114073854, 0.05317916986417464, 0.05325909477543864, 0.05333509460293996, 0.05340723282517416, 0.05347557456492834, 0.05354018650841289, 0.05360113682274425, 0.053658495071869865, 0.05371233213102978, 0.05376272009985122, 0.05380973221417466, 0.05385344275671334, 0.053893926966648464, 0.05393126094826555, 0.05396552157873937, 0.053996786415175316, 0.054025133601018356, 0.054050641771940376, 0.05407338996132036, 0.05409345750542999, 0.05411092394844105, 0.05412586894737028, 0.05413837217707829, 0.054148513235440184, 0.05415637154880511, 0.05416202627786291, 0.054165556224035426, 0.05416703973651044, 0.05416655462003528, 0.05416417804358722, 0.054159986450036744, 0.05415405546691903, 0.054146459818427715, 0.05413727323874442, 0.05412656838681518, 0.054114416762684366, 0.05410088862549394, 0.054086052913254946, 0.054069977164495096, 0.05405272744188464, 0.0540343682579404, 0.054014962502904336, 0.05399457137489153, 0.05397325431239827, 0.05395106892925891, 0.05392807095213618, 0.053904314160626646, 0.053879850330059514, 0.05385472917706271, 0.053828998307967627, 0.053802703170118676, 0.05377588700615046, 0.05374859081129135, 0.05372085329374764, 0.05369271083821844, 0.053664197472586606, 0.05363534483782712, 0.05360618216116946, 0.053576736232545684, 0.053547031384351226, 0.05351708947454176, 0.05348692987308249, 0.05345656945176436, 0.05342602257739341, 0.05339530110835849, 0.05336441439457383, 0.05333336928079166, 0.05330217011327216, 0.05327081874979583, 0.053239314572996584, 0.053207654506990415, 0.05317583303726944, 0.053143842233825636, 0.053111671777466084, 0.05307930898927434, 0.05304673886317092, 0.05301394410151889, 0.05298090515371871, 0.052947600257730716, 0.05291400548446025, 0.05288009478493666, 0.05284584004021324, 0.05281121111391183, 0.052776175907332364, 0.05274070041704375, 0.052704748794870075, 0.0526682834101823, 0.052631264914403106, 0.05259365230762978, 0.05255540300727757, 0.052516472918642615, 0.05247681650728307, 0.05243638687311313, 0.052395135826103965, 0.05235301396348321, 0.05230997074832387, 0.05226595458941087, 0.05222091292227392, 0.0521747922912729, 0.052127538432622064, 0.05207909635823855, 0.052029410440300086, 0.0519784244963962, 0.051926081875158264, 0.051872325542252455, 0.0518170981666208, 0.051760342206855665, 0.051701999997593805, 0.05164201383581648, 0.05158032606694359, 0.051516879170610375, 0.0514516158460171, 0.051384479096742874, 0.05131541231491642, 0.05124435936463944, 0.05117126466455789, 0.0510960732694806, 0.05101873095094549, 0.050939184276636386, 0.050857380688555553, 0.05077326857985964, 0.05068679737026922, 0.050597917579965214, 0.0505065809018871, 0.05041274027235235, 0.05031634993991796, 0.050217365532408846, 0.05011574412204073, 0.050011444288568206, 0.049904426180392154, 0.049794651573563393, 0.0496820839286241, 0.04956668844522991, 0.049448432114501194, 0.04932728376905329, 0.049203214130661525, 0.04907619585551737, 0.048946203577038286, 0.04881321394619566, 0.04867720566932941, 0.048538159543421465, 0.04839605848880331, 0.04825088757927717, 0.048102634069632624, 0.04795128742054607, 0.0477968393208509, 0.04763928370717304, 0.047478616780926686, 0.04731483702267165, 0.047147945203833745, 0.046977944395796174, 0.04680483997637022, 0.04662863963365907, 0.04644935336733, 0.04626699348731453, 0.04608157460995826, 0.04589311365164517, 0.045701629819924976, 0.045507144602173456, 0.04530968175181951, 0.045109267272175076, 0.044905929397906434, 0.04469969857418794, 0.04449060743358226, 0.04427869077069219, 0.04406398551463311, 0.04384653069937561, 0.043626367432011225, 0.043403538858995436, 0.04317809013042386, 0.042950068362400305, 0.04271952259755592, 0.042486503763780735, 0.04225106463123072, 0.04201325976767445, 0.04177314549224458, 0.04153077982766153, 0.0412862224509962, 0.04103953464304163, 0.04079077923636247, 0.04054002056209302, 0.04028732439555526, 0.04003275790076837, 0.039776389573921954, 0.039518289185885916, 0.039258527723830046, 0.03899717733202548, 0.03873431125190285, 0.038470003761438595, 0.03820433011394417, 0.03793736647632952, 0.037669189866914726, 0.03739987809286079, 0.037129509687292346, 0.03685816384618248, 0.03658592036507063, 0.03631285957568286, 0.03603906228252348, 0.035764609699505824, 0.03548958338668869, 0.035214065187184514, 0.03493813716430367, 0.03466188153899776, 0.034385380627664226, 0.03410871678037261, 0.03383197231957111, 0.03355522947933139, 0.033278570345186866, 0.033002076794619334, 0.0327258304382453, 0.032449912561753634, 0.03217440406864278, 0.031899385423804286, 0.031624936597998234, 0.0313511370132628, 0.03107806548929933, 0.030805800190872045, 0.030534418576258972, 0.030263997346788783, 0.029994612397497067, 0.029726338768931306, 0.02945925060013448, 0.029193421082832408, 0.028928922416849755, 0.028665825766776586, 0.02840420121990538, 0.028144117745456096, 0.027885643155105423, 0.02762884406483378, 0.027373785858101046, 0.027120532650361625, 0.026869147254925115, 0.026619691150169607, 0.02637222444810973, 0.026126805864322564, 0.025883492689230365, 0.025642340760738923, 0.025403404438227518, 0.02516673657788567, 0.02493238850938923, 0.024700410013907974, 0.02447084930343472, 0.024243753001424114, 0.024019166124729253, 0.02379713206682175, 0.02357769258228018, 0.023360887772530786, 0.02314675607282335, 0.022935334240423683, 0.02272665734400415, 0.022520758754211705, 0.022317670135393694, 0.02211742143845976, 0.021920040894858092, 0.0217255550116443, 0.02153398856761984, 0.02134536461051768, 0.021159704455211977, 0.020977027682928487, 0.020797352141432898, 0.020620693946173732, 0.020447067482356602, 0.020276485407927643, 0.020108958657442656, 0.0199444964468005, 0.01978310627881837, 0.019624793949627795, 0.019469563555870505, 0.01931741750267352, 0.019168356512384285, 0.019022379634046446, 0.018879484253597978, 0.01873966610477447, 0.01860291928070046, 0.01846923624615301, 0.018338607850482545, 0.01821102334117676, 0.01808647037805426, 0.017964935048075503, 0.0178464018807599, 0.017730853864198013, 0.01761827246164998, 0.017508637628720673, 0.017401927831104554, 0.01729812006289293, 0.017197189865437716, 0.01709911134676649, 0.017003857201544886, 0.01691139873158224, 0.01682170586687819, 0.016734747187207855, 0.01665048994424448, 0.016568900084218643, 0.016489942271113663, 0.016413579910398025, 0.01633977517329501, 0.01626848902159109, 0.016199681232984486, 0.016133310426975498, 0.016069334091300944, 0.01600770860891427, 0.015948389285513863, 0.015891330377621513, 0.01583648512121298, 0.015783805760902606, 0.015733243579683424, 0.015684748929224133, 0.015638271260723688, 0.01559375915632384, 0.015551160361079532, 0.015510421815486293, 0.015471489688562956, 0.015434309411487554, 0.015398825711783231, 0.015364982648049983, 0.015332723645237236, 0.0153019915304512, 0.015272728569289797, 0.015244876502696793, 0.015218376584325611, 0.015193169618401938, 0.015169195998073164, 0.01514639574423103, 0.015124708544792696, 0.015104073794424135, 0.015084430634687855, 0.01506571799459613, 0.015047874631548845, 0.01503083917263404, 0.015014550156267395, 0.014998946074145628, 0.014983965413487097, 0.014969546699531662, 0.014955628538270045, 0.014942149659371823, 0.014929048959279457, 0.014916265544434613, 0.014903738774601542, 0.014891408306250825, 0.014879214135965949, 0.01486709664383338, 0.014854996636776098, 0.01484285539178921, 0.014830614699035346, 0.014818216904756314, 0.014805604953957082, 0.014792722432816702, 0.0147795136107806, 0.014765923482287766, 0.014751897808085645, 0.01473738315608555, 0.014722326941710412, 0.014706677467687009, 0.014690383963234145, 0.014673396622598516, 0.014655666642889835, 0.014637146261166988, 0.0146177887907273, 0.014597548656551081, 0.014576381429854532, 0.014554243861704065, 0.014531093915646387, 0.014506890799308924, 0.014481594994926421, 0.014455168288750334, 0.014427573799298881, 0.014398776004406645, 0.014368740767034064, 0.014337435359798463, 0.014304828488189784, 0.01427089031243581, 0.014235592467983194, 0.014198908084562591, 0.014160811803807828, 0.014121279795401115, 0.014080289771718163, 0.01403782100094925, 0.01399385431867437, 0.013948372137872738, 0.013901358457349283, 0.013852798868562865, 0.013802680560843652, 0.013750992324988998, 0.013697724555229936, 0.013642869249562836, 0.013586420008442986, 0.013528372031839686, 0.013468722114654597, 0.01340746864050795, 0.013344611573899535, 0.013280152450753762, 0.013214094367360983, 0.013146441967729256, 0.01307720142936375, 0.013006380447492728, 0.012933988217762179, 0.012860035417422895, 0.012784534185036648, 0.012707498098729867, 0.012628942153025943, 0.01254888273428898, 0.01246733759481429, 0.012384325825602718, 0.012299867827857795, 0.012213985283247054, 0.012126701122969902, 0.012038039495676738, 0.011948025734285519, 0.011856686321743378, 0.01176404885578239, 0.011670142012719978, 0.011574995510355748, 0.011478640070017714, 0.011381107377811492, 0.011282430045127849, 0.011182641568463986], "yaxis": "y"}, {"legendgroup": "train mpg", "marker": {"color": "rgb(31, 119, 180)", "symbol": "line-ns-open"}, "mode": "markers", "name": "train mpg", "showlegend": false, "type": "scatter", "x": [26.0, 36.0, 28.0, 14.0, 30.0, 14.0, 29.0, 13.0, 14.0, 14.0, 17.0, 30.0, 23.0, 21.0, 46.6, 32.0, 21.0, 17.0, 10.0, 24.0, 26.0, 38.0, 14.0, 16.5, 31.9, 39.4, 29.9, 15.0, 12.0, 29.8, 13.0, 29.0, 24.0, 36.1, 26.6, 26.0, 32.3, 27.2, 20.6, 25.0, 24.0, 19.0, 29.0, 28.4, 24.0, 15.0, 32.7, 34.1, 29.0, 14.0, 31.0, 35.0, 18.0, 24.5, 27.0, 38.0, 12.0, 20.0, 26.0, 12.0, 13.0, 20.0, 29.0, 21.0, 13.0, 16.0, 44.3, 27.2, 28.0, 23.0, 31.0, 31.5, 16.0, 13.0, 25.0, 16.0, 13.0, 15.5, 23.0, 28.1, 36.1, 19.0, 37.0, 34.0, 24.0, 34.0, 21.0, 33.8, 19.2, 11.0, 11.0, 13.0, 26.0, 34.3, 14.5, 18.0, 29.0, 32.0, 19.0, 23.9, 14.0, 19.0, 22.0, 25.0, 19.0, 15.0, 17.5, 19.0, 40.8, 24.3, 17.5, 11.0, 19.0, 16.0, 32.0, 21.1, 20.0, 21.0, 38.0, 23.0, 28.0, 33.0, 31.0, 24.0, 27.0, 15.5, 32.2, 36.0, 14.0, 14.0, 29.5, 14.0, 23.6, 33.0, 20.2, 21.0, 19.0, 25.0, 21.6, 26.8, 30.0, 24.0, 18.0, 22.0, 16.0, 25.8, 29.0, 25.0, 13.0, 39.0, 18.0, 17.7, 30.7, 20.5, 25.0, 13.0, 15.0, 34.2, 14.0, 21.5, 15.0, 22.0, 23.0, 27.5, 25.0, 28.0, 13.0, 29.0, 20.0, 19.1, 27.0, 12.0, 33.7, 30.0, 30.0, 16.0, 19.2, 38.1, 22.0, 18.0, 30.5, 12.0, 26.0, 25.5, 13.0, 29.8, 20.0, 14.0, 24.0, 15.0, 20.0, 32.0, 20.3, 31.0, 14.0, 37.7, 31.0, 18.0, 15.0, 24.0, 20.0, 15.0, 12.0, 17.6, 17.5, 13.0, 17.0, 20.2, 40.9, 26.0, 17.5, 15.0, 28.0, 19.0, 15.0, 22.0, 34.4, 17.0, 22.5, 36.0, 22.3, 23.5, 33.0, 33.5, 27.0, 13.0, 18.1, 31.6, 20.2, 34.5, 15.5, 18.5, 13.0, 30.5, 19.4, 18.2, 27.0, 22.0, 20.0, 17.6, 13.0, 14.0, 18.0, 25.4, 25.0, 16.0, 27.0, 32.0, 30.0, 16.5, 32.0, 30.0, 16.9, 32.4, 14.0, 22.0, 34.7, 19.0, 21.5, 15.0, 18.1, 44.6, 16.0, 22.0, 16.0, 16.5, 32.1, 31.8, 11.0, 24.0, 43.4, 28.0, 15.0, 27.0, 18.0, 34.5, 18.0, 15.0, 23.0, 22.4, 25.0, 28.0, 30.9, 20.6, 33.5, 26.0, 27.0, 33.5, 34.1, 19.9, 36.0, 21.0, 31.3, 20.0, 13.0, 13.0, 18.0, 27.2, 31.0, 28.0, 36.0, 18.0, 17.0, 17.0, 13.0, 9.0, 15.0, 10.0, 24.5, 25.4, 14.0, 27.9, 18.0, 23.7, 23.0, 38.0, 13.0, 18.6, 32.4, 35.0, 14.0, 20.5, 36.0, 21.0, 26.0, 16.0, 26.0, 13.0, 43.1, 37.3, 35.1, 31.0, 14.0, 18.5, 17.0, 26.0, 22.0, 32.9, 29.5, 25.0, 23.2, 26.0, 26.5, 37.0, 41.5, 18.0, 16.0, 18.5, 19.4, 25.1, 16.0, 20.8, 27.4, 44.0, 20.5, 35.7, 26.0, 23.0], "xaxis": "x", "y": ["train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg", "train mpg"], "yaxis": "y2"}, {"legendgroup": "test mpg", "marker": {"color": "rgb(255, 127, 14)", "symbol": "line-ns-open"}, "mode": "markers", "name": "test mpg", "showlegend": false, "type": "scatter", "x": [16.0, 20.2, 17.5, 16.2, 15.0, 26.4, 25.5, 19.0, 37.2, 28.8, 21.5, 18.0, 18.0, 18.0, 27.0, 23.9, 19.8, 19.2, 26.0, 37.0, 31.5, 23.0, 18.0, 39.1, 24.2, 36.4, 23.0, 28.0, 32.8, 25.0, 15.0, 15.5, 28.0, 14.0, 22.0, 26.6, 23.8, 24.0, 19.0, 15.5], "xaxis": "x", "y": ["test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg", "test mpg"], "yaxis": "y2"}],
                         {"barmode": "overlay", "hovermode": "closest", "legend": {"traceorder": "reversed"}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "xaxis": {"anchor": "y2", "domain": [0.0, 1.0], "zeroline": false}, "yaxis": {"anchor": "free", "domain": [0.35, 1], "position": 0.0}, "yaxis2": {"anchor": "x", "domain": [0, 0.25], "dtick": 1, "showticklabels": false}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('e04fc52a-1776-4d38-a46e-587fd43575e0');
+var gd = document.getElementById('3ecafd6f-e84e-46d4-8b64-518f3f563e7b');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -14584,10 +15398,52 @@ if (outputEl) {{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Building-A-Basic-Model">Building A Basic Model<a class="anchor-link" href="#Building-A-Basic-Model">&#182;</a></h2><p>Let's go through the process of building a model.  Let's start by looking at just engine characteristics like "cylinders" and the "displacement. I will first illustrate how we might do this using just the <code>LinearRegression</code> class and our own feature function (as we did in previous lectures).  Then I will introduce <code>Pipelines</code> in sklearn which will allow us to track the <code>phi</code> function with our model and apply the same transformations to training and test data.</p>
+<p><br/><br/><br/></p>
+<hr>
+<h2 id="Building-A-Basic-Model">Building A Basic Model<a class="anchor-link" href="#Building-A-Basic-Model">&#182;</a></h2><p>Let's go through the process of building a model.  Let's start by looking at just engine characteristics like "cylinders" and the "displacement". We will first use just our own feature function (as we did in previous lectures).  Then we will introduce how to use sklearn <code>Pipelines</code> to combine feature functions and models. As we will see, by combining the feature function and model, we can simplify subsequent training and testing since we are guaranteed that our feature functions are the same on both the training and test datasets.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;2i7yj4JhIkw&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/2i7yj4JhIkw"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14599,7 +15455,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">phi</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
@@ -14621,7 +15477,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
@@ -14635,7 +15491,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">phi</span><span class="p">(</span><span class="n">tr</span><span class="p">),</span> <span class="n">tr</span><span class="p">[</span><span class="s1">&#39;mpg&#39;</span><span class="p">])</span>
@@ -14651,7 +15507,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -14669,14 +15525,14 @@ if (outputEl) {{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To evaluate the error we will use the Root Mean Squared Error (RMSE) which is like the mean squared error but in the correct units (mpg) instead of (mpg^2).</p>
+<p>To evaluate the error we will use the <strong>Root Mean Squared Error (RMSE)</strong> which is like the mean squared error but in the correct units (mpg) instead of (mpg^2).</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">rmse</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">yhat</span><span class="p">):</span>
@@ -14698,7 +15554,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_hat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">phi</span><span class="p">(</span><span class="n">tr</span><span class="p">))</span>
@@ -14739,7 +15595,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_hat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">phi</span><span class="p">(</span><span class="n">te</span><span class="p">))</span>
@@ -14783,6 +15639,8 @@ if (outputEl) {{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><br/><br/><br/></p>
+<hr>
 <h2 id="SKLearn-Pipelines">SKLearn Pipelines<a class="anchor-link" href="#SKLearn-Pipelines">&#182;</a></h2><p>Notice that we need to apply the same transformations to the test data when we go to evaluate our model.  Keeping track of phi can get a bit tedious.  We will use the sklearn Pipelines package to combine feature engineering stages and the model into a single "model" that applies the same transformations when you call <code>fit</code> and <code>predict</code>.  You may want to <a href="https://scikit-learn.org/stable/modules/compose.html#pipeline">skim the documentation on pipelines</a>.</p>
 
 </div>
@@ -14790,14 +15648,40 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
-<span class="kn">from</span> <span class="nn">sklearn.compose</span> <span class="kn">import</span> <span class="n">ColumnTransformer</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;9vz0n1cyMbc&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[25]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/9vz0n1cyMbc"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -14812,7 +15696,21 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">sklearn.compose</span> <span class="kn">import</span> <span class="n">ColumnTransformer</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
@@ -14836,7 +15734,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="p">[</span><span class="s1">&#39;SelectColumns&#39;</span><span class="p">]</span>
@@ -14852,7 +15750,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -14889,7 +15787,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">tr</span><span class="p">[</span><span class="s1">&#39;mpg&#39;</span><span class="p">])</span>
@@ -14905,7 +15803,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -14942,7 +15840,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_hat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tr</span><span class="p">)</span>
@@ -14983,7 +15881,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_hat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">te</span><span class="p">)</span>
@@ -15024,10 +15922,179 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">models</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;c+d&quot;</span><span class="p">:</span> <span class="n">model</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="More-Feature-Transformations">More Feature Transformations<a class="anchor-link" href="#More-Feature-Transformations">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We might also want to look at the displacement per cylinder.  This is an additional feature transformation that we can add to the first stage of our pipeline.  To define this transformation we first need to create a function transformer:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">FunctionTransformer</span>
+
+<span class="k">def</span> <span class="nf">compute_volume</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>  <span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">volume_transformer</span> <span class="o">=</span> <span class="n">FunctionTransformer</span><span class="p">(</span><span class="n">compute_volume</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can then add this as an additional column transformation:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s2">&quot;SelectColumns&quot;</span><span class="p">,</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
+        <span class="p">(</span><span class="s2">&quot;keep&quot;</span><span class="p">,</span> <span class="s2">&quot;passthrough&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;cylinders&quot;</span><span class="p">,</span> <span class="s2">&quot;displacement&quot;</span><span class="p">]),</span>
+        <span class="p">(</span><span class="s2">&quot;cyl_vol&quot;</span><span class="p">,</span> <span class="n">volume_transformer</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;cylinders&quot;</span><span class="p">,</span> <span class="s2">&quot;displacement&quot;</span><span class="p">])])),</span>
+    <span class="p">(</span><span class="s2">&quot;LinearModel&quot;</span><span class="p">,</span> <span class="n">LinearRegression</span><span class="p">())</span>
+<span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">tr</span><span class="p">[</span><span class="s1">&#39;mpg&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[35]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Pipeline(memory=None,
+         steps=[(&#39;SelectColumns&#39;,
+                 ColumnTransformer(n_jobs=None, remainder=&#39;drop&#39;,
+                                   sparse_threshold=0.3,
+                                   transformer_weights=None,
+                                   transformers=[(&#39;keep&#39;, &#39;passthrough&#39;,
+                                                  [&#39;cylinders&#39;,
+                                                   &#39;displacement&#39;]),
+                                                 (&#39;cyl_vol&#39;,
+                                                  FunctionTransformer(accept_sparse=False,
+                                                                      check_inverse=True,
+                                                                      func=&lt;function compute_volume at 0x7fcffbeb1e60&gt;,
+                                                                      inv_kw_args=None,
+                                                                      inverse_func=None,
+                                                                      kw_args=None,
+                                                                      pass_y=&#39;deprecated&#39;,
+                                                                      validate=True),
+                                                  [&#39;cylinders&#39;,
+                                                   &#39;displacement&#39;])],
+                                   verbose=False)),
+                (&#39;LinearModel&#39;,
+                 LinearRegression(copy_X=True, fit_intercept=True, n_jobs=None,
+                                  normalize=False))],
+         verbose=False)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Again, we evaluate the model on our training dataset and see a reduction in error:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_hat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tr</span><span class="p">)</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">tr</span><span class="p">[</span><span class="s1">&#39;mpg&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training Error (RMSE):&quot;</span><span class="p">,</span> <span class="n">rmse</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">Y_hat</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Training Error (RMSE): 4.318799994795116
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">models</span><span class="p">[</span><span class="s2">&quot;c+d+d/c&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
 </pre></div>
 
     </div>
@@ -15045,12 +16112,14 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">quantitative_features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;cylinders&quot;</span><span class="p">,</span> <span class="s2">&quot;displacement&quot;</span><span class="p">,</span> <span class="s2">&quot;horsepower&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">,</span> <span class="s2">&quot;acceleration&quot;</span><span class="p">]</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
-    <span class="p">(</span><span class="s2">&quot;SelectColumns&quot;</span><span class="p">,</span> <span class="n">ColumnTransformer</span><span class="p">([(</span><span class="s2">&quot;keep&quot;</span><span class="p">,</span> <span class="s2">&quot;passthrough&quot;</span><span class="p">,</span> <span class="n">quantitative_features</span><span class="p">)])),</span>
+    <span class="p">(</span><span class="s2">&quot;SelectColumns&quot;</span><span class="p">,</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
+        <span class="p">(</span><span class="s2">&quot;keep&quot;</span><span class="p">,</span> <span class="s2">&quot;passthrough&quot;</span><span class="p">,</span> <span class="n">quantitative_features</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;cyl_vol&quot;</span><span class="p">,</span> <span class="n">volume_transformer</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;cylinders&quot;</span><span class="p">,</span> <span class="s2">&quot;displacement&quot;</span><span class="p">])])),</span>
     <span class="p">(</span><span class="s2">&quot;LinearModel&quot;</span><span class="p">,</span> <span class="n">LinearRegression</span><span class="p">())</span>
 <span class="p">])</span>
 </pre></div>
@@ -15070,7 +16139,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -15113,12 +16182,14 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
-    <span class="p">(</span><span class="s2">&quot;SelectColumns&quot;</span><span class="p">,</span> <span class="n">ColumnTransformer</span><span class="p">([(</span><span class="s2">&quot;keep&quot;</span><span class="p">,</span> <span class="s2">&quot;passthrough&quot;</span><span class="p">,</span> <span class="n">quantitative_features</span><span class="p">)])),</span>
+    <span class="p">(</span><span class="s2">&quot;SelectColumns&quot;</span><span class="p">,</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
+        <span class="p">(</span><span class="s2">&quot;keep&quot;</span><span class="p">,</span> <span class="s2">&quot;passthrough&quot;</span><span class="p">,</span> <span class="n">quantitative_features</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;cyl_vol&quot;</span><span class="p">,</span> <span class="n">volume_transformer</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;cylinders&quot;</span><span class="p">,</span> <span class="s2">&quot;displacement&quot;</span><span class="p">])])),</span>
     <span class="p">(</span><span class="s2">&quot;Imputation&quot;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">()),</span>
     <span class="p">(</span><span class="s2">&quot;LinearModel&quot;</span><span class="p">,</span> <span class="n">LinearRegression</span><span class="p">())</span>
 <span class="p">])</span>
@@ -15139,7 +16210,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">tr</span><span class="p">[</span><span class="s1">&#39;mpg&#39;</span><span class="p">])</span>
@@ -15155,7 +16226,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[41]:</div>
 
 
 
@@ -15169,7 +16240,18 @@ if (outputEl) {{
                                    transformers=[(&#39;keep&#39;, &#39;passthrough&#39;,
                                                   [&#39;cylinders&#39;, &#39;displacement&#39;,
                                                    &#39;horsepower&#39;, &#39;weight&#39;,
-                                                   &#39;acceleration&#39;])],
+                                                   &#39;acceleration&#39;]),
+                                                 (&#39;cyl_vol&#39;,
+                                                  FunctionTransformer(accept_sparse=False,
+                                                                      check_inverse=True,
+                                                                      func=&lt;function compute_volume at 0x7fcffbe...
+                                                                      inv_kw_args=None,
+                                                                      inverse_func=None,
+                                                                      kw_args=None,
+                                                                      pass_y=&#39;deprecated&#39;,
+                                                                      validate=True),
+                                                  [&#39;cylinders&#39;,
+                                                   &#39;displacement&#39;])],
                                    verbose=False)),
                 (&#39;Imputation&#39;,
                  SimpleImputer(add_indicator=False, copy=True, fill_value=None,
@@ -15197,10 +16279,10 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">models</span><span class="p">[</span><span class="s1">&#39;c+d+h+w+a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">models</span><span class="p">[</span><span class="s1">&#39;c+d+d/c+h+w+a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
 </pre></div>
 
     </div>
@@ -15218,7 +16300,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_hat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tr</span><span class="p">)</span>
@@ -15240,7 +16322,7 @@ if (outputEl) {{
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Training Error (RMSE): 4.2246296215058905
+<pre>Training Error (RMSE): 4.025034093127813
 </pre>
 </div>
 </div>
@@ -15260,7 +16342,57 @@ if (outputEl) {{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Implementing-Cross-validation">Implementing Cross validation<a class="anchor-link" href="#Implementing-Cross-validation">&#182;</a></h2><p>In the following function we use the sklear <code>KFold</code> cross validation class.  Here we define a five fold cross validation with</p>
+<p><br/><br/><br/></p>
+<hr>
+<h2 id="Cross-Validation">Cross Validation<a class="anchor-link" href="#Cross-Validation">&#182;</a></h2><p>In the following function we use the sklear <code>KFold</code> cross validation class.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;m8580Et4pjY&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[44]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/m8580Et4pjY"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here we define a five fold cross validation with</p>
 <div class="highlight"><pre><span></span><span class="n">five_fold</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 <p>Then we loop over the 5 splits and get the indicies (<code>tr_ind</code>) in the training data to use for training and the indices (<code>va_ind</code>) in the training data to use for validation:</p>
@@ -15272,7 +16404,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">KFold</span>
@@ -15303,7 +16435,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cross_validate_rmse</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
@@ -15319,13 +16451,13 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[34]:</div>
+    <div class="prompt output_prompt">Out[46]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>4.268692185920505</pre>
+<pre>4.05180814386984</pre>
 </div>
 
 </div>
@@ -15344,7 +16476,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">compare_models</span><span class="p">(</span><span class="n">models</span><span class="p">):</span>
@@ -15369,7 +16501,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">compare_models</span><span class="p">(</span><span class="n">models</span><span class="p">)</span>
@@ -15394,20 +16526,20 @@ if (outputEl) {{
 <div>
         
         
-            <div id="5c9c4845-10a2-463e-b237-4cc101ba628f" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="38ad9054-be16-4a43-8529-3eb3a3576f1a" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("5c9c4845-10a2-463e-b237-4cc101ba628f")) {
+                if (document.getElementById("38ad9054-be16-4a43-8529-3eb3a3576f1a")) {
                     Plotly.newPlot(
-                        '5c9c4845-10a2-463e-b237-4cc101ba628f',
-                        [{"name": "Training RMSE", "type": "bar", "x": ["c+d", "c+d+h+w+a"], "y": [4.589009902639972, 4.2246296215058905]}, {"name": "CV RMSE", "type": "bar", "x": ["c+d", "c+d+h+w+a"], "y": [4.605282248429072, 4.268692185920505]}, {"name": "Test RMSE", "opacity": 0.3, "type": "bar", "x": ["c+d", "c+d+h+w+a"], "y": [5.034009303909176, 4.426360500858683]}],
+                        '38ad9054-be16-4a43-8529-3eb3a3576f1a',
+                        [{"name": "Training RMSE", "type": "bar", "x": ["c+d", "c+d+d/c", "c+d+d/c+h+w+a"], "y": [4.589009902639972, 4.318799994795116, 4.025034093127813]}, {"name": "CV RMSE", "type": "bar", "x": ["c+d", "c+d+d/c", "c+d+d/c+h+w+a"], "y": [4.605282248429072, 4.329888723941801, 4.05180814386984]}, {"name": "Test RMSE", "opacity": 0.3, "type": "bar", "x": ["c+d", "c+d+d/c", "c+d+d/c+h+w+a"], "y": [5.034009303909176, 4.77554281068313, 4.063052136131586]}],
                         {"template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "yaxis": {"range": [2, 5.1], "title": {"text": "RMSE"}}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('5c9c4845-10a2-463e-b237-4cc101ba628f');
+var gd = document.getElementById('38ad9054-be16-4a43-8529-3eb3a3576f1a');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -15460,13 +16592,14 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">quantitative_features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;cylinders&quot;</span><span class="p">,</span> <span class="s2">&quot;displacement&quot;</span><span class="p">,</span> <span class="s2">&quot;horsepower&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">,</span> <span class="s2">&quot;acceleration&quot;</span><span class="p">,</span> <span class="s2">&quot;model_year&quot;</span><span class="p">]</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
     <span class="p">(</span><span class="s2">&quot;SelectColumns&quot;</span><span class="p">,</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
-        <span class="p">(</span><span class="s2">&quot;keep&quot;</span><span class="p">,</span> <span class="s2">&quot;passthrough&quot;</span><span class="p">,</span> <span class="n">quantitative_features</span><span class="p">)</span>
+        <span class="p">(</span><span class="s2">&quot;keep&quot;</span><span class="p">,</span> <span class="s2">&quot;passthrough&quot;</span><span class="p">,</span> <span class="n">quantitative_features</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;cyl_vol&quot;</span><span class="p">,</span> <span class="n">volume_transformer</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;cylinders&quot;</span><span class="p">,</span> <span class="s2">&quot;displacement&quot;</span><span class="p">])</span>
     <span class="p">])),</span>
     <span class="p">(</span><span class="s2">&quot;Imputation&quot;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">()),</span>
     <span class="p">(</span><span class="s2">&quot;LinearModel&quot;</span><span class="p">,</span> <span class="n">LinearRegression</span><span class="p">())</span>
@@ -15480,11 +16613,11 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">tr</span><span class="p">[</span><span class="s1">&#39;mpg&#39;</span><span class="p">])</span>
-<span class="n">models</span><span class="p">[</span><span class="s1">&#39;c+d+h+w+a+y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
+<span class="n">models</span><span class="p">[</span><span class="s1">&#39;c+d+d/c+h+w+a+y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
 </pre></div>
 
     </div>
@@ -15502,7 +16635,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">compare_models</span><span class="p">(</span><span class="n">models</span><span class="p">)</span>
@@ -15527,20 +16660,20 @@ if (outputEl) {{
 <div>
         
         
-            <div id="9bea7ceb-e58d-42a2-87e2-531c60aaf008" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="2190e3f0-70e2-4ceb-95b4-9629d71695b6" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("9bea7ceb-e58d-42a2-87e2-531c60aaf008")) {
+                if (document.getElementById("2190e3f0-70e2-4ceb-95b4-9629d71695b6")) {
                     Plotly.newPlot(
-                        '9bea7ceb-e58d-42a2-87e2-531c60aaf008',
-                        [{"name": "Training RMSE", "type": "bar", "x": ["c+d", "c+d+h+w+a", "c+d+h+w+a+y"], "y": [4.589009902639972, 4.2246296215058905, 3.4246986562136987]}, {"name": "CV RMSE", "type": "bar", "x": ["c+d", "c+d+h+w+a", "c+d+h+w+a+y"], "y": [4.605282248429072, 4.268692185920505, 3.494938157421911]}, {"name": "Test RMSE", "opacity": 0.3, "type": "bar", "x": ["c+d", "c+d+h+w+a", "c+d+h+w+a+y"], "y": [5.034009303909176, 4.426360500858683, 3.3519854997725593]}],
+                        '2190e3f0-70e2-4ceb-95b4-9629d71695b6',
+                        [{"name": "Training RMSE", "type": "bar", "x": ["c+d", "c+d+d/c", "c+d+d/c+h+w+a", "c+d+d/c+h+w+a+y"], "y": [4.589009902639972, 4.318799994795116, 4.025034093127813, 3.042301273616167]}, {"name": "CV RMSE", "type": "bar", "x": ["c+d", "c+d+d/c", "c+d+d/c+h+w+a", "c+d+d/c+h+w+a+y"], "y": [4.605282248429072, 4.329888723941801, 4.05180814386984, 3.092908633896168]}, {"name": "Test RMSE", "opacity": 0.3, "type": "bar", "x": ["c+d", "c+d+d/c", "c+d+d/c+h+w+a", "c+d+d/c+h+w+a+y"], "y": [5.034009303909176, 4.77554281068313, 4.063052136131586, 2.867166892795793]}],
                         {"template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "yaxis": {"range": [2, 5.1], "title": {"text": "RMSE"}}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('9bea7ceb-e58d-42a2-87e2-531c60aaf008');
+var gd = document.getElementById('2190e3f0-70e2-4ceb-95b4-9629d71695b6');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -15594,13 +16727,14 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
     <span class="p">(</span><span class="s2">&quot;SelectColumns&quot;</span><span class="p">,</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
         <span class="p">(</span><span class="s2">&quot;keep&quot;</span><span class="p">,</span> <span class="s2">&quot;passthrough&quot;</span><span class="p">,</span> <span class="n">quantitative_features</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;cyl_vol&quot;</span><span class="p">,</span> <span class="n">volume_transformer</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;cylinders&quot;</span><span class="p">,</span> <span class="s2">&quot;displacement&quot;</span><span class="p">]),</span>
         <span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="n">CountVectorizer</span><span class="p">(),</span> <span class="s2">&quot;name&quot;</span><span class="p">)</span>
     <span class="p">])),</span>
     <span class="p">(</span><span class="s2">&quot;Imputation&quot;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">()),</span>
@@ -15623,11 +16757,11 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">tr</span><span class="p">[</span><span class="s1">&#39;mpg&#39;</span><span class="p">])</span>
-<span class="n">models</span><span class="p">[</span><span class="s1">&#39;c+d+h+w+a+y+n&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
+<span class="n">models</span><span class="p">[</span><span class="s1">&#39;c+d+d/c+h+w+a+y+n&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
 </pre></div>
 
     </div>
@@ -15637,7 +16771,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">compare_models</span><span class="p">(</span><span class="n">models</span><span class="p">)</span>
@@ -15662,20 +16796,20 @@ if (outputEl) {{
 <div>
         
         
-            <div id="be99a0af-6d36-4a17-85ad-a2f56247fef1" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="9431f9f2-210b-4aea-abfe-05857a881b1d" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("be99a0af-6d36-4a17-85ad-a2f56247fef1")) {
+                if (document.getElementById("9431f9f2-210b-4aea-abfe-05857a881b1d")) {
                     Plotly.newPlot(
-                        'be99a0af-6d36-4a17-85ad-a2f56247fef1',
-                        [{"name": "Training RMSE", "type": "bar", "x": ["c+d", "c+d+h+w+a", "c+d+h+w+a+y", "c+d+h+w+a+y+n"], "y": [4.589009902639972, 4.2246296215058905, 3.4246986562136987, 1.3774633934346545]}, {"name": "CV RMSE", "type": "bar", "x": ["c+d", "c+d+h+w+a", "c+d+h+w+a+y", "c+d+h+w+a+y+n"], "y": [4.605282248429072, 4.268692185920505, 3.494938157421911, 3.9120866287951843]}, {"name": "Test RMSE", "opacity": 0.3, "type": "bar", "x": ["c+d", "c+d+h+w+a", "c+d+h+w+a+y", "c+d+h+w+a+y+n"], "y": [5.034009303909176, 4.426360500858683, 3.3519854997725593, 3.556533474625232]}],
+                        '9431f9f2-210b-4aea-abfe-05857a881b1d',
+                        [{"name": "Training RMSE", "type": "bar", "x": ["c+d", "c+d+d/c", "c+d+d/c+h+w+a", "c+d+d/c+h+w+a+y", "c+d+d/c+h+w+a+y+n"], "y": [4.589009902639972, 4.318799994795116, 4.025034093127813, 3.042301273616167, 1.3279922463617784]}, {"name": "CV RMSE", "type": "bar", "x": ["c+d", "c+d+d/c", "c+d+d/c+h+w+a", "c+d+d/c+h+w+a+y", "c+d+d/c+h+w+a+y+n"], "y": [4.605282248429072, 4.329888723941801, 4.05180814386984, 3.092908633896168, 3.9500225904245694]}, {"name": "Test RMSE", "opacity": 0.3, "type": "bar", "x": ["c+d", "c+d+d/c", "c+d+d/c+h+w+a", "c+d+d/c+h+w+a+y", "c+d+d/c+h+w+a+y+n"], "y": [5.034009303909176, 4.77554281068313, 4.063052136131586, 2.867166892795793, 3.4689128052203437]}],
                         {"template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "yaxis": {"range": [0, 5.1], "title": {"text": "RMSE"}}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('be99a0af-6d36-4a17-85ad-a2f56247fef1');
+var gd = document.getElementById('9431f9f2-210b-4aea-abfe-05857a881b1d');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -15717,6 +16851,127 @@ if (outputEl) {{
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_model</span> <span class="o">=</span> <span class="n">clone</span><span class="p">(</span><span class="n">models</span><span class="p">[</span><span class="s1">&#39;c+d+d/c+h+w+a+y&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;mpg&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[56]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Pipeline(memory=None,
+         steps=[(&#39;SelectColumns&#39;,
+                 ColumnTransformer(n_jobs=None, remainder=&#39;drop&#39;,
+                                   sparse_threshold=0.3,
+                                   transformer_weights=None,
+                                   transformers=[(&#39;keep&#39;, &#39;passthrough&#39;,
+                                                  [&#39;cylinders&#39;, &#39;displacement&#39;,
+                                                   &#39;horsepower&#39;, &#39;weight&#39;,
+                                                   &#39;acceleration&#39;,
+                                                   &#39;model_year&#39;]),
+                                                 (&#39;cyl_vol&#39;,
+                                                  FunctionTransformer(accept_sparse=False,
+                                                                      check_inverse=True,
+                                                                      func=&lt;function compute_volu...
+                                                                      inv_kw_args=None,
+                                                                      inverse_func=None,
+                                                                      kw_args=None,
+                                                                      pass_y=&#39;deprecated&#39;,
+                                                                      validate=True),
+                                                  [&#39;cylinders&#39;,
+                                                   &#39;displacement&#39;])],
+                                   verbose=False)),
+                (&#39;Imputation&#39;,
+                 SimpleImputer(add_indicator=False, copy=True, fill_value=None,
+                               missing_values=nan, strategy=&#39;mean&#39;,
+                               verbose=0)),
+                (&#39;LinearModel&#39;,
+                 LinearRegression(copy_X=True, fit_intercept=True, n_jobs=None,
+                                  normalize=False))],
+         verbose=False)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rmse</span><span class="p">(</span><span class="n">best_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">te</span><span class="p">),</span> <span class="n">te</span><span class="p">[</span><span class="s1">&#39;mpg&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[57]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2.8167549672284293</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
