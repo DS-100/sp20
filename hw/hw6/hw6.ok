@@ -1,0 +1,1 @@
+{"name": "hw6", "endpoint": "cal/data100/sp20/hw6", "src": ["hw6.ipynb"], "tests": {"tests/q*.py": "ok_test"}, "protocols": ["file_contents", "grading", "backup"]}
