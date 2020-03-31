@@ -2,6 +2,9 @@
 title: Week 11
 weekNumber: 11
 days:
+  - date: 2020-03-30
+    events:
+      "**Homework**{: .label .label-hw } [Homework 6](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=hw/hw6/) (due Apr. 6)":
   - date: 2020-03-31
     events:
       "**Lecture**{: .label .label } Regularization":
