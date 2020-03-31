@@ -4,8 +4,8 @@ weekNumber: 15
 days:
   - date: 2020-04-28
     events:
-      "**Lecture**{: .label .label } HCE":
-      "**Lab**{: .label .label-lab } Lab 13":
+      "**Lecture**{: .label .label } Clustering":
+      "**Lab**{: .label .label-lab } Lab 11":
   - date: 2020-04-30
     events:
       "**Lecture**{: .label .label } Big Data Technologies":
