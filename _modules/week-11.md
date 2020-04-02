@@ -14,5 +14,5 @@ days:
       "**Lecture**{: .label .label } Generalization: Random Variables, Sampling Variability":
   - date: 2019-03-20
     events:
-      "**Discussion**{: .label .label-disc } Discussion 10":
+      "**Discussion**{: .label .label-disc } [Discussion 9](../resources/assets/discussions/disc09.pdf)":
 ---
