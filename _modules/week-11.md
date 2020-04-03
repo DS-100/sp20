@@ -14,5 +14,5 @@ days:
       "**Lecture**{: .label .label } [Random Variables, Sampling Variability](https://drive.google.com/open?id=1e9iAMFs62IhiWgWVL_vm1yw-Zxz-PEDV)":
   - date: 2019-03-20
     events:
-      "**Discussion**{: .label .label-disc } [Discussion 9](../resources/assets/discussions/disc09.pdf)":
+      "**Discussion**{: .label .label-disc } [Discussion 9](../resources/assets/discussions/disc09.pdf) ([video](https://www.youtube.com/playlist?list=PLQCcNQgUcDforEy0cWWBgN1IGWFSP0KlW))":
 ---
