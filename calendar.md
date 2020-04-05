@@ -21,6 +21,9 @@ Jump to Calendars for [Online Discussion](#dll) or [Office Hours](#oh).
 ## Online Discussions
 
 **Note:** <span style="color:#C0392B">To address concerns about the coronavirus, we have shifted all of our discussion sections to be online and converted all of the lab slots to office hours. Given the virtual format, both lab and office hours are treated the exact same. <br><br>
+
+Please also note that we will be condensing our discussion sections and eliminating those with little attendance. In substitution, we will be posting discussion video walkthroughs on the **syllabus** page.
+
 Please check Piazza for the most up-to-date information for each specific section.</span>
 
 Discussion sections are in <span style="color:DodgerBlue">**blue**</span>. All lectures now will be posted directly on Piazza in the format of video playlists, Jupyter notebooks, and presentation pdfs.
