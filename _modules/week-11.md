@@ -14,5 +14,5 @@ days:
       "**Lecture**{: .label .label } [Random Variables, Sampling Variability](https://drive.google.com/open?id=1e9iAMFs62IhiWgWVL_vm1yw-Zxz-PEDV) ([Part 1](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lecture/lec20/Lec_20_Part_1.ipynb)) ([Part 2](../resources/assets/lectures/lec20/Lec_20_Part_02.html)) ([video](https://www.youtube.com/playlist?list=PLQCcNQgUcDfpgAVb8h1VcUJ_G8-3cFvY4))":
   - date: 2019-03-20
     events:
-      "**Discussion**{: .label .label-disc } [Discussion 9](../resources/assets/discussions/disc09.pdf) ([video](https://www.youtube.com/playlist?list=PLQCcNQgUcDforEy0cWWBgN1IGWFSP0KlW))":
+      "**Discussion**{: .label .label-disc } [Discussion 9](../resources/assets/discussions/disc09.pdf) ([solutions](../resources/assets/discussions/disc09_sol.pdf)) ([video](https://www.youtube.com/playlist?list=PLQCcNQgUcDforEy0cWWBgN1IGWFSP0KlW))":
 ---
