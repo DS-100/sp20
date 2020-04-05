@@ -60,9 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## Discussion, Lab, and Lecture
 
-**Note:** <span style="color:#C0392B">To address concerns about the coronavirus, we have shifted all of our labs and discussions to be online instead. Please consult the following calendars below for the most up-to-date information. We also recommend you check on **Piazza** for the most up-to-date link for all Zoom/Google Meet video calls.</span>
+**Note:** <span style="color:#C0392B">To address concerns about the coronavirus, we have shifted all of our labs and discussions to be online instead. Please consult the following calendars below for the most up-to-date information. We also recommend you check on **Piazza** for the most up-to-date link for all Zoom/Google Meet video calls. <br>
+In addition, please note that we have converted all of the "lab" slots to "office hours". Given the virtual format, both lab and office hours are treated the exact same (All of the lab slots are now labeled as "LAB - OH").</span>
 
-Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, labs are in <span style="color:MediumSeaGreen">**green**</span>, and lectures are in <span style="color:Orange">**yellow**</span>. Click a discussion / lab event to see the different GSIs teaching at that time. 
+Discussion sections are in <span style="color:DodgerBlue">**blue**</span>, and lab office hours are in <span style="color:MediumSeaGreen">**green**</span>. All lectures now will be posted directly on Piazza in the format of video playlists, Jupyter notebooks, and presentation pdfs.
 
 <iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;mode=WEEK&amp;title=%20&amp;src=YmVya2VsZXkuZWR1XzFxOG1tNGxzaTRhdHZyYWlrdDZya2dsYzhnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X2IyNDhyYmRsbHJ1cTY4ZjI2cWwyMTlyMTBjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X29odmVpZG1qdWJuaTdnOWdoNmNvOGE2NGYwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%233366CC&amp;color=%23329262&amp;color=%239D7000" style="border-width:0" width="750" height="550" frameborder="0" scrolling="no"></iframe>
 <br>
