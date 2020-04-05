@@ -20,13 +20,13 @@ Jump to Calendars for [Online Discussion](#dll) or [Office Hours](#oh).
 
 ## Online Discussions
 
-**Note:** <span style="color:#C0392B">To address concerns about the coronavirus, we have shifted all of our discussion sections to be online and converted all of the lab slots to office hours. Given the virtual format, both lab and office hours are treated the exact same. <br><br>
+**Note:** <span style="color:#C0392B">To address concerns about the coronavirus, we have shifted all of our discussion sections to be online and converted all of the lab slots to office hours. Given the virtual format, both lab and office hours are treated the exact same. <span>
 
-Please also note that we will be condensing our discussion sections and eliminating those with little attendance. In substitution, we will be posting discussion video walkthroughs on the **syllabus** page.
+<span style="color:#C0392B">Please also note that we will be condensing our discussion sections and eliminating those with little attendance. In substitution, we will be posting discussion video walkthroughs on the **syllabus** page.</span>
 
-Please check Piazza for the most up-to-date information for each specific section.</span>
+<span style="color:#C0392B">Please check Piazza for the most up-to-date information for each specific section.</span>
 
-Discussion sections are in <span style="color:DodgerBlue">**blue**</span>. All lectures now will be posted directly on Piazza in the format of video playlists, Jupyter notebooks, and presentation pdfs.
+Online Discussion sections are in <span style="color:DodgerBlue">**blue**</span>. All lectures now will be posted directly on Piazza in the format of video playlists, Jupyter notebooks, and presentation pdfs.
 
 <iframe src="https://calendar.google.com/calendar/embed?height=800&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1XzFxOG1tNGxzaTRhdHZyYWlrdDZya2dsYzhnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%234285F4&amp;mode=WEEK&amp;title=%20" style="border-width:0" width="750" height="800" frameborder="0" scrolling="no"></iframe>
 <br>
