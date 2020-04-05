@@ -35,7 +35,7 @@ To accommodate students' shifting demands, we will be condensing our discussion 
 
 <a name = 'loc'></a>
 
-GSI **online** office hours are in <span style="color:DodgerBlue">**blue**</span> and **online** discussion sections are in <span style="color:MediumSeaGreen">**green**</span>. To access any online office hour, go to the link <http://oh.ds100.org>.
+GSI **online** office hours are in <span style="color:DodgerBlue">**blue**</span>, **online** discussion sections are in <span style="color:MediumSeaGreen">**green**</span>, and Professor Adhikari and Professor Gonzalez's office hours are in <span stype="color:orange">**orange**</span>. To access any online office hour, go to the link <http://oh.ds100.org>.
 
-<iframe src="https://calendar.google.com/calendar/embed?height=1125&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1XzFxOG1tNGxzaTRhdHZyYWlrdDZya2dsYzhnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1Xzk1MnBocWl1bzBmZDRxdDcxNXBpODE5MWZjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%2333B679&amp;color=%237986CB&amp;title=%20&amp;mode=WEEK" style="border-width:0" width="800" height="1125" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=1125&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVya2VsZXkuZWR1XzFxOG1tNGxzaTRhdHZyYWlrdDZya2dsYzhnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1Xzk1MnBocWl1bzBmZDRxdDcxNXBpODE5MWZjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=YmVya2VsZXkuZWR1X2t1MXZpYWFqZ2gxMTM3ZGY4bWU4ZDl0MnE0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%2333B679&amp;color=%237986CB&amp;color=%23F09300&amp;title=%20&amp;mode=WEEK" style="border-width:0" width="800" height="1125" frameborder="0" scrolling="no"></iframe>
 <br>
