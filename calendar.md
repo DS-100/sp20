@@ -7,7 +7,6 @@ description: An embedded Google Calendar displaying the weekly event schedule.
 
 # Calendar
 
-Jump to Calendars for [Office Hours and Discussions](#oh).
 
 **Note**: All time slots shown on the following calendar are in Pacific Daylight Time (GMT-07:00).
 
@@ -17,31 +16,14 @@ Jump to Calendars for [Office Hours and Discussions](#oh).
 }
 </style>
 
-## A Few Logistical Changes In Response to COVID-19
 
-To address concerns about the coronavirus, we have <span style="color:#C0392B">made a few adjustments to how we run our discussions and labs online</span>. Please read the following information carefully and refer to Piazza if you need more clarifications/details. We appreciate your patience and understanding during this challenging time!
+Please read the following information carefully and refer to Piazza if you need more clarifications/details. We appreciate your patience and understanding during this challenging time!
 
-### Please Check on Piazza for Zoom Links for All Discussions
-
-Please check on Piazza for a weekly update post on specific Zoom links for all discussion sections.
-
-### All Lab Sections are Now Office Hours
-
-We have converted all of the lab slots to office hours. Given the virtual format, both lab and office hours are treated the exact same.
-
-### Discussion Sections are Condensed with Video Walkthroughs
-
-To accommodate students' shifting demands, we will be condensing our discussion sections and eliminating those with less attendance. In substitution, we will be posting discussion video walkthroughs on the **syllabus** page.
-
-### Office Hours and Discussion Sections For Students in non-US Timezones
-
-To accommodate students no longer in the US, we are currently providing a few office hours and one discussion section catering to those in non-US timezones. To see all of those sections in the calendar below, please make sure to look at the very top and scroll all the way to the bottom. We have also listed them here (in Pacific Daylight Time):
-- Office Hours:
-  - 11pm - 12am, Tuesday, GSI: Ishaan
-  - 12am - 1am, Wednesday, GSI: Ishaan
-- Discussions:
-  - 12am - 1am, Saturday, GSI: Ishaan
-
+- **Lecture:** Lectures are pre-recorded and posted on the syllabus page.
+- **Discussion:** Discussions are now held on Zoom. The calendar below has the times at which they will be offered, while the Zoom links themselves can be found on Piazza. We also will be creating a walkthrough video for each discussion moving forward, which will be posted on the syllabus page.
+- **Lab:** All labs have been converted to office hours. Given the virtual format, both lab and office hours are treated the exact same.
+- **Office Hours:** Office hours are all also run on Zoom. To access them, log onto our [Office Hours Queue](http://oh.ds100.org). When it's your turn, you will be given the Zoom link to join.
+- In addition, we have a few office hours and discussions at times more convenient to students outside of the US. Refer to the calendar below for these events.
 
 <a name = 'oh'></a>
 
