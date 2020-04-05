@@ -27,7 +27,7 @@ We have converted all of the lab slots to office hours. Given the virtual format
 
 ### Discussion Sections are Condensed with Video Walkthroughs
 
-To accommodate students' shifting demands, we will be condensing our discussion sections and eliminating those with less attendance. In substitution, we will be posting discussion video walkthroughs on the **syllabus** page.</span>
+To accommodate students' shifting demands, we will be condensing our discussion sections and eliminating those with less attendance. In substitution, we will be posting discussion video walkthroughs on the **syllabus** page.
 
 <a name = 'oh'></a>
 
