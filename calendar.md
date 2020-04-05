@@ -18,7 +18,7 @@ Jump to Calendars for [Online Discussion](#dll) or [Office Hours](#oh).
 </style>
 <a name = 'dll'></a>
 
-## Discussion, Lab, and Lecture
+## Online Discussions
 
 **Note:** <span style="color:#C0392B">To address concerns about the coronavirus, we have shifted all of our discussion sections to be online and converted all of the lab slots to office hours. Given the virtual format, both lab and office hours are treated the exact same. <br><br>
 Please check Piazza for the most up-to-date information for each specific section.</span>
