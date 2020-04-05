@@ -33,6 +33,16 @@ We have converted all of the lab slots to office hours. Given the virtual format
 
 To accommodate students' shifting demands, we will be condensing our discussion sections and eliminating those with less attendance. In substitution, we will be posting discussion video walkthroughs on the **syllabus** page.
 
+### Office Hours and Discussion Sections For Students in non-US Timezones
+
+To accommodate students no longer in the US, we are currently providing a few office hours and one discussion section catering to those in non-US timezones. To see all of those sections in the calendar below, please make sure to look at the very top and scroll all the way to the bottom. We have also listed them here (in Pacific Daylight Time):
+- Office Hours:
+  - 11pm - 12am, Tuesday, GSI: Ishaan
+  - 12am - 1am, Wednesday, GSI: Ishaan
+- Discussions:
+  - 12am - 1am, Saturday, GSI: Ishaan
+
+
 <a name = 'oh'></a>
 
 ## Online Office Hours and Discussions
