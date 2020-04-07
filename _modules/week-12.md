@@ -8,7 +8,7 @@ days:
   - date: 2020-04-07
     events:
       "**Lecture**{: .label .label } Bias Variance Tradeoff":
-      "**Lab**{: .label .label-lab } Lab 8":
+      "**Lab**{: .label .label-lab } [Lab 8](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab08/) (due Apr. 13)":
   - date: 2020-04-09
     events:
       "**Lecture**{: .label .label } Regression: Residuals, Multicollinearity, Inference":
