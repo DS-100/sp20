@@ -2,6 +2,9 @@
 title: Week 12
 weekNumber: 12
 days:
+  - date: 2020-04-06
+    events:
+      "**Homework**{: .label .label-hw } [Homework 7](../resources/assets/homework/hw7.pdf) (due Apr. 13)":
   - date: 2020-04-07
     events:
       "**Lecture**{: .label .label } Bias Variance Tradeoff":
