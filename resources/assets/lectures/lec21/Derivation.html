@@ -13212,7 +13212,7 @@ $$
 <h3 id="Step-3">Step 3<a class="anchor-link" href="#Step-3">&#182;</a></h3><p>Remember that the model bias at $x$ is a constant, not a random variable. Think of it as your favorite number, say 10. Then</p>
 $$
 \begin{align*}
-\mathbb{E}\big{(}(g(x) + \hat{Y}(x))^2\big{)} ~ &amp; = ~ \text{model bias}^2 - 2(\text{model bias})\mathbb{E}(D_{\hat{Y}(x)}) + \mathbb{E}(D_{\hat{Y}(x)}^2) \\
+\mathbb{E}\big{(}(g(x) - \hat{Y}(x))^2\big{)} ~ &amp; = ~ \text{model bias}^2 - 2(\text{model bias})\mathbb{E}(D_{\hat{Y}(x)}) + \mathbb{E}(D_{\hat{Y}(x)}^2) \\
 &amp;= ~ \text{model bias}^2 - 0 + \text{model variance} \\
 &amp;= ~ \text{model bias}^2 + \text{model variance}
 \end{align*}
