@@ -14,5 +14,5 @@ days:
       "**Lecture**{: .label .label } Regression: Residuals, Multicollinearity, Inference":
   - date: 2019-04-10
     events:
-      "**Discussion**{: .label .label-disc } Discussion 11":
+      "**Discussion**{: .label .label-disc } [Discussion 10](../resources/assets/discussions/disc10.pdf) ([video](https://www.youtube.com/playlist?list=PLQCcNQgUcDfq7IhrDyiHvoIEVL7Nty6gj))":
 ---
