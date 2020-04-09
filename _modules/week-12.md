@@ -7,7 +7,7 @@ days:
       "**Homework**{: .label .label-hw } [Homework 7](../resources/assets/homework/hw7.pdf) (due Apr. 13)":
   - date: 2020-04-07
     events:
-      "**Lecture**{: .label .label } [Bias Variance Tradeoff](https://drive.google.com/a/berkeley.edu/file/d/1sdWDg7t2mzYMWinH8G9370DZXJmQNgJg/view?usp=sharing) ([Derivation](../resources/assets/lectures/lec21/Derivation.html))":
+      "**Lecture**{: .label .label } [Bias Variance Tradeoff](https://drive.google.com/a/berkeley.edu/file/d/1sdWDg7t2mzYMWinH8G9370DZXJmQNgJg/view?usp=sharing) ([Derivation](../resources/assets/lectures/lec21/Derivation.html)) ([video](https://www.youtube.com/playlist?list=PLQCcNQgUcDfpw29nciQKDflawuILgaERS))":
       "**Lab**{: .label .label-lab } [Lab 8](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab08/) (due Apr. 13)":
   - date: 2020-04-09
     events:
