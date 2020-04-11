@@ -13017,21 +13017,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    /*
-Placeholder for custom user CSS
-
-mainly to be overridden in profile/static/custom/custom.css
-
-This will always be an empty file in IPython
-*/
-
-.CodeMirror pre,.output_area pre {font-family: Consolas; font-size: 14pt; line-height:120%;}
-
-.output_area {font-size:14pt;}:W
-
-
-    </style>
 
 
 <style type="text/css">
@@ -13152,6 +13137,33 @@ div#notebook {
 
 </div>
 
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+        <script type="text/javascript">
+        window.PlotlyConfig = {MathJaxConfig: 'local'};
+        if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+        if (typeof require !== 'undefined') {
+        require.undef("plotly");
+        requirejs.config({
+            paths: {
+                'plotly': ['https://cdn.plot.ly/plotly-latest.min']
+            }
+        });
+        require(['plotly'], function(Plotly) {
+            window._Plotly = Plotly;
+        });
+        }
+        </script>
+        
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13179,7 +13191,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This notebook accompanies the slides for Lecture 22. You can think of it as a reading guide for the slides. It takes you through the ideas and results on the slides, in the context of one example.</p>
+<p>This notebook accompanies the slides for Lecture 21. You can think of it as a reading guide for the slides. It takes you through the ideas and results on the slides, in the context of one example.</p>
 <p>Start by going over the Review of Linear Regression.</p>
 <ul>
 <li>The first three slides in that section are taken from <a href="https://drive.google.com/file/d/1XYMw8vnFKFar1bGVYSrQzIH_NuOrs4dO/view">Lecture 15</a>.</li>
@@ -13216,7 +13228,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">birds</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;snowy_plover.csv&#39;</span><span class="p">)</span>
@@ -13233,7 +13245,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[97]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13311,7 +13323,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">birds</span><span class="o">.</span><span class="n">shape</span>
@@ -13327,7 +13339,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[98]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13352,7 +13364,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig1</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
@@ -13385,20 +13397,20 @@ div#notebook {
 <div>
         
         
-            <div id="40f9a90d-2858-4967-9b19-39abb15fe2bc" class="plotly-graph-div" style="height:400px; width:100%;"></div>
+            <div id="39e3279f-c198-4e7c-a728-f7a4c4871731" class="plotly-graph-div" style="height:400px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("40f9a90d-2858-4967-9b19-39abb15fe2bc")) {
+                if (document.getElementById("39e3279f-c198-4e7c-a728-f7a4c4871731")) {
                     Plotly.newPlot(
-                        '40f9a90d-2858-4967-9b19-39abb15fe2bc',
+                        '39e3279f-c198-4e7c-a728-f7a4c4871731',
                         [{"marker": {"size": 8}, "mode": "markers", "type": "scatter", "x": [7.4, 7.7, 7.9, 7.5, 8.3, 8.5, 8.2, 8.3, 9.0, 8.5, 8.6, 8.2, 8.3, 8.7, 8.5, 8.4, 8.5, 8.9, 9.1, 8.9, 8.6, 8.5, 8.8, 8.3, 8.2, 8.2, 8.9, 8.5, 8.8, 8.6, 9.1, 9.0, 8.9, 9.2, 9.1, 8.6, 8.8, 9.1, 9.2, 9.2, 8.9, 9.1, 9.9, 9.0], "y": [5.2, 5.4, 5.6, 5.3, 5.9, 5.8, 5.8, 6.0, 6.1, 6.2, 6.5, 5.7, 6.2, 6.4, 6.2, 6.1, 6.3, 6.3, 6.5, 6.0, 5.6, 6.2, 6.3, 5.8, 5.7, 6.0, 6.4, 5.9, 6.4, 6.2, 7.1, 6.5, 5.8, 6.4, 6.4, 6.1, 6.2, 6.8, 6.3, 6.4, 6.4, 6.6, 7.1, 6.3]}],
                         {"height": 400, "margin": {"b": 0, "l": 0, "r": 0, "t": 0}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "xaxis": {"title": {"text": "Egg Weight"}}, "yaxis": {"title": {"text": "Bird Weight"}}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('40f9a90d-2858-4967-9b19-39abb15fe2bc');
+var gd = document.getElementById('39e3279f-c198-4e7c-a728-f7a4c4871731');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -13443,7 +13455,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig2</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
@@ -13479,20 +13491,20 @@ if (outputEl) {{
 <div>
         
         
-            <div id="867119bc-92f5-4989-a9ef-8115d7051414" class="plotly-graph-div" style="height:500px; width:100%;"></div>
+            <div id="9b1b9060-96af-4a2c-8764-4df94aa7b7c3" class="plotly-graph-div" style="height:500px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("867119bc-92f5-4989-a9ef-8115d7051414")) {
+                if (document.getElementById("9b1b9060-96af-4a2c-8764-4df94aa7b7c3")) {
                     Plotly.newPlot(
-                        '867119bc-92f5-4989-a9ef-8115d7051414',
+                        '9b1b9060-96af-4a2c-8764-4df94aa7b7c3',
                         [{"marker": {"size": 4}, "mode": "markers", "type": "scatter3d", "x": [28.8, 29.04, 29.36, 30.1, 30.17, 30.34, 30.36, 30.46, 30.54, 30.62, 30.7, 30.71, 30.86, 30.87, 30.89, 30.9, 31.0, 31.06, 31.07, 31.14, 31.18, 31.41, 31.46, 31.47, 31.5, 31.5, 31.55, 31.56, 31.68, 31.81, 31.98, 32.06, 32.14, 32.16, 32.3, 32.53, 32.54, 32.66, 32.72, 32.78, 32.98, 33.15, 33.3, 33.73], "y": [21.84, 22.45, 22.48, 21.71, 22.75, 22.84, 22.5, 22.72, 23.31, 22.94, 23.18, 22.51, 22.52, 23.35, 22.78, 22.81, 23.09, 23.42, 23.82, 23.7, 22.92, 22.79, 22.86, 22.35, 22.19, 22.4, 23.17, 22.54, 22.82, 22.68, 23.21, 23.1, 22.87, 23.34, 23.2, 22.68, 22.5, 23.14, 23.25, 23.23, 22.94, 23.02, 23.7, 22.72], "z": [5.2, 5.4, 5.6, 5.3, 5.9, 5.8, 5.8, 6.0, 6.1, 6.2, 6.5, 5.7, 6.2, 6.4, 6.2, 6.1, 6.3, 6.3, 6.5, 6.0, 5.6, 6.2, 6.3, 5.8, 5.7, 6.0, 6.4, 5.9, 6.4, 6.2, 7.1, 6.5, 5.8, 6.4, 6.4, 6.1, 6.2, 6.8, 6.3, 6.4, 6.4, 6.6, 7.1, 6.3]}],
                         {"height": 500, "margin": {"b": 0, "l": 0, "r": 0, "t": 0}, "scene": {"xaxis": {"title": {"text": "Egg Length"}}, "yaxis": {"title": {"text": "Egg Breadth"}}, "zaxis": {"title": {"text": "Bird Weight"}}}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('867119bc-92f5-4989-a9ef-8115d7051414');
+var gd = document.getElementById('9b1b9060-96af-4a2c-8764-4df94aa7b7c3');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -13530,9 +13542,10 @@ if (outputEl) {{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Regression-on-All-Three-Covariates">Regression on All Three Covariates<a class="anchor-link" href="#Regression-on-All-Three-Covariates">&#182;</a></h2><p>It seems to fit a linear model to these data. Let's start by regressing Bird Weight on all three measurements on the eggs. That means $d=3$.</p>
+<h2 id="Regression-on-All-Three-Covariates">Regression on All Three Covariates<a class="anchor-link" href="#Regression-on-All-Three-Covariates">&#182;</a></h2><p>It seems reasonable to fit a linear model to these data. Let's start by regressing Bird Weight on all three measurements on the eggs. That means $d=3$.</p>
 <p>We will first use SKLearn just as you have done before.</p>
 <p>Note that we are using a model with an intercept. That is, every element of the first column of the design matrix $\mathbb{X}$ is 1.</p>
+<p>The other columns of $\mathbb{X}$ are Egg Length, Egg Breadth, and Egg Weight.</p>
 <p>The observed responses $\mathbb{Y}$ are the column Bird Weight.</p>
 
 </div>
@@ -13540,7 +13553,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">(</span><span class="n">fit_intercept</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -13553,7 +13566,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">birds</span><span class="p">[[</span><span class="s2">&quot;Egg Length&quot;</span><span class="p">,</span> <span class="s2">&quot;Egg Breadth&quot;</span><span class="p">,</span> <span class="s2">&quot;Egg Weight&quot;</span><span class="p">]],</span> 
@@ -13570,7 +13583,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[92]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -13601,7 +13614,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span>
@@ -13617,7 +13630,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[94]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -13643,7 +13656,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">all_covariates</span> <span class="o">=</span> <span class="n">birds</span>
@@ -13659,7 +13672,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">all_covariates</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13675,7 +13688,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[36]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -13767,7 +13780,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">all_covariates</span><span class="p">[</span><span class="s2">&quot;Residuals&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_covariates</span><span class="p">[</span><span class="s2">&quot;Bird Weight&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">all_covariates</span><span class="p">[</span><span class="s2">&quot;Fitted&quot;</span><span class="p">]</span>
@@ -13780,7 +13793,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">all_covariates</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13796,7 +13809,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[42]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -13886,7 +13899,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The sum of the residuals is 0</span>
@@ -13904,7 +13917,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[39]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -13922,14 +13935,14 @@ if (outputEl) {{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Observed-Responses-and-Fitted-Values-(Slide-13)">Observed Responses and Fitted Values (Slide 13)<a class="anchor-link" href="#Observed-Responses-and-Fitted-Values-(Slide-13)">&#182;</a></h3><p>These ($\mathbb{Y}$ and $\mathbb{\hat{Y}}$) have the same average:</p>
+<h3 id="Observed-Responses-and-Fitted-Values-(Slide-13)">Observed Responses and Fitted Values (Slide 13)<a class="anchor-link" href="#Observed-Responses-and-Fitted-Values-(Slide-13)">&#182;</a></h3><p>These two ($\mathbb{Y}$ and $\mathbb{\hat{Y}}$) have the same average:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">all_covariates</span><span class="p">[</span><span class="s2">&quot;Bird Weight&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -13945,7 +13958,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[40]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -13962,7 +13975,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">all_covariates</span><span class="p">[</span><span class="s2">&quot;Fitted&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -13978,7 +13991,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[41]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -14008,7 +14021,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig3</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
@@ -14041,20 +14054,20 @@ if (outputEl) {{
 <div>
         
         
-            <div id="c675b2ef-360d-474e-b1a2-df969ef14dbf" class="plotly-graph-div" style="height:400px; width:100%;"></div>
+            <div id="ebbdb1d7-8589-46c0-a63f-5efca52b23ab" class="plotly-graph-div" style="height:400px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("c675b2ef-360d-474e-b1a2-df969ef14dbf")) {
+                if (document.getElementById("ebbdb1d7-8589-46c0-a63f-5efca52b23ab")) {
                     Plotly.newPlot(
-                        'c675b2ef-360d-474e-b1a2-df969ef14dbf',
+                        'ebbdb1d7-8589-46c0-a63f-5efca52b23ab',
                         [{"marker": {"color": "red", "size": 8}, "mode": "markers", "type": "scatter", "x": [5.218206516021171, 5.495259564754795, 5.609285222977066, 5.319801836375868, 5.8939954115377216, 6.010990380494171, 5.809542361072932, 5.906823347792924, 6.341398438400121, 6.051221434321597, 6.151489297094075, 5.8350010687923195, 5.890268625986453, 6.242634497554688, 6.034649147196816, 5.9986693808260725, 6.108905207319053, 6.35664259045865, 6.52991966726748, 6.42242412488663, 6.127305351001981, 6.071424787826855, 6.219235941821086, 5.894171064720808, 5.818499042940774, 5.863840982146234, 6.33528348626464, 6.027431817811543, 6.225244824562681, 6.117425213873023, 6.458791005744201, 6.397243193454596, 6.3097857016190115, 6.541965348292074, 6.477934327731498, 6.165355753259309, 6.21340271226258, 6.48894475765165, 6.559812397044146, 6.559488328735339, 6.380818643971498, 6.495654472965784, 6.997444624977069, 6.426368098191077], "y": [-0.01820651602117085, -0.09525956475479447, -0.009285222977066354, -0.019801836375868298, 0.006004588462278804, -0.21099038049417107, -0.00954236107293216, 0.0931766522070756, -0.24139843840012176, 0.14877856567840286, 0.3485107029059247, -0.13500106879231932, 0.30973137401354744, 0.15736550244531244, 0.16535085280318373, 0.10133061917392716, 0.1910947926809472, -0.056642590458650055, -0.029919667267479966, -0.4224241248866303, -0.5273053510019814, 0.12857521217314538, 0.08076405817891352, -0.0941710647208085, -0.11849904294077351, 0.13615901785376572, 0.06471651373536069, -0.12743181781154256, 0.1747551754373191, 0.082574786126977, 0.6412089942557984, 0.10275680654540409, -0.5097857016190117, -0.1419653482920733, -0.07793432773149789, -0.06535575325930942, -0.013402712262579719, 0.3110552423483499, -0.25981239704414616, -0.15948832873533902, 0.01918135602850235, 0.10434552703421573, 0.10255537502293066, -0.12636809819107686]}],
                         {"height": 400, "margin": {"b": 0, "l": 0, "r": 0, "t": 0}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "xaxis": {"title": {"text": "Fitted Values"}}, "yaxis": {"title": {"text": "Residuals"}}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('c675b2ef-360d-474e-b1a2-df969ef14dbf');
+var gd = document.getElementById('ebbdb1d7-8589-46c0-a63f-5efca52b23ab');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -14102,7 +14115,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig4</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
@@ -14135,20 +14148,20 @@ if (outputEl) {{
 <div>
         
         
-            <div id="595add20-c2ce-4b6a-b6f0-e37f7dd9c70e" class="plotly-graph-div" style="height:400px; width:100%;"></div>
+            <div id="6f857a39-398f-44b8-a7a7-d3b7cfe4f201" class="plotly-graph-div" style="height:400px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     
-                if (document.getElementById("595add20-c2ce-4b6a-b6f0-e37f7dd9c70e")) {
+                if (document.getElementById("6f857a39-398f-44b8-a7a7-d3b7cfe4f201")) {
                     Plotly.newPlot(
-                        '595add20-c2ce-4b6a-b6f0-e37f7dd9c70e',
+                        '6f857a39-398f-44b8-a7a7-d3b7cfe4f201',
                         [{"marker": {"size": 8}, "mode": "markers", "type": "scatter", "x": [5.218206516021171, 5.495259564754795, 5.609285222977066, 5.319801836375868, 5.8939954115377216, 6.010990380494171, 5.809542361072932, 5.906823347792924, 6.341398438400121, 6.051221434321597, 6.151489297094075, 5.8350010687923195, 5.890268625986453, 6.242634497554688, 6.034649147196816, 5.9986693808260725, 6.108905207319053, 6.35664259045865, 6.52991966726748, 6.42242412488663, 6.127305351001981, 6.071424787826855, 6.219235941821086, 5.894171064720808, 5.818499042940774, 5.863840982146234, 6.33528348626464, 6.027431817811543, 6.225244824562681, 6.117425213873023, 6.458791005744201, 6.397243193454596, 6.3097857016190115, 6.541965348292074, 6.477934327731498, 6.165355753259309, 6.21340271226258, 6.48894475765165, 6.559812397044146, 6.559488328735339, 6.380818643971498, 6.495654472965784, 6.997444624977069, 6.426368098191077], "y": [5.2, 5.4, 5.6, 5.3, 5.9, 5.8, 5.8, 6.0, 6.1, 6.2, 6.5, 5.7, 6.2, 6.4, 6.2, 6.1, 6.3, 6.3, 6.5, 6.0, 5.6, 6.2, 6.3, 5.8, 5.7, 6.0, 6.4, 5.9, 6.4, 6.2, 7.1, 6.5, 5.8, 6.4, 6.4, 6.1, 6.2, 6.8, 6.3, 6.4, 6.4, 6.6, 7.1, 6.3]}],
                         {"height": 400, "margin": {"b": 0, "l": 0, "r": 0, "t": 0}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "xaxis": {"title": {"text": "Fitted Values"}}, "yaxis": {"title": {"text": "Bird Weight"}}},
                         {"responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('595add20-c2ce-4b6a-b6f0-e37f7dd9c70e');
+var gd = document.getElementById('6f857a39-398f-44b8-a7a7-d3b7cfe4f201');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -14200,7 +14213,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">birds</span><span class="p">[[</span><span class="s2">&quot;Bird Weight&quot;</span><span class="p">,</span> <span class="s2">&quot;Fitted&quot;</span><span class="p">,</span> <span class="s2">&quot;Residuals&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -14216,7 +14229,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[66]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -14278,14 +14291,14 @@ if (outputEl) {{
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The correlation between the fitted values and the observed Bird Weight is pretty high: more than 0.85.</p>
-<p>The multiple $R^2$ is the square of this correlation.</p>
+<p>The multiple $R^2$ is the square of this correlation. It is one way of measuring how close the fitted values are to the observed responses.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Multiple R^2</span>
@@ -14303,7 +14316,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[54]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -14321,7 +14334,7 @@ if (outputEl) {{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Everything we have done thus far has been descriptive. We have not considered generalizing beyond the data that we have.</p>
+<h4 id="Towards-Inference">Towards Inference<a class="anchor-link" href="#Towards-Inference">&#182;</a></h4><p>Everything we have done thus far has been descriptive. We have not considered generalizing beyond the data that we have.</p>
 <p>Also, everything that we have done thus far makes no assumptions about the shape of the scatter plots of the data.</p>
 <p>To generalize – that is, to make predictions based on new eggs – we do have to make some assumptions about randomness.</p>
 
@@ -14351,7 +14364,7 @@ $$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
@@ -14364,7 +14377,7 @@ $$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">birds</span><span class="p">[</span><span class="s2">&quot;Bird Weight&quot;</span><span class="p">]</span>
@@ -14377,7 +14390,7 @@ $$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_all</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span>
@@ -14397,7 +14410,7 @@ $$<ul>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[85]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -14414,10 +14427,10 @@ $$<ul>
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   34.98</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Fri, 10 Apr 2020</td> <th>  Prob (F-statistic):</th> <td>2.90e-11</td>
+  <th>Date:</th>             <td>Sat, 11 Apr 2020</td> <th>  Prob (F-statistic):</th> <td>2.90e-11</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>17:37:38</td>     <th>  Log-Likelihood:    </th> <td>  5.5617</td>
+  <th>Time:</th>                 <td>13:57:15</td>     <th>  Log-Likelihood:    </th> <td>  5.5617</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>    44</td>      <th>  AIC:               </th> <td>  -3.123</td>
@@ -14489,7 +14502,7 @@ $$<ul>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Confidence-Intervals-for-the-True-Parameters">Confidence Intervals for the True Parameters<a class="anchor-link" href="#Confidence-Intervals-for-the-True-Parameters">&#182;</a></h3><p>Skip the next two columns and look at the two at the end. Those form approximate 95% confidence intervals for the true coefficient. For example,</p>
+<h3 id="Confidence-Intervals-for-the-True-Parameters">Confidence Intervals for the True Parameters<a class="anchor-link" href="#Confidence-Intervals-for-the-True-Parameters">&#182;</a></h3><p>Skip the next two columns and look at the two at the end. Those form approximate 95% confidence intervals for the true coefficients. For example,</p>
 <ul>
 <li>$(-14.934, 5.183)$ is an approximate 95% confidence interval for $\theta_0$</li>
 <li>$(-0.101, 0.234)$ is an approximate 95% confidence interval for $\theta_1$</li>
@@ -14502,7 +14515,7 @@ $$<ul>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Normal-curve based rough 95% confidence interval </span>
@@ -14521,7 +14534,7 @@ $$<ul>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[104]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -14539,7 +14552,7 @@ $$<ul>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Testing-if-a-Slope-is-0-(Slides-27-28)">Testing if a Slope is 0 (Slides 27-28)<a class="anchor-link" href="#Testing-if-a-Slope-is-0-(Slides-27-28)">&#182;</a></h3><p>Before you read this, you might want to skim the <a href="https://www.textbook.ds100.org/ch/18/hyp_regression.html#Bootstrapping-the-Observations">textbook</a>, especially if you didn't take Data 8. But if you understand the hypotheses and the reasons for , then keep reading here.</p>
+<h3 id="Testing-if-a-Slope-is-0-(Slides-27-28)">Testing if a Slope is 0 (Slides 27-28)<a class="anchor-link" href="#Testing-if-a-Slope-is-0-(Slides-27-28)">&#182;</a></h3><p>Before you read this, you might want to skim the <a href="https://www.textbook.ds100.org/ch/18/hyp_regression.html#Bootstrapping-the-Observations">textbook</a>, especially if you didn't take Data 8. But if you understand the hypotheses and the reasons for them, then keep reading here.</p>
 <p>Look at the columns labeled <code>t</code> and <code>P(&gt;|t|)</code>. The first is a test statistic and the second is a $p$-value.</p>
 <ul>
 <li>For each true slope $\theta_i$, we are testing the null hypothesis $\theta_i = 0$ versus the alternative hypothesis $\theta_i \neq 0$.</li>
@@ -14568,7 +14581,7 @@ $$<p>Small $p$-values lead us to rejecting the null hypothesis. Equivalently, yo
 <li>But none of the coefficients is significantly different from 0. Each confidence interval contains 0.</li>
 </ul>
 <p>What we are realizing that while the model fits well, none of the <em>individual</em> coefficients has meaning. We have a good overall fit but no detailed interpretation.</p>
-<p>Now read Slides 21-22. The problem is <strong>collinearity</strong>. The covariates are related to each other, not just to the response.</p>
+<p>Now read Slides 21-22. The problem is <strong>collinearity</strong>. The covariates are related to each other, not just to the response. As a result, we can't interpret the individual coefficients.</p>
 <p>Here is the correlation matrix of the covariates and the response.</p>
 
 </div>
@@ -14576,7 +14589,7 @@ $$<p>Small $p$-values lead us to rejecting the null hypothesis. Equivalently, yo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">birds</span><span class="p">[[</span><span class="s2">&quot;Egg Length&quot;</span><span class="p">,</span> <span class="s2">&quot;Egg Breadth&quot;</span><span class="p">,</span> <span class="s2">&quot;Egg Weight&quot;</span><span class="p">,</span> <span class="s2">&quot;Bird Weight&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -14592,7 +14605,7 @@ $$<p>Small $p$-values lead us to rejecting the null hypothesis. Equivalently, yo
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[88]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -14665,7 +14678,7 @@ $$<p>Small $p$-values lead us to rejecting the null hypothesis. Equivalently, yo
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>First look at the Bird Weight column. All the covariates are correlated with the response. That's good for regression.</li>
+<li>First look at the Bird Weight column. All the covariates are correlated with the response. That's good news for regressing Bird Weight on the other variables.</li>
 <li>But now look at the the correlations between the covariates. Those are high too. For example, Egg Breadth and Egg Weight have a high correlation.</li>
 </ul>
 <p>This means you can't increase one covariate while keeping the others constant. The individual slopes have no meaning.</p>
@@ -14680,7 +14693,8 @@ $$<p>Small $p$-values lead us to rejecting the null hypothesis. Equivalently, yo
 <li>Egg Weight is highly correlated with the other two covariates. We can try regressing on Egg Weight alone.</li>
 <li>Egg Breadth and Egg Length have the smallest correlation among all pairs of the covariates. We can try regressing on just those two.</li>
 </ul>
-<p>Here are the two regressions. Notice that $R^2$ hardly drops at all compared to the regression with all three covariates. But in each regression below, the slopes are significantly different from 0. Separating egg weight from the two length dimensions of the egg shows that the variables matter, but that egg length and breadth have almost the same explanatory power as egg weight.</p>
+<p>Here are the two regressions. Notice that $R^2$ hardly drops at all compared to the regression with all three covariates. But in each regression below, the slopes are significantly different from 0. Separating egg weight from the two length dimensions of the egg shows that the variables matter, but that egg length and breadth have almost the same explanatory power as egg weight by itself.</p>
+<p>The regression on egg weight alone looks like the one to use. It's no surprise that if you want to predict the weight of the newly-hatched chick, using the weight of the egg is your best move.</p>
 
 </div>
 </div>
@@ -14694,7 +14708,7 @@ $$<p>Small $p$-values lead us to rejecting the null hypothesis. Equivalently, yo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_ew</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span>
@@ -14714,7 +14728,7 @@ $$<p>Small $p$-values lead us to rejecting the null hypothesis. Equivalently, yo
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[86]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -14731,10 +14745,10 @@ $$<p>Small $p$-values lead us to rejecting the null hypothesis. Equivalently, yo
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   106.8</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Fri, 10 Apr 2020</td> <th>  Prob (F-statistic):</th> <td>4.15e-13</td>
+  <th>Date:</th>             <td>Sat, 11 Apr 2020</td> <th>  Prob (F-statistic):</th> <td>4.15e-13</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>17:37:43</td>     <th>  Log-Likelihood:    </th> <td>  5.0722</td>
+  <th>Time:</th>                 <td>13:57:15</td>     <th>  Log-Likelihood:    </th> <td>  5.0722</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>    44</td>      <th>  AIC:               </th> <td>  -6.144</td>
@@ -14791,7 +14805,7 @@ $$<p>Small $p$-values lead us to rejecting the null hypothesis. Equivalently, yo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_el_eb</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span>
@@ -14811,7 +14825,7 @@ $$<p>Small $p$-values lead us to rejecting the null hypothesis. Equivalently, yo
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[87]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -14828,10 +14842,10 @@ $$<p>Small $p$-values lead us to rejecting the null hypothesis. Equivalently, yo
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   50.49</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Fri, 10 Apr 2020</td> <th>  Prob (F-statistic):</th> <td>8.73e-12</td>
+  <th>Date:</th>             <td>Sat, 11 Apr 2020</td> <th>  Prob (F-statistic):</th> <td>8.73e-12</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>17:38:12</td>     <th>  Log-Likelihood:    </th> <td>  4.5668</td>
+  <th>Time:</th>                 <td>13:57:15</td>     <th>  Log-Likelihood:    </th> <td>  4.5668</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>    44</td>      <th>  AIC:               </th> <td>  -3.134</td>
@@ -14889,19 +14903,6 @@ $$<p>Small $p$-values lead us to rejecting the null hypothesis. Equivalently, yo
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
