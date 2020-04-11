@@ -11,7 +11,7 @@ days:
       "**Lab**{: .label .label-lab } [Lab 8](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab08/) (due Apr. 13)":
   - date: 2020-04-09
     events:
-      "**Lecture**{: .label .label } Regression: Residuals, Multicollinearity, Inference":
+      "**Lecture**{: .label .label } [Regression: Residuals, Multicollinearity, Inference](https://drive.google.com/open?id=1Zn4dMVH-Im1_nl4IgLOwdw6pG7BJGLuo) ([demo](../resources/assets/lectures/lec22/Lec22_Demo.html))":
   - date: 2019-04-10
     events:
       "**Discussion**{: .label .label-disc } [Discussion 10](../resources/assets/discussions/disc10.pdf) ([video](https://www.youtube.com/playlist?list=PLQCcNQgUcDfq7IhrDyiHvoIEVL7Nty6gj))":
