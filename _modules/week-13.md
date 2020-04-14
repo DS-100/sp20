@@ -5,6 +5,7 @@ days:
   - date: 2020-04-13
     events:
       "**Homework**{: .label .label-hw } [Optional Homework](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=hw/optional_hw/) (due May 11)":
+      "**Project**{: .label .label-proj } [Project 2A](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=proj/proj2a/) (due Apr. 20)":
   - date: 2020-04-14
     events:
       "**Lecture**{: .label .label } Logistic Regression (Classification)":
