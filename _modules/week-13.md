@@ -8,7 +8,7 @@ days:
       "**Project**{: .label .label-proj } [Project 2A](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=proj/proj2a/) (due Apr. 20)":
   - date: 2020-04-14
     events:
-      "**Lecture**{: .label .label } Logistic Regression (Classification)":
+      "**Lecture**{: .label .label } [Logistic Regression](https://drive.google.com/open?id=1BY7l_bLGhTZ1y_Bc5dP9NN_KYGR8TOOn)":
       "**Lab**{: .label .label-lab } [Lab 9](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab09/) (due Apr. 20)":
   - date: 2020-04-16
     events:
