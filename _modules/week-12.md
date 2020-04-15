@@ -15,5 +15,5 @@ days:
         "[Ch. 18.3](https://www.textbook.ds100.org/ch/18/hyp_regression.html)"
   - date: 2019-04-10
     events:
-      "**Discussion**{: .label .label-disc } [Discussion 10](../resources/assets/discussions/disc10.pdf) ([video](https://www.youtube.com/playlist?list=PLQCcNQgUcDfq7IhrDyiHvoIEVL7Nty6gj))":
+      "**Discussion**{: .label .label-disc } [Discussion 10](../resources/assets/discussions/disc10.pdf) ([solutions](../resources/assets/discussions/disc10_sol.pdf)) ([video](https://www.youtube.com/playlist?list=PLQCcNQgUcDfq7IhrDyiHvoIEVL7Nty6gj))":
 ---
