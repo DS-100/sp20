@@ -15,5 +15,5 @@ days:
       "**Lecture**{: .label .label } Decision Trees":
   - date: 2019-04-17
     events:
-      "**Discussion**{: .label .label-disc } [Discussion 11](../resources/assets/discussions/disc11.pdf) ([video](https://www.youtube.com/playlist?list=PLQCcNQgUcDfqss4GXkU70RQLG2RnW2KB7))":
+      "**Discussion**{: .label .label-disc } [Discussion 11](../resources/assets/discussions/disc11.pdf) ([solutions](../resources/assets/discussions/disc11_sol.pdf)) ([video](https://www.youtube.com/playlist?list=PLQCcNQgUcDfqss4GXkU70RQLG2RnW2KB7))":
 ---
