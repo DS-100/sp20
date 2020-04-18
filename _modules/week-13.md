@@ -12,7 +12,7 @@ days:
       "**Lab**{: .label .label-lab } [Lab 9](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab09/) (due Apr. 20)":
   - date: 2020-04-16
     events:
-      "**Lecture**{: .label .label } Decision Trees":
+      "**Lecture**{: .label .label } [Logistic Regression Part 2](../resources/assets/lectures/lec24/LogisticRegressionPart2.html) ([code](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lecture/lec24/)) ([playlist](https://www.youtube.com/playlist?list=PLcK2S75CXo8M-HWhfSL0y8nmLdaDsa7mU))":
   - date: 2019-04-17
     events:
       "**Discussion**{: .label .label-disc } [Discussion 11](../resources/assets/discussions/disc11.pdf) ([solutions](../resources/assets/discussions/disc11_sol.pdf)) ([video](https://www.youtube.com/playlist?list=PLQCcNQgUcDfqss4GXkU70RQLG2RnW2KB7))":
