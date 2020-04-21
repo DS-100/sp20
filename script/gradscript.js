@@ -3,17 +3,18 @@
 N_LABS = 11
 N_HWS = 9
 N_VITAMINS = 4
-// N_PROJS = 1
+CHECKPOINT_TOTAL = 145;
+N_PROJS = 2
 
 LAB_TOTALS = [6, 6, 14, 1, 9, 8, 5, 6, 1, 1, 1] // All autograder scores
-VITAMIN_TOTALS = [3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3] 
+VITAMIN_TOTALS = [6, 4, 9, 8]
 HW_TOTALS = [39, 36, 23, 29, 20, 21, 1, 1, 1] // Homework 3 AG only, rest is sum; 1s for HW 7, optional, and one more presumably
-PROJ1_TOTAL = 87
+PROJ_TOTALS = [87, 1]
 
 CHECKPOINT_TOTAL = 145
 // MT1_TOTAL = 90
 // MT2_TOTAL = 100
-// FINAL_TOTAL = 1 // TODO: update this
+FINAL_TOTAL = 1 // TODO: update this
 
 function setupLog() {
     var el = document.querySelector('#log');
@@ -70,7 +71,8 @@ function hw(num) {
 
 function vitamin(num) {
     var assign = 'vitamin' + num;
-    return Math.min(s(assign), VITAMIN_TOTALS[num - 3]); // first vitamin week 3
+    return s(assign);
+    // return Math.min(s(assign), VITAMIN_TOTALS[num - 3]); // first vitamin week 3
 }
 
 function project(num) {
@@ -79,18 +81,20 @@ function project(num) {
     return s(autogradedAssign) + s(manualAssign);
 }
 
-function getLowestTwoScores(scores) {
-    var lowestScore = 100;
-    var secondLowestScore = 100;
-    for (var i = 0; i < scores.length; i++) {
-        if (scores[i] < lowestScore) {
-            secondLowestScore = lowestScore;
-            lowestScore = scores[i];
-        } else if (scores[i] < secondLowestScore) {
-            secondLowestScore = scores[i];
-        }
-    }
-    return [lowestScore, secondLowestScore];
+function getNLowest(scores, n) {
+    // var lowestScore = 100;
+    // var secondLowestScore = 100;
+    // for (var i = 0; i < scores.length; i++) {
+    //     if (scores[i] < lowestScore) {
+    //         secondLowestScore = lowestScore;
+    //         lowestScore = scores[i];
+    //     } else if (scores[i] < secondLowestScore) {
+    //         secondLowestScore = scores[i];
+    //     }
+    // }
+    // return [lowestScore, secondLowestScore];
+    var cp = Array.from(scores)
+    return cp.sort().slice(0, n)
 }
 
 function round(number) {
@@ -107,15 +111,15 @@ function calculateGradesForAssignmentType(type) {
     if (type === "Lab") {
         assignmentFn = lab;
         pointTotals = LAB_TOTALS;
-        assignmentIndices = [3, 4, 5, 6, 9, 10, 11, 13, 14, 15];
+        assignmentIndices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
     } else if (type === "Homework") {
         assignmentFn = hw;
         pointTotals = HW_TOTALS;
-        assignmentIndices = [1, 2, 3, 4, 5, 6, 7, 8];
+        assignmentIndices = [1, 2, 3, 4, 5, 6, 7, 8, 'optional'];
     } else if (type === "Vitamin") {
         assignmentFn = vitamin;
         pointTotals = VITAMIN_TOTALS;
-        assignmentIndices = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+        assignmentIndices = [1, 2, 3, 4];
     } else {
         throw "Unknown assignment type. Should be 'Lab', 'Homework', or 'Vitamin'";
     }
@@ -128,21 +132,10 @@ function calculateGradesForAssignmentType(type) {
     console.log(type);
     console.log(assignmentScores);
     var droppedScores;
-    if (type === "Homework") {
-        var hw8Score = assignmentScores.pop();
-        droppedScores = getLowestTwoScores(assignmentScores);
-        // Drop hw8Score if it is lower than secondLowest.
-        // Otherwise, it makes up for secondLowest in hw avg calculation.
-        if (hw8Score < droppedScores[1]) {
-            droppedScores[1] = hw8Score;
-        }
-        assignmentScores.push(hw8Score);
-        console.log(type);
-        console.log(hw8Score);
-        console.log(assignmentScores);
-        console.log(droppedScores);
+    if (type === "Homework" || type === "Lab") {
+        droppedScores = getNLowest(assignmentScores, 3);
     } else {
-        droppedScores = getLowestTwoScores(assignmentScores);
+        droppedScores = getNLowest(assignmentScores, 0);
     }
 
     var resultsString = "";
@@ -150,7 +143,12 @@ function calculateGradesForAssignmentType(type) {
     var numDrops = droppedScores.length
     for (var i = 0; i < assignmentIndices.length; i++) {
         // assignmentScore = isNaN(assignmentScores[i]) ? hw8Score : assignmentScores[i]
-        resultsString += type + " " + assignmentIndices[i] + ":\t" + earnedPoints[i] + "/" + pointTotals[i] + ",\t\t" + round(assignmentScores[i]) + "%";
+        if (type === "Homework" && assignmentIndices[i] === "optional") {
+            resultsString += "Opt. Homework" + ":  " + earnedPoints[i] + "/" + pointTotals[i] + ",\t\t" + round(assignmentScores[i]) + "%";
+        }
+        else {
+            resultsString += type + " " + assignmentIndices[i] + ":\t" + earnedPoints[i] + "/" + pointTotals[i] + ",\t\t" + round(assignmentScores[i]) + "%";
+        }
         if (droppedScores.includes(assignmentScores[i])) {
             resultsString += " [dropped]\n";
             droppedScores.splice(droppedScores.indexOf(assignmentScores[i]), 1);
@@ -173,51 +171,67 @@ function calculateGrades() {
     var hws = calculateGradesForAssignmentType("Homework");
     var vitamins = calculateGradesForAssignmentType("Vitamin");
 
-    var projEarnedPoints = [project(1), project(2), project(3)];
-    var projScores = [];
+    // var projEarnedPoints = [project(1), project(2), project(3)];
+    // var projScores = [];
+    // var projResultsString = "";
+    // for (var i = 0; i < N_PROJS; i++) {
+    //     projScores[i] = 100.0 * projEarnedPoints[i] / PROJ_TOTALS[i];
+    //     projResultsString += "Project " + (i + 1) + ":\t" + projEarnedPoints[i] + "/" + PROJ_TOTALS[i] + ",\t\t" + round(projScores[i]) + "%\n";
+    // }
+    // var projAverageScore = projScores.reduce(function(a, b) { return a + b }, 0) / N_PROJS;
+
+    var project1 = s('proj1a') + s('proj1awritten') + s('proj1b') + s('proj1bwritten');
+    var project1Score = 100 * project1 / PROJ_TOTALS[0];
+
+    var project2 = s('proj2a') + s('proj2awritten') + s('proj2b') + s('proj2bwritten');
+    var project2Score = 100 * project2 / PROJ_TOTALS[1];
+
+    var projEarnedPoints = [project1, project2];
+    var projScores = [project1Score, project2Score];
     var projResultsString = "";
     for (var i = 0; i < N_PROJS; i++) {
-        projScores[i] = 100.0 * projEarnedPoints[i] / PROJ_TOTALS[i];
         projResultsString += "Project " + (i + 1) + ":\t" + projEarnedPoints[i] + "/" + PROJ_TOTALS[i] + ",\t\t" + round(projScores[i]) + "%\n";
     }
     var projAverageScore = projScores.reduce(function(a, b) { return a + b }, 0) / N_PROJS;
+
     projResultsString += "=====\nProject Average: " + round(projAverageScore) + "%";
 
-    var finalProject = s('finalProject');
-    var midterm1 = s('midterm1');
-    var midterm2 = s('midterm2');
-    var final = s('final');
-    var finalProjectScore = 100 * finalProject / FINAL_PROJ_TOTAL;
-    var midterm1Score = 100.0 * midterm1 / MT1_TOTAL;
-    var midterm2Score = 100.0 * midterm2 / MT2_TOTAL;
-    var finalScore = 100 * final / FINAL_TOTAL;
-    var attendanceScore = 100 * Math.min(s('attendance'), N_ATTENDANCE) / N_ATTENDANCE;
+    // var finalProject = s('finalProject');
+    // var midterm1 = s('midterm1');
+    // var midterm2 = s('midterm2');
 
-    var ugradScore = 0.15 * projAverageScore +
+    var final = s('final');
+    var finalScore = 100 * final / FINAL_TOTAL;
+
+    var checkpoint = s('checkpointassignment');
+    var checkpointScore = 100 * checkpoint / CHECKPOINT_TOTAL;
+
+    // var finalProjectScore = 100 * finalProject / FINAL_PROJ_TOTAL;
+    // var midterm1Score = 100.0 * midterm1 / MT1_TOTAL;
+    // var midterm2Score = 100.0 * midterm2 / MT2_TOTAL;
+    // var attendanceScore = 100 * Math.min(s('attendance'), N_ATTENDANCE) / N_ATTENDANCE;
+
+    var ugradScore = 0.2 * hws.score +
                      0.1 * labs.score +
-                     0.2 * hws.score +
                      0.05 * vitamins.score +
-                     0.1 * midterm1Score +
-                     0.1 * midterm2Score +
-                     Math.max(0.05 * attendanceScore + 0.25 * finalScore, 0.3 * finalScore);
-    var gradScore = 0.15 * projAverageScore +
-                    0.2 * hws.score +
-                    0.1 * midterm1Score +
-                    0.1 * midterm2Score +
-                    0.15 * finalProjectScore +
-                    Math.max(0.05 * labs.score + 0.25 * finalScore, 0.3 * finalScore);
+                     0.1 * project1Score +
+                     0.15 * project2Score +
+                     0.1 * checkpointScore +
+                     0.3 * finalScore
+    var gradScore = 0.2 * hws.score +
+                    0.05 * labs.score + 
+                    0.075 * project1Score +
+                    0.125 * project2Score +
+                    0.1 * checkpointScore +
+                    0.45 * finalScore
 
     setupLog();
     var nameEl = document.querySelector('.user-name') || document.querySelector('.widget-user-username');
     var student = nameEl.innerHTML.trim();
 
-    log('<strong>Data 100 Fall 2019 Score Report for ', student, '</strong>');
+    log('<strong>Data 100 Spring 2020 Score Report for ', student, '</strong>');
     log('=========================================================================');
     log();
-    log('<strong>Attendance</strong>');
-    log('-------------------------------------------------------------------------');
-    log("Attendance:\t" + s('attendance') + ",\t" + round(attendanceScore) + "%");
-    log("NOTE: The max attendance score is 100% (at most 18/18).");
     log();
     log('<strong>Assignments</strong>');
     log('-------------------------------------------------------------------------');
@@ -239,21 +253,15 @@ function calculateGrades() {
     log();
     log();
     log();
-    log('<strong>Projects</strong>');
+    log('<strong>Projects 1-2</strong>');
     log('------------------------------');
-    log("<strong>NOTE: We have not yet graded Project 3 or the Grad Project.</strong>");
     log(projResultsString);
-    log();
-    log("Grad Project:\t" + finalProject + "/" + FINAL_PROJ_TOTAL + ",\t" + round(finalProjectScore) + "%");
     log();
     log();
     log();
     log('<strong>Exams</strong>');
     log('-------------------------------------------------------------------------');
-    log("Midterm 1:\t" + midterm1 + "/" + MT1_TOTAL + ",\t" + round(midterm1Score) + "%");
-    log("Midterm 2:\t" + midterm2 + "/" + MT2_TOTAL + ",\t" + round(midterm2Score) + "%");
-    log("=====\nMidterm Average: " + round((midterm1Score + midterm2Score) / 2) + "%");
-    log();
+    log("Checkpoint Assignment:\t" + checkpoint + "/" + CHECKPOINT_TOTAL + ",\t" + round(checkpointScore) + "%");
     log("Final:\t\t" + final + "/" + FINAL_TOTAL + ",\t" + round(finalScore) + "%");
     log();
     log();
@@ -264,16 +272,10 @@ function calculateGrades() {
     log("Your score according to the graduate guidelines is: " + round(gradScore) + "%");
     log("NOTE: These scores are computed based on the policies on our website.");
     log();
-    log("<strong>UNDERGRADUATES</strong>: Your grade will be determined by the higher of these two scores: " + round(Math.max(ugradScore, gradScore)) + "%");
-    log();
-    log("<strong>GRADUATES</strong>: Your grade will be the graduate score: " + round(gradScore) + "%");
-    log();
     log();
     log('<strong>Disclaimer</strong>')
     log('-------------------------------------------------------------------------');
     log('This calculator is only for your reference.');
-    log('It does not apply if you missed a midterm.');
-    log('It does not include penalties for academic dishonesty.');
     log('Please post on Piazza if you have questions about this score calculator.');
     log();
     log();
