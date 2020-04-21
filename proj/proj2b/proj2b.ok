@@ -1,0 +1,1 @@
+{"name": "proj2b", "endpoint": "cal/data100/sp20/proj2b", "src": ["proj2b.ipynb"], "tests": {"tests/q*.py": "ok_test"}, "protocols": ["file_contents", "grading", "backup"]}

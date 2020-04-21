@@ -3,17 +3,17 @@
 N_LABS = 11
 N_HWS = 9
 N_VITAMINS = 4
-N_PROJS = 2
-N_ATTENDANCE = 18
+// N_PROJS = 1
 
-LAB_TOTALS = [10, 6, 8, 1, 9, 5, 7, 11, 9, 9] // All autograder scores
-VITAMIN_TOTALS = [3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3] // All graded out of 3, except Vitamin 8 graded out of 1
-HW_TOTALS = [24, 35, 41, 29, 32, 38, 22, 21] // Written points: [19, 18, 35, 16, 16, 38, 7, 0], Autograder points: [5, 17, 6, 13, 16, 0, 15, 15]
-PROJ_TOTALS = [46, 52, 11] // Written points: [25, 24, 11], Autograder points: [21, 28, ?]
-FINAL_PROJ_TOTAL = 100
-MT1_TOTAL = 90
-MT2_TOTAL = 100
-FINAL_TOTAL = 1 // TODO: update this
+LAB_TOTALS = [6, 6, 14, 1, 9, 8, 5, 6, 1, 1, 1] // All autograder scores
+VITAMIN_TOTALS = [3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3] 
+HW_TOTALS = [39, 36, 23, 29, 20, 21, 1, 1, 1] // Homework 3 AG only, rest is sum; 1s for HW 7, optional, and one more presumably
+PROJ1_TOTAL = 87
+
+CHECKPOINT_TOTAL = 145
+// MT1_TOTAL = 90
+// MT2_TOTAL = 100
+// FINAL_TOTAL = 1 // TODO: update this
 
 function setupLog() {
     var el = document.querySelector('#log');
