@@ -15,5 +15,5 @@ days:
       "**Lecture**{: .label .label } Big Data Technologies":
   - date: 2019-05-01
     events:
-      "**Discussion**{: .label .label-disc } Discussion 14":
+      "**Discussion**{: .label .label-disc } [Discussion 13](../resources/assets/discussions/disc13.pdf) ([video](https://www.youtube.com/playlist?list=PLQCcNQgUcDfq65OTrRZkGoViZi-3dBmNr))":
 ---
