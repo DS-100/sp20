@@ -12,7 +12,7 @@ days:
       "**Lab**{: .label .label-lab } [Lab 11](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=lab/lab11/) (due May 4)":
   - date: 2020-04-30
     events:
-      "**Lecture**{: .label .label } Big Data Technologies":
+      "**Lecture**{: .label .label } [Clustering (Prof. Hug)](https://docs.google.com/presentation/d/1i5tIhNx50Xu-hxffMubQ_aOCu2tRQNHLrzUyu8GQAkI/edit#slide=id.g756fb96d6d_0_31) ([webcast](https://www.youtube.com/watch?v=cWBA0HgXFgI))":
   - date: 2019-05-01
     events:
       "**Discussion**{: .label .label-disc } [Discussion 13](../resources/assets/discussions/disc13.pdf) ([video](https://www.youtube.com/playlist?list=PLQCcNQgUcDfq65OTrRZkGoViZi-3dBmNr))":
