@@ -1,0 +1,1 @@
+{"name": "optional_lab", "endpoint": "cal/data100/sp20/laboptional", "src": ["optional_lab.ipynb"], "tests": {"tests/q*.py": "ok_test"}, "protocols": ["file_contents", "grading", "backup"]}
