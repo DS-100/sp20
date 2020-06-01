@@ -4,7 +4,7 @@ weekNumber: 15
 days:
   - date: 2020-04-27
     events:
-      "**Final Project**{: .label .label-proj } [Final Project](../resources/assets/final_proj/final_proj_spec.pdf) (due May 13) ([datasets](../resources/assets/final_proj/final_proj_data.zip))":
+      "**Final Project**{: .label .label-proj } [Final Project](../resources/assets/final_proj/final_proj_spec.pdf) (due May 13) ([datasets](../resources/assets/final_proj/final_proj_data.zip)) ([Undergrad Rubric](../resources/assets/final_proj/New_Undergrad_DS_100_Final_Project_Rubric.pdf)) ([Grad Rubric](../resources/assets/final_proj/New_Grad_DS_100_Final_Project_Rubric.pdf))":
       "**Homework**{: .label .label-hw } [Homework 8](http://data100.datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/DS-100/sp20&subPath=hw/hw8/) (due May 4)":
   - date: 2020-04-28
     events:
