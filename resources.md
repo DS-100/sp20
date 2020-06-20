@@ -46,6 +46,8 @@ Click [here]({{ site.baseurl }}/setup) to read our guide on how to set up our de
 
 We've assembled some [SQL Review Slides](https://docs.google.com/presentation/d/1mLVkQxah9asdKhnTNpcUSYBOuKGSWE_d3MJ5nYuTw9U/edit?usp=sharing) to help you brush up on SQL. We've also compiled a list of SQL practice problems, which can be found [here](assets/other/sqlReview.pdf), along with their [solutions](assets/other/sqlReviewSol.pdf).
 
+This [SQL Cheat Sheet](https://websitesetup.org/sql-cheat-sheet/) is an awesome resource that was created by Luke Harrison, a former Data 100 student.
+
 ## Probability Practice
 
 We've compiled a few practice probability problems that we believe may help in understanding the ideas covered in the course. They can be found [here](assets/other/prob_practice.pdf), along with their [solutions](assets/other/prob_practice_solutions.pdf).
