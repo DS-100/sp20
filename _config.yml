@@ -15,10 +15,9 @@
 # in the templates via {{ site.myvariable }}.
 title: Data 100
 description: Principles and Techniques of Data Science
-author: Suraj Rampure
-email: suraj.rampure@berkeley.edu
+author: Joseph Gonzalez and Ani Adikari Adhikari
 baseurl: '/sp20' # the subpath of your site, e.g. /blog
-url: 'http://ds100.org' # the base hostname & protocol for your site, e.g. http://example.com
+url: 'https://ds100.org' # the base hostname & protocol for your site, e.g. http://example.com
 
 # Theme settings
 remote_theme: pmarsceill/just-the-docs@v0.2.5-release
