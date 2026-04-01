@@ -5,6 +5,9 @@ nav_exclude: true
 description: The weekly event schedule.
 ---
 
+{: .warning }
+⚠️ This content is archived as of March 2026 and is retained exclusively for reference. [Find current offerings.](https://ds100.org/)
+
 # Calendar
 
 <!-- **Note:** This is not up-to-date
